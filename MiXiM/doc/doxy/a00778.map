@@ -1,0 +1,15 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,345,168"];
+	Node1 [label=InterfaceTable, height="0.22", width="1.11", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="133,16", rects="93,8,174,24"];
+	Node2 [label=IInterfaceTable, height="0.22", width="1.17", color=black, fillcolor=white, style=filled, URL="$a00100.html", pos="42,152", rects="0,144,85,160"];
+	Node3 [label=INotifiable, height="0.22", width="0.89", color=black, fillcolor=white, style=filled, URL="$a00102.html", pos="195,84", rects="163,76,227,92"];
+	Node4 [label=InterfaceEntry, height="0.22", width="1.14", color=red, fillcolor=white, style=filled, URL="$a00104.html", pos="83,84", rects="42,76,125,92"];
+	Node5 [label=NotificationBoard, height="0.22", width="1.39", color=black, fillcolor=white, style=filled, URL="$a00164.html", pos="295,84", rects="245,76,345,92"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,38,144 36,137 31,121 24,95 33,76 47,48 79,32 103,24"];
+	Node3 -> Node1 [dir=back, color=darkgreen, style=solid, pos="s,195,76 194,67 193,59 190,49 185,42 178,34 169,28 160,24"];
+	Node4 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" tmpInterfaceList", pos="s,81,76 80,68 80,59 81,49 85,42 90,34 98,28 106,24", lp="133,50"];
+	Node2 -> Node4 [dir=back, color=darkorchid3, style=dashed, label=" ownerp", pos="s,47,144 51,137 60,123 71,103 78,92", lp="92,118"];
+	Node5 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" nb", pos="s,279,76 271,72 245,59 203,40 166,26 164,25 163,25 161,24", lp="257,50"];
+}

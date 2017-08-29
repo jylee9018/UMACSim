@@ -1,0 +1,16 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,468,136"];
+	Node1 [label=BaseDecider, height="0.22", width="0.97", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="212,68", rects="177,60,247,76"];
+	Node2 [label=Decider, height="0.22", width="0.64", color=black, fillcolor=white, style=filled, URL="$a00070.html", tooltip="The basic Decider class.", pos="212,120", rects="189,112,236,128"];
+	Node3 [label=Decider80211, height="0.22", width="0.97", color=red, fillcolor=white, style=filled, URL="$a00071.html", tooltip="Decider for the 802.11 modules.", pos="35,16", rects="0,8,71,24"];
+	Node4 [label=Decider802154Narrow, height="0.22", width="1.64", color=black, fillcolor=white, style=filled, URL="$a00074.html", tooltip="Decider for the 802.15.4 Narrow band module.", pos="147,16", rects="88,8,206,24"];
+	Node5 [label=DeciderUWBIRED, height="0.22", width="1.47", color=red, fillcolor=white, style=filled, URL="$a00080.html", tooltip="This class implements a model of an energy detection receiver that demodulates UWB-IR burst position ...", pos="277,16", rects="224,8,330,24"];
+	Node6 [label=SNRThresholdDecider, height="0.22", width="1.67", color=black, fillcolor=white, style=filled, URL="$a00203.html", tooltip="Decider implementation which decides a signals correctness by checking its SNR against a threshold...", pos="408,16", rects="348,8,469,24"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,212,112 212,103 212,94 212,83 212,76"];
+	Node1 -> Node3 [dir=back, color=midnightblue, style=solid, pos="s,185,60 176,57 142,47 93,33 63,24"];
+	Node1 -> Node4 [dir=back, color=midnightblue, style=solid, pos="s,202,60 195,54 183,45 168,32 157,24"];
+	Node1 -> Node5 [dir=back, color=midnightblue, style=solid, pos="s,222,60 229,54 241,45 256,32 267,24"];
+	Node1 -> Node6 [dir=back, color=midnightblue, style=solid, pos="s,242,60 251,57 289,47 343,33 377,24"];
+}

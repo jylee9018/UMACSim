@@ -1,0 +1,14 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,347,180"];
+	Node1 [label=SimpleConstMappingIterator, height="0.22", width="2.11", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="154,16", rects="78,8,231,24"];
+	Node2 [label=ConstMappingIterator, height="0.22", width="1.64", color=black, fillcolor=white, style=filled, URL="$a00059.html", tooltip="Defines an const iterator for a ConstMapping which is able to iterate over the Mapping.", pos="59,84", rects="0,76,119,92"];
+	Node3 [label=ConstMapping, height="0.22", width="1.14", color=black, fillcolor=white, style=filled, URL="$a00058.html", tooltip="Represents a not changeable mapping (mathematical function) from domain with at least the time to a A...", pos="281,84", rects="240,76,323,92"];
+	Node4 [label=DimensionSet, height="0.22", width="1.06", color=black, fillcolor=white, style=filled, URL="$a00086.html", tooltip="Represents a set of dimensions which is used to define over which dimensions a mapping is defined (th...", pos="197,158", rects="159,150,236,166"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,70,76 77,71 96,57 126,36 143,24"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" mapping", pos="s,266,76 259,72 233,58 191,36 169,24", lp="265,50"];
+	Node4 -> Node3 [dir=back, color=darkorchid3, style=dashed, label=" dimensions", pos="s,206,150 212,145 230,129 258,104 272,92", lp="283,118"];
+	Node4 -> Node4 [dir=back, color=darkorchid3, style=dashed, label=" timeDomain\ntimeFreqDomain", pos="s,236,152 245,153 250,154 253,156 253,158 253,162 245,164 236,164", lp="300,158"];
+	Node4 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" dimensions", pos="s,192,150 188,144 180,131 169,111 163,92 156,68 155,38 154,24", lp="200,84"];
+}

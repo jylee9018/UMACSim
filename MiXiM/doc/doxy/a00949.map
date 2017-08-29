@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,148,100"];
+	Node1 [label="PostureTransition::AreaType", height="0.22", width="2.06", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="74,16", rects="0,8,149,24"];
+	Node2 [label=string, height="0.22", width="0.50", color=grey75, fillcolor=white, style=filled, pos="74,84", rects="56,76,93,92"];
+	Node2 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" name", pos="s,74,76 74,67 74,53 74,35 74,24", lp="94,50"];
+}

@@ -1,0 +1,9 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,342,16"];
+	Node1 [label=MacToPhyControlInfo, height="0.22", width="1.69", color=black, fillcolor=white, style=filled, URL="$a00133.html", tooltip="Stores information which is needed by the physical layer when sending a MacPkt.", pos="70,8", rects="9,0,132,16"];
+	Node2 [label=MacToUWBIRPhyControlInfo, height="0.22", width="2.31", color=black, fillcolor=white, style=filled, URL="$a00135.html", tooltip="This control info allows to store the IEEE802154A config parameters that were used to generate the ac...", pos="251,8", rects="168,0,334,16"];
+	Node1 -> Node2 [dir=back, color=midnightblue, style=solid, pos="s,132,8 142,8 150,8 159,8 168,8"];
+}

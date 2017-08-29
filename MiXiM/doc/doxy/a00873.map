@@ -1,0 +1,15 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,284,236"];
+	Node1 [label=MoBANLocal, height="0.22", width="1.11", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="144,16", rects="104,8,185,24"];
+	Node2 [label=LineSegmentsMobilityBase, height="0.22", width="2.00", color=red, fillcolor=white, style=filled, URL="$a00124.html", tooltip="Base class for mobility models where movement consists of a sequence of linear movements of constant ...", pos="144,152", rects="72,144,216,160"];
+	Node3 [label=Coord, height="0.22", width="0.56", color=black, fillcolor=white, style=filled, URL="$a00065.html", tooltip="Class for storing 3D coordinates.", pos="61,220", rects="41,212,81,228"];
+	Node4 [label=MoBANCoordinator, height="0.22", width="1.56", color=red, fillcolor=white, style=filled, URL="$a00142.html", tooltip="This is the coordinator module of the MoBAN mobility model. It should be instantiated in the top leve...", pos="228,84", rects="172,76,285,92"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,144,144 144,135 144,106 144,47 144,24"];
+	Node3 -> Node2 [dir=back, color=darkorchid3, style=dashed, label=" targetPosition", pos="s,71,212 77,207 94,193 120,171 134,160", lp="148,186"];
+	Node3 -> Node3 [dir=back, color=darkorchid3, style=dashed, label=" ZERO", pos="s,81,214 91,214 96,215 99,217 99,220 99,225 91,227 81,226", lp="122,220"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" referencePosition", pos="s,57,212 54,205 43,184 28,142 42,110 59,69 105,38 129,24", lp="91,118"];
+	Node4 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" coordinator", pos="s,218,76 212,71 194,57 168,35 154,24", lp="229,50"];
+	Node2 -> Node4 [dir=back, color=midnightblue, style=solid, pos="s,154,144 160,139 178,125 204,103 218,92"];
+}

@@ -1,0 +1,9 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,184,112"];
+	Node1 [label=InterfaceProtocolData, height="0.22", width="1.64", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="75,96", rects="16,88,134,104"];
+	Node2 [label=InterfaceEntry, height="0.22", width="1.14", color=red, fillcolor=white, style=filled, URL="$a00104.html", pos="75,16", rects="34,8,117,24"];
+	Node2 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" ownerp", pos="s,87,24 94,31 97,34 99,38 101,42 105,53 105,58 101,70 98,77 92,83 86,88", lp="129,56"];
+	Node1 -> Node2 [dir=back, color=darkorchid3, style=dashed, label=" protocol3data\nprotocol4data", pos="s,39,88 30,83 24,80 19,75 15,70 9,59 9,52 15,42 20,34 29,28 38,24", lp="57,56"];
+}

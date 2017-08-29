@@ -1,0 +1,27 @@
+digraph G {
+	graph [compound=true];
+	node [label="\N", fontsize=10, fontname=Helvetica];
+	edge [labelfontsize=10, labelfontname=Helvetica];
+	graph [bb="0,0,410,100"];
+	subgraph clusterdir_5b98468eb5a3695f9b6d6d18452c8ea1 {
+		graph [bgcolor="#ddddee"];
+		graph [pencolor=black];
+		graph [label=mixim];
+		graph [fontname=Helvetica];
+		graph [fontsize=10];
+		graph [URL="dir_5b98468eb5a3695f9b6d6d18452c8ea1.html"];
+		graph [lp="205,84"];
+		graph [bb="8,8,402,92"];
+		subgraph clusterdir_a8e215bf854b9c7e8f39782c0cbe2e3a {
+			graph [bgcolor="#eeeeff"];
+			graph [label=""];
+			graph [URL="dir_a8e215bf854b9c7e8f39782c0cbe2e3a.html"];
+			graph [lp=""];
+			graph [bb="16,16,394,68"];
+			dir_a8e215bf854b9c7e8f39782c0cbe2e3a [label=examples, shape=plaintext, pos="359,42", width="0.75", height="0.50"];
+			dir_c2dea2f761526973c39c610dbc60b0fc [label=analogueModels, shape=box, color=black, fillcolor=white, style=filled, URL="dir_c2dea2f761526973c39c610dbc60b0fc.html", pos="269,42", width="1.25", height="0.50"];
+			dir_3d6ed159e5768439e443c67f4f7e3d3a [label=CSMAMac, shape=box, color=black, fillcolor=white, style=filled, URL="dir_3d6ed159e5768439e443c67f4f7e3d3a.html", pos="173,42", width="0.92", height="0.50"];
+			dir_d2b72a89cd4bc14cc5e1e11b45bf4e7e [label=ieee802154Narrow, shape=box, color=black, fillcolor=white, style=filled, URL="dir_d2b72a89cd4bc14cc5e1e11b45bf4e7e.html", pos="73,42", width="1.36", height="0.50"];
+		}
+	}
+}

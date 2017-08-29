@@ -1,0 +1,7 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,186,16"];
+	Node1 [label="ProbabilisticBroadcast::tMsgDesc", height="0.22", width="2.33", color=black, fillcolor=white, style=filled, URL="$a00214.html", tooltip="Store messages in a structure so that we can keep some information needed by the protocol.", pos="93,8", rects="9,0,178,16"];
+}

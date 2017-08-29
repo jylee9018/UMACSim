@@ -1,0 +1,12 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,288,84"];
+	Node1 [label=BaseArp, height="0.22", width="0.72", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="146,16", rects="120,8,173,24"];
+	Node2 [label=ArpInterface, height="0.22", width="1.03", color=black, fillcolor=white, style=filled, URL="$a00015.html", tooltip="Interface every Address resolution protocol (ARP) module has to implement.", pos="37,68", rects="0,60,74,76"];
+	Node3 [label=AddressingInterface, height="0.22", width="1.50", color=black, fillcolor=white, style=filled, URL="$a00004.html", tooltip="Interface for modules which assign L2 and L3 addresses for modules.", pos="146,68", rects="92,60,201,76"];
+	Node4 [label=BaseModule, height="0.22", width="0.97", color=black, fillcolor=white, style=filled, URL="$a00027.html", tooltip="Base class for all simple modules of a host.", pos="253,68", rects="218,60,289,76"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,54,60 62,56 83,46 111,33 129,24"];
+	Node3 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,146,60 146,51 146,42 146,31 146,24"];
+	Node4 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,236,60 228,56 208,46 181,33 163,24"];
+}

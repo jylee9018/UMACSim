@@ -1,0 +1,10 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,158,154"];
+	Node1 [label="TimeMapping\< Interpolator \>", height="0.22", width="2.19", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="79,84", rects="0,76,159,92"];
+	Node2 [label=Mapping, height="0.22", width="0.75", color=red, fillcolor=white, style=filled, URL="$a00136.html", tooltip="Represents a changeable mapping (mathematical function) from at least time to Argument::mapped_type.", pos="79,138", rects="52,130,107,146"];
+	Node3 [label="TimeMapping\< Linear \>", height="0.22", width="1.83", color=black, fillcolor=white, style=filled, URL="$a00212.html", pos="79,16", rects="13,8,146,24"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,79,130 79,120 79,111 79,99 79,92"];
+	Node1 -> Node3 [dir=back, color=orange, style=dashed, label=" \< Linear \>", pos="s,79,76 79,67 79,53 79,35 79,24", lp="112,50"];
+}

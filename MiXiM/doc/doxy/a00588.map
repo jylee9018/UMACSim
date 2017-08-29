@@ -1,0 +1,12 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,410,124"];
+	Node1 [label=BaseLayer, height="0.22", width="0.86", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="175,16", rects="144,8,206,24"];
+	Node2 [label=MiximBatteryAccess, height="0.22", width="1.56", color=red, fillcolor=white, style=filled, URL="$a00140.html", tooltip="Extends BaseModule by several methods which provide access to the battery module.", pos="56,108", rects="0,100,113,116"];
+	Node3 [label=simsignalwrap_t, height="0.22", width="1.25", color=black, fillcolor=white, style=filled, URL="$a00201.html", tooltip="Helper function to initialize signal change identifier on use and not on initializing static sections...", pos="175,108", rects="130,100,221,116"];
+	Node4 [label=PassedMessage, height="0.22", width="1.14", color=black, fillcolor=white, style=filled, URL="$a00170.html", pos="344,108", rects="303,100,386,116"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,67,100 74,95 98,75 144,40 164,24"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" catDroppedPacketSignal\ncatPassedMsgSignal\ncatPacketSignal", pos="s,175,100 175,92 175,72 175,40 175,24", lp="242,62"];
+	Node4 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" passedMsg", pos="s,343,100 341,93 337,78 328,54 312,42 273,13 252,33 206,24", lp="370,62"];
+}

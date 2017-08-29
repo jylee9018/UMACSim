@@ -1,0 +1,15 @@
+digraph structs {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,772,118"];
+	Node2 [label="IEEE 802.15.4 - Classes for the IEEE 802.15.4 implementation of MiXiM", height="0.22", width="4.97", color=black, fillcolor=white, style=filled, URL="$a00523.html", pos="581,110", rects="402,102,761,118"];
+	Node0 [label="protocols - Classes for the different protocols implemented in MiXiM", height="0.22", width="4.89", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="185,59", rects="9,51,362,67"];
+	Node3 [label="IEEE 802.15.4A - Classes that implement the IEEE 802.15.4A UWB PHY.", height="0.22", width="5.06", color=black, fillcolor=white, style=filled, URL="$a00524.html", pos="581,76", rects="399,68,764,84"];
+	Node1 [label="IEEE 802.11 - Classes for the IEEE 802.11 implementation of MiXiM", height="0.22", width="4.72", color=black, fillcolor=white, style=filled, URL="$a00522.html", pos="581,42", rects="411,34,752,50"];
+	Node4 [label="CSMA - Classes for the CSMA implementation of MiXiM", height="0.22", width="4.17", color=black, fillcolor=white, style=filled, URL="$a00525.html", pos="581,8", rects="431,0,731,16"];
+	Node0 -> Node1 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,362,51 371,51 384,50 397,50 410,49"];
+	Node0 -> Node2 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,362,67 370,71 382,80 381,94 398,102 399,102 400,103 401,103"];
+	Node0 -> Node3 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,362,67 372,67 381,67 389,68 398,68"];
+	Node0 -> Node4 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,362,51 370,47 382,37 381,23 398,16 405,13 417,11 431,9"];
+}

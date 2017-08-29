@@ -1,0 +1,13 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,402,112"];
+	Node1 [label=SimpleMacLayer, height="0.22", width="1.31", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="142,16", rects="95,8,189,24"];
+	Node2 [label=BaseModule, height="0.22", width="0.97", color=red, fillcolor=white, style=filled, URL="$a00027.html", tooltip="Base class for all simple modules of a host.", pos="35,90", rects="0,82,71,98"];
+	Node3 [label=MacToPhyInterface, height="0.22", width="1.50", color=black, fillcolor=white, style=filled, URL="$a00134.html", tooltip="Defines the methods provided by the phy to the mac layer.", pos="142,90", rects="88,82,197,98"];
+	Node4 [label=DimensionSet, height="0.22", width="1.06", color=black, fillcolor=white, style=filled, URL="$a00086.html", tooltip="Represents a set of dimensions which is used to define over which dimensions a mapping is defined (th...", pos="252,90", rects="214,82,291,98"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,47,82 54,77 76,62 112,37 130,24"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" phy", pos="s,142,82 142,73 142,58 142,36 142,24", lp="158,50"];
+	Node4 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" dimensions", pos="s,240,82 233,77 210,62 173,37 154,24", lp="239,50"];
+	Node4 -> Node4 [dir=back, color=darkorchid3, style=dashed, label=" timeDomain\ntimeFreqDomain", pos="s,291,84 300,85 305,86 308,88 308,90 308,94 300,96 291,96", lp="355,90"];
+}

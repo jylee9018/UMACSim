@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,132,84"];
+	Node1 [label=ConnectionManager, height="0.22", width="1.53", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="66,16", rects="11,8,121,24"];
+	Node2 [label=BaseConnectionManager, height="0.22", width="1.83", color=red, fillcolor=white, style=filled, URL="$a00019.html", tooltip="Module to control the channel and handle all connection related stuff.", pos="66,68", rects="0,60,133,76"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,66,60 66,51 66,42 66,31 66,24"];
+}

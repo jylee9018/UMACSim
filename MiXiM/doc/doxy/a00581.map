@@ -1,0 +1,10 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,442,100"];
+	Node1 [label="BaseDelayedMapping\< Base \>", height="0.22", width="2.25", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="235,84", rects="154,76,316,92"];
+	Node2 [label="BaseDelayedMapping\< const ConstMapping \>", height="0.22", width="3.33", color=red, fillcolor=white, style=filled, URL="$a00022.html", pos="120,16", rects="0,8,241,24"];
+	Node3 [label="BaseDelayedMapping\< Mapping \>", height="0.22", width="2.56", color=red, fillcolor=white, style=filled, URL="$a00022.html", pos="350,16", rects="258,8,442,24"];
+	Node1 -> Node2 [dir=back, color=orange, style=dashed, label=" \< const ConstMapping \>", pos="s,221,76 214,72 191,58 154,36 134,24", lp="258,50"];
+	Node1 -> Node3 [dir=back, color=orange, style=dashed, label=" \< Mapping \>", pos="s,277,76 286,74 305,69 323,64 330,58 340,49 345,34 348,24", lp="378,50"];
+}

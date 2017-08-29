@@ -1,0 +1,23 @@
+digraph structs {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,948,418"];
+	Node2 [label="connectionManager - channel and connection related classes", height="0.22", width="4.22", color=black, fillcolor=white, style=filled, URL="$a00517.html", pos="775,402", rects="623,394,928,410"];
+	Node6 [label="Power consumption - Classes using/defining power consumption", height="0.22", width="4.58", color=black, fillcolor=white, style=filled, URL="$a00530.html", pos="775,326", rects="610,318,940,334"];
+	Node3 [label="phyLayer - physical layer modules", height="0.22", width="2.50", color=black, fillcolor=white, style=filled, URL="$a00510.html", pos="775,262", rects="685,254,866,270"];
+	Node8 [label="decider - decider modules", height="0.22", width="1.86", color=black, fillcolor=white, style=filled, URL="$a00512.html", pos="775,210", rects="708,202,842,218"];
+	Node1 [label="base - base MiXiM modules", height="0.22", width="2.06", color=black, fillcolor=white, style=filled, URL="$a00515.html", pos="82,210", rects="8,202,156,218"];
+	Node7 [label="macLayer - MAC layer modules", height="0.22", width="2.36", color=black, fillcolor=white, style=filled, URL="$a00509.html", pos="775,158", rects="690,150,861,166"];
+	Node4 [label="netwLayer - network layer modules", height="0.22", width="2.61", color=black, fillcolor=white, style=filled, URL="$a00507.html", pos="775,70", rects="681,62,869,78"];
+	Node5 [label="applLayer - application layer modules", height="0.22", width="2.72", color=black, fillcolor=white, style=filled, URL="$a00506.html", pos="775,18", rects="677,10,873,26"];
+	Node0 [label="baseModules - base module classes of MiXiM", height="0.22", width="3.25", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="312,210", rects="195,202,430,218"];
+	Node1 -> Node0 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,156,210 166,210 175,210 184,210 194,210"];
+	Node0 -> Node2 [shape=plaintext, color=orange, dir=none, style=dashed, label=ConnectionManagerAccess, pos="404,218 416,221 425,224 430,229 471,270 409,316 448,359 472,385 549,395 622,400", lp="520,404"];
+	Node0 -> Node3 [shape=plaintext, color=orange, dir=none, style=dashed, label="ConnectionManagerAccess\nBasePhyLayer", pos="427,218 428,218 429,219 430,219 439,221 440,226 448,230 517,254 538,246 610,254 634,256 660,258 684,259", lp="520,265"];
+	Node0 -> Node4 [shape=plaintext, color=orange, dir=none, style=dashed, label="AddressingInterface\nArpInterface\nBaseArp\nBaseNetwLayer", pos="411,202 420,200 426,197 430,194 458,170 422,139 448,113 501,62 537,88 610,78 633,75 657,73 681,72", lp="520,142"];
+	Node0 -> Node5 [shape=plaintext, color=orange, dir=none, style=dashed, label=BaseApplLayer, pos="393,202 412,199 428,195 430,191 456,139 409,104 448,61 478,29 592,20 677,18", lp="520,72"];
+	Node0 -> Node6 [shape=plaintext, color=orange, dir=none, style=dashed, label="DrawAmount\nBaseBattery\nMiximBatteryAccess", pos="411,218 419,220 426,223 430,226 451,243 429,265 448,283 503,332 537,308 610,318", lp="520,335"];
+	Node0 -> Node7 [shape=plaintext, color=orange, dir=none, style=dashed, label=BaseMacLayer, pos="427,202 428,202 429,201 430,201 439,199 440,194 448,190 517,166 538,174 610,166 636,164 664,162 689,161", lp="520,201"];
+	Node0 -> Node8 [shape=plaintext, color=orange, dir=none, style=dashed, label=BaseDecider, pos="430,210 518,210 635,210 708,210", lp="520,218"];
+}

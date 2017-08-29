@@ -1,0 +1,10 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,124,136"];
+	Node1 [label=Mac80211, height="0.22", width="0.75", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="62,68", rects="35,60,90,76"];
+	Node2 [label=BaseMacLayer, height="0.22", width="1.17", color=red, fillcolor=white, style=filled, URL="$a00026.html", tooltip="A very simple MAC module template which provides de- and encapsulation of messages using the standard...", pos="62,120", rects="20,112,104,128"];
+	Node3 [label=Mac80211MultiChannel, height="0.22", width="1.72", color=black, fillcolor=white, style=filled, URL="$a00129.html", tooltip="Adds multi channel support to Mac80211.", pos="62,16", rects="0,8,124,24"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,62,112 62,103 62,94 62,83 62,76"];
+	Node1 -> Node3 [dir=back, color=midnightblue, style=solid, pos="s,62,60 62,51 62,42 62,31 62,24"];
+}

@@ -1,0 +1,19 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,874,269"];
+	Node1 [label="MultiDimMapping\< Interpolator \>", height="0.22", width="2.53", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="774,140", rects="683,132,866,148"];
+	Node2 [label=Mapping, height="0.22", width="0.75", color=red, fillcolor=white, style=filled, URL="$a00136.html", tooltip="Represents a changeable mapping (mathematical function) from at least time to Argument::mapped_type.", pos="36,218", rects="9,210,64,226"];
+	Node3 [label=ConstMappingWrapper, height="0.22", width="1.75", color=red, fillcolor=white, style=filled, URL="$a00061.html", tooltip="Wraps an ConstMapping into a Mapping interface.", pos="310,193", rects="247,185,374,201"];
+	Node4 [label="InterpolateableMap\< Interpolator\< std::map\< argument_value_t, Mapping * \> \> \>", height="0.22", width="5.78", color=red, fillcolor=white, style=filled, URL="$a00110.html", pos="310,140", rects="102,132,518,148"];
+	Node5 [label=ConstantSimpleConstMapping, height="0.22", width="2.22", color=red, fillcolor=white, style=filled, URL="$a00055.html", tooltip="Represents a constant mathematical mapping (f(x) = c)", pos="310,88", rects="230,80,390,96"];
+	Node6 [label=Dimension, height="0.22", width="0.86", color=black, fillcolor=white, style=filled, URL="$a00085.html", tooltip="Specifies a dimension for mappings (like time, frequency, etc.)", pos="310,8", rects="279,0,342,16"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,64,221 73,222 192,235 569,269 664,202 682,189 666,171 682,158 687,154 698,151 711,148"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" wrappedOORMapping", pos="s,374,192 382,192 422,192 473,190 518,185 584,178 602,181 664,160 673,156 674,153 682,150 684,149 687,149 689,148", lp="600,190"];
+	Node2 -> Node3 [dir=back, color=midnightblue, style=solid, pos="s,64,210 73,208 85,204 96,202 102,201 150,194 205,192 246,192"];
+	Node4 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" entries", pos="s,518,140 527,140 582,140 637,140 682,140", lp="600,148"];
+	Node5 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" outOfRangeMapping", pos="s,390,89 399,89 436,90 479,92 518,96 584,103 602,99 664,120 673,124 674,128 682,130 684,131 686,131 689,132", lp="600,128"];
+	Node6 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" myDimension", pos="s,342,6 351,6 394,4 461,3 518,16 587,32 615,29 664,79 680,95 666,111 682,124 686,127 693,130 702,132", lp="600,87"];
+	Node6 -> Node6 [dir=back, color=darkorchid3, style=dashed, label=" frequency\ntime", pos="s,328,16 333,21 336,28 328,34 310,34 287,34 281,24 292,16", lp="310,48"];
+}

@@ -1,0 +1,7 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,88,16"];
+	Node1 [label=DeviceEntry, height="0.22", width="1.00", color=black, fillcolor=white, style=filled, URL="$a00084.html", tooltip="per-device/per-account record of battery consumption, is passed to BatteryStats on finish()...", pos="44,8", rects="8,0,80,16"];
+}

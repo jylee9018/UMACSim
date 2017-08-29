@@ -1,0 +1,27 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,754,118"];
+	Node1 [label=Decider, height="0.22", width="0.64", color=black, fillcolor=white, style=filled, URL="$a00070.html", tooltip="The basic Decider class.", pos="32,42", rects="9,34,56,50"];
+	Node2 [label=BaseDecider, height="0.22", width="0.97", color=black, fillcolor=white, style=filled, URL="$a00020.html", tooltip="Provides some base functionality for most common deciders.", pos="141,59", rects="106,51,176,67"];
+	Node3 [label=Decider80211, height="0.22", width="0.97", color=black, fillcolor=white, style=filled, URL="$a00071.html", tooltip="Decider for the 802.11 modules.", pos="287,110", rects="252,102,323,118"];
+	Node4 [label=Decider80211Battery, height="0.22", width="1.50", color=black, fillcolor=white, style=filled, URL="$a00072.html", tooltip="Extends Decider80211 by drawing power during receiving of messages.", pos="477,110", rects="423,102,531,118"];
+	Node5 [label=Decider80211MultiChannel, height="0.22", width="1.94", color=black, fillcolor=white, style=filled, URL="$a00073.html", tooltip="Extends Decider80211 by multi channel support.", pos="676,110", rects="606,102,746,118"];
+	Node6 [label=Decider802154Narrow, height="0.22", width="1.64", color=black, fillcolor=white, style=filled, URL="$a00074.html", tooltip="Decider for the 802.15.4 Narrow band module.", pos="287,76", rects="228,68,346,84"];
+	Node7 [label=DeciderUWBIRED, height="0.22", width="1.47", color=black, fillcolor=white, style=filled, URL="$a00080.html", tooltip="This class implements a model of an energy detection receiver that demodulates UWB-IR burst position ...", pos="287,42", rects="234,34,340,50"];
+	Node8 [label=DeciderUWBIREDSync, height="0.22", width="1.81", color=black, fillcolor=white, style=filled, URL="$a00081.html", tooltip="this Decider models a non-coherent energy-detection receiver that synchronizes on the first sync prea...", pos="477,59", rects="412,51,542,67"];
+	Node9 [label=DeciderUWBIREDSyncOnAddress, height="0.22", width="2.58", color=black, fillcolor=white, style=filled, URL="$a00082.html", tooltip="this Decider models a non-coherent energy-detection receiver", pos="477,25", rects="384,17,570,33"];
+	Node10 [label=SNRThresholdDecider, height="0.22", width="1.67", color=black, fillcolor=white, style=filled, URL="$a00203.html", tooltip="Decider implementation which decides a signals correctness by checking its SNR against a threshold...", pos="287,8", rects="227,0,348,16"];
+	Node11 [label=ThresholdDecider, height="0.22", width="1.33", color=black, fillcolor=white, style=filled, URL="$a00209.html", tooltip="A simple Decider implementation which only checks for a received signal if the receiving power is abo...", pos="141,25", rects="93,17,190,33"];
+	Node1 -> Node2 [dir=back, color=midnightblue, style=solid, pos="s,56,46 64,47 78,49 93,52 106,54"];
+	Node2 -> Node3 [dir=back, color=midnightblue, style=solid, pos="s,176,62 185,65 187,65 188,66 190,67 210,78 206,93 226,102 234,105 243,108 251,109"];
+	Node3 -> Node4 [dir=back, color=midnightblue, style=solid, pos="s,323,110 332,110 359,110 394,110 423,110"];
+	Node4 -> Node5 [dir=back, color=midnightblue, style=solid, pos="s,531,110 540,110 561,110 584,110 606,110"];
+	Node2 -> Node6 [dir=back, color=midnightblue, style=solid, pos="s,176,63 184,64 198,66 213,67 228,69"];
+	Node2 -> Node7 [dir=back, color=midnightblue, style=solid, pos="s,176,55 185,54 200,52 218,51 234,48"];
+	Node7 -> Node8 [dir=back, color=midnightblue, style=solid, pos="s,340,47 349,48 360,49 373,50 384,51 393,52 403,53 412,54"];
+	Node7 -> Node9 [dir=back, color=midnightblue, style=solid, pos="s,340,37 350,36 361,35 373,34 384,33"];
+	Node2 -> Node10 [dir=back, color=midnightblue, style=solid, pos="s,176,56 185,53 187,53 188,52 190,51 210,41 206,26 226,16"];
+	Node1 -> Node11 [dir=back, color=midnightblue, style=solid, pos="s,56,38 64,37 73,35 83,34 92,32"];
+}

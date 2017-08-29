@@ -1,0 +1,7 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,210,16"];
+	Node1 [label="BaseDelayedIterator\< Base, Iterator \>", height="0.22", width="2.69", color=black, fillcolor=white, style=filled, URL="$a00021.html", tooltip="Common base for a Const- and NonConst-Iterator for a DelayedMapping.", pos="105,8", rects="8,0,202,16"];
+}

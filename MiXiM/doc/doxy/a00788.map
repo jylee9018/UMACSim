@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,252,100"];
+	Node1 [label="InterpolateableMap\< TInterpolator, TContainer \>", height="0.22", width="3.50", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="126,16", rects="0,8,253,24"];
+	Node2 [label=TInterpolator, height="0.22", width="1.03", color=grey75, fillcolor=white, style=filled, pos="126,84", rects="89,76,164,92"];
+	Node2 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" interpolate", pos="s,126,76 126,67 126,53 126,35 126,24", lp="159,50"];
+}

@@ -1,0 +1,12 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,208,178"];
+	Node1 [label=MovingMobilityBase, height="0.22", width="1.58", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="57,16", rects="0,8,114,24"];
+	Node2 [label=MobilityBase, height="0.22", width="1.03", color=red, fillcolor=white, style=filled, URL="$a00145.html", tooltip="Abstract base class for mobility modules.", pos="133,70", rects="96,62,171,78"];
+	Node3 [label=Coord, height="0.22", width="0.56", color=black, fillcolor=white, style=filled, URL="$a00065.html", tooltip="Class for storing 3D coordinates.", pos="59,162", rects="39,154,79,170"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,121,62 114,57 100,47 81,33 69,24"];
+	Node3 -> Node2 [dir=back, color=darkorchid3, style=dashed, label=" constraintAreaMax\nconstraintAreaMin\nlastPosition", pos="s,63,154 66,148 73,133 84,111 99,96 105,89 113,83 120,78", lp="154,116"];
+	Node3 -> Node3 [dir=back, color=darkorchid3, style=dashed, label=" ZERO", pos="s,79,156 89,156 94,157 97,159 97,162 97,167 89,169 79,168", lp="120,162"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" lastSpeed", pos="s,53,154 50,148 39,129 21,93 29,62 33,47 43,33 50,24", lp="58,70"];
+}

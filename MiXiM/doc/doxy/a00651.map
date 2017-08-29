@@ -1,0 +1,13 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,282,136"];
+	Node1 [label=ConnectionManagerAccess, height="0.22", width="1.97", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="131,68", rects="60,60,203,76"];
+	Node2 [label=MiximBatteryAccess, height="0.22", width="1.56", color=red, fillcolor=white, style=filled, URL="$a00140.html", tooltip="Extends BaseModule by several methods which provide access to the battery module.", pos="56,120", rects="0,112,113,128"];
+	Node3 [label=ChannelMobilityAccessType, height="0.22", width="2.11", color=black, fillcolor=white, style=filled, URL="$a00002.html", tooltip="Finds and returns the pointer to a module of type T. Uses FindModule&lt;&gt;::findSubModule(), FindModule&lt;&gt;::findHost(). S\
+ee usage e.g. at ConnectionManagerAccess.", pos="206,120", rects="130,112,282,128"];
+	Node4 [label=BasePhyLayer, height="0.22", width="1.14", color=red, fillcolor=white, style=filled, URL="$a00029.html", tooltip="The BasePhyLayer represents the physical layer of a nic.", pos="131,16", rects="90,8,172,24"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,68,112 75,107 89,97 107,84 119,76"];
+	Node3 -> Node1 [dir=back, color=darkgreen, style=solid, pos="s,194,112 187,107 173,97 155,84 143,76"];
+	Node1 -> Node4 [dir=back, color=midnightblue, style=solid, pos="s,131,60 131,51 131,42 131,31 131,24"];
+}

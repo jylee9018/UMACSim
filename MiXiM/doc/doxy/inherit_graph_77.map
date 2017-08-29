@@ -1,0 +1,7 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,58,16"];
+	Node1 [label=Packet, height="0.22", width="0.58", color=black, fillcolor=white, style=filled, URL="$a00168.html", tooltip="Class that keeps track of the number of packets sent.", pos="29,8", rects="8,0,50,16"];
+}

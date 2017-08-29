@@ -1,0 +1,13 @@
+digraph structs {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,924,86"];
+	Node0 [label="connectionManager - channel and connection related classes", height="0.22", width="4.22", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="347,44", rects="195,36,500,52"];
+	Node2 [label="phyLayer - physical layer modules", height="0.22", width="2.50", color=black, fillcolor=white, style=filled, URL="$a00510.html", pos="798,70", rects="708,62,889,78"];
+	Node1 [label="base - base MiXiM modules", height="0.22", width="2.06", color=black, fillcolor=white, style=filled, URL="$a00515.html", pos="82,44", rects="8,36,156,52"];
+	Node3 [label="baseModules - base module classes of MiXiM", height="0.22", width="3.25", color=black, fillcolor=white, style=filled, URL="$a00516.html", pos="798,18", rects="681,10,916,26"];
+	Node1 -> Node0 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,156,44 166,44 175,44 184,44 194,44"];
+	Node0 -> Node2 [shape=plaintext, color=orange, dir=none, style=dashed, label=ConnectionManagerAccess, pos="500,52 570,56 648,60 707,64", lp="590,68"];
+	Node0 -> Node3 [shape=plaintext, color=orange, dir=none, style=dashed, label=ConnectionManagerAccess, pos="500,36 509,35 510,34 518,32 571,25 630,22 680,20", lp="590,43"];
+}

@@ -1,0 +1,6 @@
+<area shape="rect" href="inet.mobility.models.MobilityBase.html" title="Simple Module MobilityBase" alt="MobilityBase" coords="237,88,323,112">
+<area shape="rect" href="inet.mobility.models.MovingMobilityBase.html" title="Simple Module MovingMobilityBase" alt="MovingMobilityBase" coords="7,160,132,184">
+<area shape="rect" href="inet.mobility.models.StaticGridMobility.html" title="Simple Module StaticGridMobility" alt="StaticGridMobility" coords="156,160,268,184">
+<area shape="rect" href="inet.mobility.models.StationaryMobility.html" title="Simple Module StationaryMobility" alt="StationaryMobility" coords="292,160,407,184">
+<area shape="rect" href="inet.mobility.models.TraCIMobility.html" title="Simple Module TraCIMobility" alt="TraCIMobility" coords="431,160,516,184">
+<area shape="rect" href="inet.mobility.IMobility.html" title="Module Interface IMobility" alt="IMobility" coords="244,16,316,40">

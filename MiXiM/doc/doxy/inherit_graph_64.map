@@ -1,0 +1,9 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,208,16"];
+	Node1 [label=MiximRadio, height="0.22", width="1.00", color=black, fillcolor=white, style=filled, URL="$a00141.html", tooltip="The class that represents the Radio as a state machine.", pos="45,8", rects="9,0,82,16"];
+	Node2 [label=RadioUWBIR, height="0.22", width="1.11", color=black, fillcolor=white, style=filled, URL="$a00183.html", tooltip="This class extends the basic radio model.", pos="159,8", rects="119,0,200,16"];
+	Node1 -> Node2 [dir=back, color=midnightblue, style=solid, pos="s,82,8 91,8 100,8 110,8 118,8"];
+}

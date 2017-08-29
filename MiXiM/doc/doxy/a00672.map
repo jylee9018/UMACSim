@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,126,84"];
+	Node1 [label=ConstMappingWrapper, height="0.22", width="1.75", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="63,16", rects="0,8,127,24"];
+	Node2 [label=Mapping, height="0.22", width="0.75", color=red, fillcolor=white, style=filled, URL="$a00136.html", tooltip="Represents a changeable mapping (mathematical function) from at least time to Argument::mapped_type.", pos="63,68", rects="36,60,91,76"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,63,60 63,51 63,42 63,31 63,24"];
+}

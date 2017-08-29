@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,82,84"];
+	Node1 [label=PhyLayer, height="0.22", width="0.81", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="41,16", rects="12,8,71,24"];
+	Node2 [label=BasePhyLayer, height="0.22", width="1.14", color=red, fillcolor=white, style=filled, URL="$a00029.html", tooltip="The BasePhyLayer represents the physical layer of a nic.", pos="41,68", rects="0,60,82,76"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,41,60 41,51 41,42 41,31 41,24"];
+}

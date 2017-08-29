@@ -1,0 +1,29 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,332,356"];
+	Node1 [label=AnalogueModel, height="0.22", width="1.22", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="53,178", rects="9,170,98,186"];
+	Node2 [label=BreakpointPathlossModel, height="0.22", width="1.89", color=black, fillcolor=white, style=filled, URL="$a00039.html", tooltip="Basic implementation of a BreakpointPathlossModel. This class can be used to implement the ieee802154...", pos="229,348", rects="161,340,297,356"];
+	Node3 [label=IntensityModel, height="0.22", width="1.17", color=black, fillcolor=white, style=filled, URL="$a00103.html", tooltip="TODO: Short description for this AnalogueModel.", pos="229,314", rects="187,306,271,322"];
+	Node4 [label=JakesFading, height="0.22", width="0.97", color=black, fillcolor=white, style=filled, URL="$a00114.html", tooltip="Implements Rayleigh fading after Jakes&#39; model.", pos="229,280", rects="194,272,264,288"];
+	Node5 [label=LogNormalShadowing, height="0.22", width="1.69", color=black, fillcolor=white, style=filled, URL="$a00127.html", tooltip="Channel state implementing log-normal shadowing.", pos="229,246", rects="168,238,291,254"];
+	Node6 [label=PERModel, height="0.22", width="0.89", color=black, fillcolor=white, style=filled, URL="$a00172.html", tooltip="This class applies a parameterized packet error rate to incoming packets. This allows the user to eas...", pos="229,212", rects="197,204,261,220"];
+	Node7 [label=RadioStateAnalogueModel, height="0.22", width="1.97", color=black, fillcolor=white, style=filled, URL="$a00182.html", tooltip="This special AnalogueModel provides filtering of a Signal according to the actual RadioStates the Rad...", pos="229,178", rects="158,170,300,186"];
+	Node8 [label=RandomFreqTimeModel, height="0.22", width="1.83", color=black, fillcolor=white, style=filled, URL="$a00184.html", tooltip="Sample implementation of an AnalogueModel which uses MultiDimMapping as AttenuationMapping.", pos="229,144", rects="163,136,296,152"];
+	Node9 [label=RandomFrequencyOnlyModel, height="0.22", width="2.25", color=black, fillcolor=white, style=filled, URL="$a00185.html", tooltip="Sample implementation of an AnalogueModel which uses MultiDimMapping as AttenuationMapping.", pos="229,110", rects="148,102,310,118"];
+	Node10 [label=SimplePathlossModel, height="0.22", width="1.58", color=black, fillcolor=white, style=filled, URL="$a00199.html", tooltip="Basic implementation of a SimplePathlossModel that uses SimplePathlossConstMapping (that is subclasse...", pos="229,76", rects="172,68,286,84"];
+	Node11 [label=UWBIRIEEE802154APathlossModel, height="0.22", width="2.64", color=black, fillcolor=white, style=filled, URL="$a00222.html", tooltip="This class implements the IEEE 802.15.4A Channel Model[1] in the MiXiM omnet++ modeling framework...", pos="229,42", rects="134,34,324,50"];
+	Node12 [label=UWBIRStochasticPathlossModel, height="0.22", width="2.36", color=black, fillcolor=white, style=filled, URL="$a00226.html", tooltip="This AnalogueModel models implements the Ghassmezadeh stochastic UWB channel models.", pos="229,8", rects="144,0,315,16"];
+	Node1 -> Node2 [dir=back, color=midnightblue, style=solid, pos="s,98,186 105,193 144,240 84,296 134,340 142,346 151,350 161,352"];
+	Node1 -> Node3 [dir=back, color=midnightblue, style=solid, pos="s,98,186 105,193 135,229 94,272 134,306 149,317 169,320 187,320"];
+	Node1 -> Node4 [dir=back, color=midnightblue, style=solid, pos="s,98,186 105,192 127,217 104,249 134,272 151,284 175,286 194,285"];
+	Node1 -> Node5 [dir=back, color=midnightblue, style=solid, pos="s,98,186 105,192 120,206 113,225 134,238 144,244 156,247 167,249"];
+	Node1 -> Node6 [dir=back, color=midnightblue, style=solid, pos="s,98,186 107,189 116,194 121,200 134,204 154,210 178,212 197,212"];
+	Node1 -> Node7 [dir=back, color=midnightblue, style=solid, pos="s,98,178 107,178 123,178 141,178 158,178"];
+	Node1 -> Node8 [dir=back, color=midnightblue, style=solid, pos="s,98,170 107,166 116,161 120,155 134,152 143,149 153,147 162,146"];
+	Node1 -> Node9 [dir=back, color=midnightblue, style=solid, pos="s,98,170 105,165 120,149 113,130 134,118 138,115 143,113 148,112"];
+	Node1 -> Node10 [dir=back, color=midnightblue, style=solid, pos="s,98,170 105,163 127,138 104,106 134,84 145,76 158,72 172,71"];
+	Node1 -> Node11 [dir=back, color=midnightblue, style=solid, pos="s,98,170 105,163 135,126 94,83 134,50"];
+	Node1 -> Node12 [dir=back, color=midnightblue, style=solid, pos="s,98,170 104,164 144,116 83,59 134,16 137,14 140,12 143,10"];
+}

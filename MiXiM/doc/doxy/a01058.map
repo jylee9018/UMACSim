@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,110,84"];
+	Node1 [label=UnitDisk, height="0.22", width="0.75", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="55,16", rects="28,8,83,24"];
+	Node2 [label=ConnectionManager, height="0.22", width="1.53", color=red, fillcolor=white, style=filled, URL="$a00052.html", tooltip="BaseConnectionManager implementation which only defines a specific max interference distance...", pos="55,68", rects="0,60,110,76"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,55,60 55,51 55,42 55,31 55,24"];
+}

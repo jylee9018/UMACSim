@@ -1,0 +1,14 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,510,100"];
+	Node1 [label=MoBANCoordinator, height="0.22", width="1.56", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="245,16", rects="189,8,302,24"];
+	Node2 [label=LineSegmentsMobilityBase, height="0.22", width="2.00", color=red, fillcolor=white, style=filled, URL="$a00124.html", tooltip="Base class for mobility models where movement consists of a sequence of linear movements of constant ...", pos="72,84", rects="0,76,144,92"];
+	Node3 [label=Posture, height="0.22", width="0.64", color=red, fillcolor=white, style=filled, URL="$a00178.html", tooltip="to store the specification of a posture on the MoBAN mobility model.", pos="185,84", rects="162,76,208,92"];
+	Node4 [label="MoBANCoordinator::pattern", height="0.22", width="2.08", color=red, fillcolor=white, style=filled, URL="$a00171.html", tooltip="Data type for one instance of mobility pattern.", pos="306,84", rects="231,76,382,92"];
+	Node5 [label=PostureTransition, height="0.22", width="1.33", color=black, fillcolor=white, style=filled, URL="$a00179.html", tooltip="Class to provide spatial and temporal correlation in the posture selection process of the MoBAN mobil...", pos="447,84", rects="399,76,495,92"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,90,76 98,72 128,60 176,39 219,24"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" currentPosture", pos="s,186,76 187,67 189,59 193,49 199,42 205,34 214,28 222,24", lp="242,50"];
+	Node4 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" mobilityPattern", pos="s,304,76 301,67 298,59 294,49 288,42 281,34 272,28 264,24", lp="342,50"];
+	Node5 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" transitions", pos="s,439,76 433,71 422,61 407,49 391,42 382,38 335,30 297,24", lp="451,50"];
+}

@@ -1,0 +1,15 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,569,100"];
+	Node1 [label=ConnectionManagerAccess, height="0.22", width="1.97", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="246,16", rects="175,8,318,24"];
+	Node2 [label=MiximBatteryAccess, height="0.22", width="1.56", color=red, fillcolor=white, style=filled, URL="$a00140.html", tooltip="Extends BaseModule by several methods which provide access to the battery module.", pos="56,84", rects="0,76,113,92"];
+	Node3 [label=ChannelMobilityAccessType, height="0.22", width="2.11", color=black, fillcolor=white, style=filled, URL="$a00002.html", tooltip="Finds and returns the pointer to a module of type T. Uses FindModule&lt;&gt;::findSubModule(), FindModule&lt;&gt;::findHost(). S\
+ee usage e.g. at ConnectionManagerAccess.", pos="206,84", rects="130,76,282,92"];
+	Node4 [label=simsignalwrap_t, height="0.22", width="1.25", color=black, fillcolor=white, style=filled, URL="$a00201.html", tooltip="Helper function to initialize signal change identifier on use and not on initializing static sections...", pos="345,84", rects="300,76,391,92"];
+	Node5 [label=BaseConnectionManager, height="0.22", width="1.83", color=red, fillcolor=white, style=filled, URL="$a00019.html", tooltip="Module to control the channel and handle all connection related stuff.", pos="503,84", rects="437,76,570,92"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,79,76 87,73 125,59 190,36 224,24"];
+	Node3 -> Node1 [dir=back, color=darkgreen, style=solid, pos="s,211,76 215,69 223,55 234,35 241,24"];
+	Node4 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" mobilityStateChangedSignal", pos="s,333,76 326,71 306,57 275,36 258,24", lp="384,50"];
+	Node5 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" cc", pos="s,498,76 493,69 486,60 476,48 464,42 460,40 380,31 318,24", lp="496,50"];
+}

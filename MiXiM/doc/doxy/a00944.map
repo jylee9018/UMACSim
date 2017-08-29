@@ -1,0 +1,9 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,107,100"];
+	Node1 [label=Posture, height="0.22", width="0.64", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="23,16", rects="0,8,46,24"];
+	Node2 [label=Coord, height="0.22", width="0.56", color=black, fillcolor=white, style=filled, URL="$a00065.html", tooltip="Class for storing 3D coordinates.", pos="23,84", rects="3,76,43,92"];
+	Node2 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" nodePs", pos="s,23,76 23,67 23,53 23,35 23,24", lp="47,50"];
+	Node2 -> Node2 [dir=back, color=darkorchid3, style=dashed, label=" ZERO", pos="s,43,78 53,78 58,79 61,81 61,84 61,89 53,91 43,90", lp="84,84"];
+}

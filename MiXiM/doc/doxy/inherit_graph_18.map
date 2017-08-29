@@ -1,0 +1,7 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,350,16"];
+	Node1 [label="ChannelInfo::BaseIntersectionIterator\< C, ItMatrix, ItSubMatrix \>", height="0.22", width="4.61", color=black, fillcolor=white, style=filled, URL="$a00024.html", tooltip="Iterator for every intersection of a specific interval in a AirFrameMatrix.", pos="175,8", rects="9,0,342,16"];
+}

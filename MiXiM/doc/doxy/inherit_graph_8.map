@@ -1,0 +1,7 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,174,16"];
+	Node1 [label="BaseDecider::tProcessingSignal", height="0.22", width="2.19", color=black, fillcolor=white, style=filled, URL="$a00215.html", tooltip="Pair of a AirFrame and the state it is in.", pos="87,8", rects="8,0,166,16"];
+}

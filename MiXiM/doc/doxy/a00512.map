@@ -1,0 +1,19 @@
+digraph structs {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,958,314"];
+	Node4 [label="Power consumption - Classes using/defining power consumption", height="0.22", width="4.58", color=black, fillcolor=white, style=filled, URL="$a00530.html", pos="767,298", rects="602,290,932,306"];
+	Node5 [label="IEEE 802.15.4 - Classes for the IEEE 802.15.4 implementation of MiXiM", height="0.22", width="4.97", color=black, fillcolor=white, style=filled, URL="$a00523.html", pos="767,234", rects="588,226,947,242"];
+	Node1 [label="phyLayer - physical layer modules", height="0.22", width="2.50", color=black, fillcolor=white, style=filled, URL="$a00510.html", pos="99,146", rects="9,138,190,154"];
+	Node0 [label="decider - decider modules", height="0.22", width="1.86", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="295,146", rects="228,138,362,154"];
+	Node6 [label="IEEE 802.15.4A - Classes that implement the IEEE 802.15.4A UWB PHY.", height="0.22", width="5.06", color=black, fillcolor=white, style=filled, URL="$a00524.html", pos="767,146", rects="585,138,950,154"];
+	Node3 [label="IEEE 802.11 - Classes for the IEEE 802.11 implementation of MiXiM", height="0.22", width="4.72", color=black, fillcolor=white, style=filled, URL="$a00522.html", pos="767,70", rects="597,62,938,78"];
+	Node2 [label="baseModules - base module classes of MiXiM", height="0.22", width="3.25", color=black, fillcolor=white, style=filled, URL="$a00516.html", pos="767,18", rects="650,10,885,26"];
+	Node1 -> Node0 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,190,146 199,146 209,146 219,146 228,146"];
+	Node0 -> Node2 [shape=plaintext, color=orange, dir=none, style=dashed, label=BaseDecider, pos="344,138 352,136 359,133 362,130 388,105 353,75 380,50 419,16 550,11 649,13", lp="473,61"];
+	Node0 -> Node3 [shape=plaintext, color=orange, dir=none, style=dashed, label="Decider80211\nDecider80211Battery\nDeciderResult80211", pos="361,138 361,138 362,137 362,137 377,127 366,112 380,102 415,78 509,70 596,68", lp="473,125"];
+	Node0 -> Node4 [shape=plaintext, color=orange, dir=none, style=dashed, label=Decider80211Battery, pos="346,154 353,156 359,159 362,162 395,196 346,235 380,268 397,283 504,291 602,295", lp="473,300"];
+	Node0 -> Node5 [shape=plaintext, color=orange, dir=none, style=dashed, label="Decider802154Narrow\nDeciderResult802154Narrow", pos="361,154 361,154 362,155 362,155 380,168 363,188 380,202 413,227 503,235 587,237", lp="473,250"];
+	Node0 -> Node6 [shape=plaintext, color=orange, dir=none, style=dashed, label="DeciderResultUWBIR\nDeciderUWBIRED\nDeciderUWBIREDSync\nDeciderUWBIREDSyncOnAddress", pos="362,146 420,146 506,146 584,146", lp="473,172"];
+}

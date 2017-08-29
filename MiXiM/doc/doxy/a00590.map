@@ -1,0 +1,20 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,482,136"];
+	Node1 [label=BaseMacLayer, height="0.22", width="1.17", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="234,68", rects="192,60,276,76"];
+	Node2 [label=BaseLayer, height="0.22", width="0.86", color=red, fillcolor=white, style=filled, URL="$a00025.html", tooltip="A very simple layer template.", pos="234,120", rects="203,112,265,128"];
+	Node3 [label=BMacLayer, height="0.22", width="0.94", color=black, fillcolor=white, style=filled, URL="$a00035.html", tooltip="Implementation of B-MAC (called also Berkeley MAC, Low Power Listening or LPL).", pos="34,16", rects="0,8,69,24"];
+	Node4 [label=csma, height="0.22", width="0.47", color=red, fillcolor=white, style=filled, URL="$a00067.html", tooltip="Generic CSMA Mac-Layer.", pos="103,16", rects="86,8,120,24"];
+	Node5 [label=CSMAMacLayer, height="0.22", width="1.31", color=black, fillcolor=white, style=filled, URL="$a00069.html", tooltip="MAC module which provides non-persistent CSMA.", pos="185,16", rects="138,8,233,24"];
+	Node6 [label=LMacLayer, height="0.22", width="0.94", color=black, fillcolor=white, style=filled, URL="$a00126.html", tooltip="Implementation of L-MAC (Lightweight Medium Access Protocol for Wireless Sensor Networks [van Hoesel ...", pos="284,16", rects="250,8,318,24"];
+	Node7 [label=Mac80211, height="0.22", width="0.75", color=red, fillcolor=white, style=filled, URL="$a00128.html", tooltip="An implementation of the 802.11b MAC.", pos="363,16", rects="336,8,391,24"];
+	Node8 [label=UWBIRMac, height="0.22", width="1.03", color=red, fillcolor=white, style=filled, URL="$a00223.html", tooltip="This class provides helper function for MAC modules that use the UWB-IR IEEE 802.15.4A model.", pos="445,16", rects="408,8,482,24"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,234,112 234,103 234,94 234,83 234,76"];
+	Node1 -> Node3 [dir=back, color=midnightblue, style=solid, pos="s,203,60 194,57 156,47 100,33 65,24"];
+	Node1 -> Node4 [dir=back, color=midnightblue, style=solid, pos="s,212,60 205,57 182,48 149,36 120,24"];
+	Node1 -> Node5 [dir=back, color=midnightblue, style=solid, pos="s,226,60 220,53 211,44 200,32 193,24"];
+	Node1 -> Node6 [dir=back, color=midnightblue, style=solid, pos="s,242,60 248,53 257,44 269,32 276,24"];
+	Node1 -> Node7 [dir=back, color=midnightblue, style=solid, pos="s,254,60 262,57 286,47 321,33 343,24"];
+	Node1 -> Node8 [dir=back, color=midnightblue, style=solid, pos="s,267,60 277,57 317,47 376,33 412,24"];
+}

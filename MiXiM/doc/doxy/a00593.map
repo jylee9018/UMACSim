@@ -1,0 +1,25 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,238,288"];
+	Node1 [label=BaseModule, height="0.22", width="0.97", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="44,144", rects="9,136,80,152"];
+	Node2 [label=ArpHost, height="0.22", width="0.72", color=black, fillcolor=white, style=filled, URL="$a00014.html", tooltip="A class to convert integer layer addresses.", pos="173,280", rects="147,272,199,288"];
+	Node3 [label=BaseArp, height="0.22", width="0.72", color=black, fillcolor=white, style=filled, URL="$a00017.html", tooltip="A class to convert integer layer addresses.", pos="173,246", rects="147,238,200,254"];
+	Node4 [label=BaseBattery, height="0.22", width="0.94", color=red, fillcolor=white, style=filled, URL="$a00018.html", tooltip="Base class for any power source.", pos="173,212", rects="139,204,208,220"];
+	Node5 [label=BatteryStats, height="0.22", width="0.94", color=black, fillcolor=white, style=filled, URL="$a00033.html", tooltip="collects and formates statistical data from the battery", pos="173,178", rects="139,170,208,186"];
+	Node6 [label=MiximBatteryAccess, height="0.22", width="1.56", color=red, fillcolor=white, style=filled, URL="$a00140.html", tooltip="Extends BaseModule by several methods which provide access to the battery module.", pos="173,144", rects="117,136,230,152"];
+	Node7 [label=phyPER, height="0.22", width="0.72", color=black, fillcolor=white, style=filled, URL="$a00176.html", pos="173,110", rects="147,102,199,118"];
+	Node8 [label=SimpleMacLayer, height="0.22", width="1.31", color=black, fillcolor=white, style=filled, URL="$a00196.html", tooltip="A simple Mac layer implementation which only shows how to create Signals, send them to Phy and receiv...", pos="173,76", rects="126,68,220,84"];
+	Node9 [label=SimpleNetwLayer, height="0.22", width="1.39", color=black, fillcolor=white, style=filled, URL="$a00197.html", tooltip="This is an implementation of a simple network layer which provides only some simple routing (next hop...", pos="173,42", rects="123,34,223,50"];
+	Node10 [label=TestApplication, height="0.22", width="1.19", color=black, fillcolor=white, style=filled, URL="$a00207.html", pos="173,8", rects="130,0,217,16"];
+	Node1 -> Node2 [dir=back, color=midnightblue, style=solid, pos="s,80,152 87,159 115,195 77,237 116,272 125,279 136,281 147,282"];
+	Node1 -> Node3 [dir=back, color=midnightblue, style=solid, pos="s,80,152 87,158 108,183 87,214 116,238 125,244 136,247 146,247"];
+	Node1 -> Node4 [dir=back, color=midnightblue, style=solid, pos="s,80,152 87,158 102,172 96,191 116,204 123,208 131,210 138,212"];
+	Node1 -> Node5 [dir=back, color=midnightblue, style=solid, pos="s,80,152 89,155 98,160 103,165 116,170 123,172 131,174 138,175"];
+	Node1 -> Node6 [dir=back, color=midnightblue, style=solid, pos="s,80,144 90,144 98,144 107,144 116,144"];
+	Node1 -> Node7 [dir=back, color=midnightblue, style=solid, pos="s,80,136 89,132 98,127 103,122 116,118 126,115 137,113 147,112"];
+	Node1 -> Node8 [dir=back, color=midnightblue, style=solid, pos="s,80,136 87,130 102,115 96,96 116,84 119,82 122,80 126,79"];
+	Node1 -> Node9 [dir=back, color=midnightblue, style=solid, pos="s,80,136 87,129 108,104 87,73 116,50 118,48 120,47 123,46"];
+	Node1 -> Node10 [dir=back, color=midnightblue, style=solid, pos="s,80,136 86,129 116,93 76,50 116,16 120,13 124,11 129,9"];
+}

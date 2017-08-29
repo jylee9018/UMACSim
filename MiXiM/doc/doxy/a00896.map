@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,146,84"];
+	Node1 [label=NetwControlInfo, height="0.22", width="1.33", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="73,68", rects="25,60,121,76"];
+	Node2 [label=ProbBcastNetwControlInfo, height="0.22", width="2.03", color=black, fillcolor=white, style=filled, URL="$a00181.html", tooltip="Control info IPAC networking messages.", pos="73,16", rects="0,8,146,24"];
+	Node1 -> Node2 [dir=back, color=midnightblue, style=solid, pos="s,73,60 73,51 73,42 73,31 73,24"];
+}

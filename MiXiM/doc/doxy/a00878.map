@@ -1,0 +1,14 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,234,136"];
+	Node1 [label=MobilityBase, height="0.22", width="1.03", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="120,68", rects="83,60,158,76"];
+	Node2 [label=BasicModule, height="0.22", width="1.00", color=red, fillcolor=white, style=filled, URL="$a00031.html", tooltip="Base class for all simple modules of a host that want to have access to the NotificationBoard module...", pos="79,120", rects="43,112,116,128"];
+	Node3 [label=IMobility, height="0.22", width="0.78", color=black, fillcolor=white, style=filled, URL="$a00101.html", tooltip="Abstract base class defining the public interface that must be provided by all mobility modules...", pos="161,120", rects="133,112,189,128"];
+	Node4 [label=MovingMobilityBase, height="0.22", width="1.58", color=red, fillcolor=white, style=filled, URL="$a00147.html", tooltip="Base class for moving mobility modules. Periodically emits a signal with the current mobility state...", pos="57,16", rects="0,8,114,24"];
+	Node5 [label=StationaryMobility, height="0.22", width="1.42", color=red, fillcolor=white, style=filled, URL="$a00205.html", pos="183,16", rects="132,8,234,24"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,85,112 91,105 98,95 108,84 114,76"];
+	Node3 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,155,112 149,105 142,95 132,84 126,76"];
+	Node1 -> Node4 [dir=back, color=midnightblue, style=solid, pos="s,110,60 103,54 91,44 77,32 67,24"];
+	Node1 -> Node5 [dir=back, color=midnightblue, style=solid, pos="s,130,60 137,54 149,44 163,32 173,24"];
+}

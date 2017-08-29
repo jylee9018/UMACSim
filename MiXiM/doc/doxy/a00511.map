@@ -1,0 +1,15 @@
+digraph structs {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,1094,174"];
+	Node1 [label="phyLayer - physical layer modules", height="0.22", width="2.50", color=black, fillcolor=white, style=filled, URL="$a00510.html", pos="99,82", rects="9,74,190,90"];
+	Node0 [label="analogueModels - AnalogueModel implementations", height="0.22", width="3.67", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="361,82", rects="229,74,494,90"];
+	Node3 [label="IEEE 802.15.4A - Classes that implement the IEEE 802.15.4A UWB PHY.", height="0.22", width="5.06", color=black, fillcolor=white, style=filled, URL="$a00524.html", pos="903,146", rects="721,138,1086,154"];
+	Node2 [label="mapping - classes representing mathematical mappings", height="0.22", width="3.89", color=black, fillcolor=white, style=filled, URL="$a00519.html", pos="903,82", rects="763,74,1043,90"];
+	Node4 [label="AnalogueModels example - Classes from the AnalogueModels example", height="0.22", width="5.03", color=black, fillcolor=white, style=filled, URL="$a00527.html", pos="903,18", rects="722,10,1085,26"];
+	Node1 -> Node0 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,190,82 200,82 209,82 218,82 228,82"];
+	Node0 -> Node2 [shape=plaintext, color=orange, dir=none, style=dashed, label="JakesFadingMapping\nSimplePathlossConstMapping", pos="494,82 575,82 680,82 763,82", lp="607,96"];
+	Node0 -> Node3 [shape=plaintext, color=orange, dir=none, style=dashed, label="UWBIRIEEE802154APathlossModel\nUWBIRStochasticPathlossModel", pos="492,90 493,90 493,91 494,91 506,97 501,107 512,114 594,159 628,130 720,138", lp="607,153"];
+	Node0 -> Node4 [shape=plaintext, color=orange, dir=none, style=dashed, label="RandomFreqTimeModel\nRandomFrequencyOnlyModel", pos="489,74 491,73 493,73 494,72 506,66 501,56 512,50 594,6 628,33 720,26 720,26 721,26 721,26", lp="607,64"];
+}

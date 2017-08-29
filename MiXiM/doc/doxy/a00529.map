@@ -1,0 +1,11 @@
+digraph structs {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,832,50"];
+	Node2 [label="IEEE 802.15.4 - Classes for the IEEE 802.15.4 implementation of MiXiM", height="0.22", width="4.97", color=black, fillcolor=white, style=filled, URL="$a00523.html", pos="188,42", rects="9,34,368,50"];
+	Node0 [label="IEEE 802.15.4 Narrow band example - Classes from the ieee802154Narrow example", height="0.22", width="5.81", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="614,25", rects="405,17,824,33"];
+	Node1 [label="examples - Classes for the examples of MiXiM", height="0.22", width="3.36", color=black, fillcolor=white, style=filled, URL="$a00526.html", pos="188,8", rects="67,0,309,16"];
+	Node1 -> Node0 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,309,13 319,13 347,14 376,16 404,17"];
+	Node2 -> Node0 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,368,34 377,34 386,34 395,33 404,33"];
+}

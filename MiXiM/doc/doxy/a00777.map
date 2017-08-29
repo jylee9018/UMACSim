@@ -1,0 +1,10 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,166,84"];
+	Node1 [label=InterfaceTable, height="0.22", width="1.11", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="88,16", rects="48,8,129,24"];
+	Node2 [label=IInterfaceTable, height="0.22", width="1.17", color=black, fillcolor=white, style=filled, URL="$a00100.html", pos="42,68", rects="0,60,85,76"];
+	Node3 [label=INotifiable, height="0.22", width="0.89", color=black, fillcolor=white, style=filled, URL="$a00102.html", pos="134,68", rects="102,60,166,76"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,49,60 55,53 64,44 74,32 81,24"];
+	Node3 -> Node1 [dir=back, color=darkgreen, style=solid, pos="s,127,60 121,53 112,44 102,32 95,24"];
+}

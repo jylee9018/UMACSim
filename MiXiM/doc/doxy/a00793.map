@@ -1,0 +1,11 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,216,154"];
+	Node1 [label="Interpolated\< Mapping * \>", height="0.22", width="1.97", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="71,16", rects="0,8,143,24"];
+	Node2 [label=Mapping, height="0.22", width="0.75", color=red, fillcolor=white, style=filled, URL="$a00136.html", tooltip="Represents a changeable mapping (mathematical function) from at least time to Argument::mapped_type.", pos="85,138", rects="58,130,113,146"];
+	Node3 [label=LinearIntplMapping, height="0.22", width="1.53", color=red, fillcolor=white, style=filled, URL="$a00120.html", tooltip="Helper class which represents a linear interpolation between two other mappings.", pos="161,84", rects="106,76,216,92"];
+	Node2 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" value", pos="s,78,130 73,123 67,115 60,104 57,92 50,67 61,38 67,24", lp="80,84"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" mapping", pos="s,150,76 143,71 125,57 97,35 82,24", lp="155,50"];
+	Node2 -> Node3 [dir=back, color=midnightblue, style=solid, pos="s,97,130 104,125 118,115 137,101 149,92"];
+}

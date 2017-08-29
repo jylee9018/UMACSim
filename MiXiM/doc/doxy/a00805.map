@@ -1,0 +1,13 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,948,86"];
+	Node1 [label="Linear\< _ContainerType \>", height="0.22", width="2.00", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="312,44", rects="240,36,384,52"];
+	Node2 [label="InterpolatorBase\< _ContainerType \>", height="0.22", width="2.67", color=black, fillcolor=white, style=filled, URL="$a00113.html", pos="105,44", rects="9,36,202,52"];
+	Node3 [label="Linear\< std::map\< argument_value_t, Mapping * \> \>", height="0.22", width="3.81", color=black, fillcolor=white, style=filled, URL="$a00118.html", pos="803,70", rects="666,62,940,78"];
+	Node4 [label="Linear\< std::map\< simtime_t, argument_value_t \> \>", height="0.22", width="3.75", color=black, fillcolor=white, style=filled, URL="$a00118.html", pos="803,18", rects="668,10,938,26"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,202,44 211,44 221,44 230,44 240,44"];
+	Node1 -> Node3 [dir=back, color=orange, style=dashed, label=" \< std::map\< argument_value_t, Mapping * \> \>", pos="s,384,48 394,49 468,53 578,58 666,63", lp="525,69"];
+	Node1 -> Node4 [dir=back, color=orange, style=dashed, label=" \< std::map\< simtime_t, argument_value_t \> \>", pos="s,384,36 393,32 395,31 398,29 402,28 451,17 572,15 668,16", lp="525,39"];
+}

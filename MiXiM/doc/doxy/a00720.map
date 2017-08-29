@@ -1,0 +1,14 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,470,100"];
+	Node1 [label=DeciderUWBIRED, height="0.22", width="1.47", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="217,16", rects="164,8,270,24"];
+	Node2 [label=BaseDecider, height="0.22", width="0.97", color=red, fillcolor=white, style=filled, URL="$a00020.html", tooltip="Provides some base functionality for most common deciders.", pos="35,84", rects="0,76,70,92"];
+	Node3 [label=simsignalwrap_t, height="0.22", width="1.25", color=black, fillcolor=white, style=filled, URL="$a00201.html", tooltip="Helper function to initialize signal change identifier on use and not on initializing static sections...", pos="133,84", rects="88,76,179,92"];
+	Node4 [label=UWBIRPacket, height="0.22", width="1.17", color=black, fillcolor=white, style=filled, URL="$a00225.html", tooltip="Class that keeps track of the number of packets sent.", pos="301,84", rects="259,76,344,92"];
+	Node5 [label=PhyLayerUWBIR, height="0.22", width="1.39", color=red, fillcolor=white, style=filled, URL="$a00175.html", tooltip="Physical layer that models an Ultra Wideband Impulse Radio wireless communication system...", pos="411,84", rects="361,76,462,92"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,51,76 58,72 85,59 130,39 170,26 172,25 174,25 176,24"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" catUWBIRPacketSignal", pos="s,134,76 135,67 137,59 140,49 147,42 155,34 166,28 177,24", lp="213,50"];
+	Node4 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" packet", pos="s,299,76 297,67 294,59 290,49 283,42 274,34 263,28 252,24", lp="316,50"];
+	Node5 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" uwbiface", pos="s,400,76 394,71 380,62 361,50 342,42 328,36 294,29 265,24", lp="406,50"];
+}

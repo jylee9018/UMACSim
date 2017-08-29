@@ -1,0 +1,19 @@
+digraph structs {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,1330,359"];
+	Node6 [label="Power consumption - Classes using/defining power consumption", height="0.22", width="4.58", color=black, fillcolor=white, style=filled, URL="$a00530.html", pos="1157,334", rects="992,326,1322,342"];
+	Node5 [label="phyLayer - physical layer modules", height="0.22", width="2.50", color=black, fillcolor=white, style=filled, URL="$a00510.html", pos="1157,258", rects="1067,250,1248,266"];
+	Node2 [label="analogueModels - AnalogueModel implementations", height="0.22", width="3.67", color=black, fillcolor=white, style=filled, URL="$a00511.html", pos="1157,194", rects="1025,186,1290,202"];
+	Node4 [label="decider - decider modules", height="0.22", width="1.86", color=black, fillcolor=white, style=filled, URL="$a00512.html", pos="1157,106", rects="1090,98,1224,114"];
+	Node3 [label="macLayer - MAC layer modules", height="0.22", width="2.36", color=black, fillcolor=white, style=filled, URL="$a00509.html", pos="1157,30", rects="1072,22,1243,38"];
+	Node1 [label="protocols - Classes for the different protocols implemented in MiXiM", height="0.22", width="4.89", color=black, fillcolor=white, style=filled, URL="$a00521.html", pos="185,194", rects="9,186,362,202"];
+	Node0 [label="IEEE 802.15.4A - Classes that implement the IEEE 802.15.4A UWB PHY.", height="0.22", width="5.06", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="583,194", rects="401,186,766,202"];
+	Node1 -> Node0 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,362,194 371,194 381,194 391,194 400,194"];
+	Node0 -> Node2 [shape=plaintext, color=orange, dir=none, style=dashed, label="UWBIRIEEE802154APathlossModel\nUWBIRStochasticPathlossModel", pos="766,194 850,194 947,194 1024,194", lp="879,208"];
+	Node0 -> Node3 [shape=plaintext, color=orange, dir=none, style=dashed, label="AlohaMacLayer\nUWBIRMac\nMacToUWBIRPhyControlInfo", pos="735,186 751,184 763,181 766,178 804,144 748,100 784,64 851,0 900,47 992,38 1018,36 1046,34 1071,33", lp="879,87"];
+	Node0 -> Node4 [shape=plaintext, color=orange, dir=none, style=dashed, label="DeciderResultUWBIR\nDeciderUWBIRED\nDeciderUWBIREDSync\nDeciderUWBIREDSyncOnAddress", pos="764,186 765,186 765,185 766,185 785,172 767,152 784,138 858,81 900,122 992,114 1024,112 1060,110 1090,109", lp="879,167"];
+	Node0 -> Node5 [shape=plaintext, color=orange, dir=none, style=dashed, label="MacToUWBIRPhyControlInfo\nPhyLayerUWBIR\nRadioUWBIR", pos="764,202 765,202 765,203 766,203 778,208 773,219 784,226 866,271 900,242 992,250 1016,252 1042,253 1066,254", lp="879,271"];
+	Node0 -> Node6 [shape=plaintext, color=orange, dir=none, style=dashed, label=PhyLayerUWBIR, pos="734,202 751,204 762,207 766,210 795,235 756,268 784,295 853,359 899,316 992,326", lp="879,338"];
+}

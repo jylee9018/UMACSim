@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,90,84"];
+	Node1 [label=BurstApplLayer, height="0.22", width="1.25", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="45,16", rects="0,8,91,24"];
+	Node2 [label=TestApplLayer, height="0.22", width="1.17", color=red, fillcolor=white, style=filled, URL="$a00208.html", tooltip="Test class for the application layer.", pos="45,68", rects="3,60,87,76"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,45,60 45,51 45,42 45,31 45,24"];
+}

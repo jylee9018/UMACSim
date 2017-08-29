@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,94,84"];
+	Node1 [label=SamplePhyLayer, height="0.22", width="1.31", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="47,16", rects="0,8,95,24"];
+	Node2 [label=PhyLayer, height="0.22", width="0.81", color=red, fillcolor=white, style=filled, URL="$a00173.html", tooltip="Provides initialisation for several AnalogueModels and Deciders from modules directory.", pos="47,68", rects="18,60,77,76"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,47,60 47,51 47,42 47,31 47,24"];
+}

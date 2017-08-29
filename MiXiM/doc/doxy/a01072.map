@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,88,84"];
+	Node1 [label=WiseRoute, height="0.22", width="0.89", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="44,16", rects="12,8,76,24"];
+	Node2 [label=BaseNetwLayer, height="0.22", width="1.22", color=red, fillcolor=white, style=filled, URL="$a00028.html", tooltip="Base class for the network layer.", pos="44,68", rects="0,60,89,76"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,44,60 44,51 44,42 44,31 44,24"];
+}

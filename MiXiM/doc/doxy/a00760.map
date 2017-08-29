@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,173,124"];
+	Node1 [label=IEEE802154A, height="0.22", width="1.06", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="55,16", rects="17,8,94,24"];
+	Node2 [label="IEEE802154A::config", height="0.22", width="1.53", color=black, fillcolor=white, style=filled, URL="$a00051.html", tooltip="currently unused", pos="55,108", rects="0,100,111,116"];
+	Node2 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" cfg_mandatory_16M\ncfg_mandatory_4M\ncfg", pos="s,55,100 55,92 55,72 55,40 55,24", lp="114,62"];
+}

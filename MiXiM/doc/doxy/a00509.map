@@ -1,0 +1,25 @@
+digraph structs {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,922,506"];
+	Node8 [label="IEEE 802.15.4 - Classes for the IEEE 802.15.4 implementation of MiXiM", height="0.22", width="4.97", color=black, fillcolor=white, style=filled, URL="$a00523.html", pos="731,490", rects="552,482,911,498"];
+	Node3 [label="phyLayer - physical layer modules", height="0.22", width="2.50", color=black, fillcolor=white, style=filled, URL="$a00510.html", pos="731,402", rects="641,394,822,410"];
+	Node0 [label="macLayer - MAC layer modules", height="0.22", width="2.36", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="260,236", rects="175,228,346,244"];
+	Node5 [label="netwLayer - network layer modules", height="0.22", width="2.61", color=black, fillcolor=white, style=filled, URL="$a00507.html", pos="731,338", rects="637,330,825,346"];
+	Node6 [label="IEEE 802.15.4A - Classes that implement the IEEE 802.15.4A UWB PHY.", height="0.22", width="5.06", color=black, fillcolor=white, style=filled, URL="$a00524.html", pos="731,262", rects="549,254,914,270"];
+	Node9 [label="IEEE 802.11 - Classes for the IEEE 802.11 implementation of MiXiM", height="0.22", width="4.72", color=black, fillcolor=white, style=filled, URL="$a00522.html", pos="731,210", rects="561,202,902,218"];
+	Node1 [label="nic - network interfaces", height="0.22", width="1.75", color=black, fillcolor=white, style=filled, URL="$a00508.html", pos="72,236", rects="9,228,136,244"];
+	Node4 [label="baseUtils - utilities for base MiXiM", height="0.22", width="2.53", color=black, fillcolor=white, style=filled, URL="$a00518.html", pos="731,146", rects="640,138,823,154"];
+	Node7 [label="CSMA - Classes for the CSMA implementation of MiXiM", height="0.22", width="4.17", color=black, fillcolor=white, style=filled, URL="$a00525.html", pos="731,70", rects="581,62,881,78"];
+	Node2 [label="baseModules - base module classes of MiXiM", height="0.22", width="3.25", color=black, fillcolor=white, style=filled, URL="$a00516.html", pos="731,18", rects="614,10,849,26"];
+	Node1 -> Node0 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,136,236 146,236 155,236 165,236 174,236"];
+	Node0 -> Node2 [shape=plaintext, color=orange, dir=none, style=dashed, label=BaseMacLayer, pos="325,228 336,225 344,221 346,216 363,182 338,73 364,46 398,12 519,9 613,11", lp="447,59"];
+	Node0 -> Node3 [shape=plaintext, color=orange, dir=none, style=dashed, label="MacToPhyControlInfo\nMacToPhyInterface\nPhyToMacControlInfo\nMacToUWBIRPhyControlInfo", pos="329,244 337,246 343,249 346,252 381,286 330,325 364,360 402,398 544,404 640,404", lp="447,426"];
+	Node0 -> Node4 [shape=plaintext, color=orange, dir=none, style=dashed, label="MacToNetwControlInfo\nNetwToMacControlInfo", pos="327,228 335,226 342,223 346,220 363,207 347,188 364,174 406,143 545,140 639,142", lp="447,191"];
+	Node0 -> Node5 [shape=plaintext, color=orange, dir=none, style=dashed, label="MacToNetwControlInfo\nNetwToMacControlInfo", pos="343,244 344,245 345,245 346,246 365,260 347,279 364,295 428,348 466,320 548,330 577,333 608,335 637,336", lp="447,342"];
+	Node0 -> Node6 [shape=plaintext, color=orange, dir=none, style=dashed, label="AlohaMacLayer\nUWBIRMac\nMacToUWBIRPhyControlInfo", pos="346,242 403,245 480,250 548,254", lp="447,271"];
+	Node0 -> Node7 [shape=plaintext, color=orange, dir=none, style=dashed, label="CSMA802154\ncsma\nCSMAMacLayer", pos="328,228 337,225 344,222 346,217 370,171 327,137 364,100 395,71 494,64 581,64", lp="447,123"];
+	Node0 -> Node8 [shape=plaintext, color=orange, dir=none, style=dashed, label=CSMA802154, pos="321,244 333,247 342,250 346,255 376,288 334,423 364,456 378,470 465,479 551,483", lp="447,489"];
+	Node0 -> Node9 [shape=plaintext, color=orange, dir=none, style=dashed, label=Mac80211, pos="346,228 355,227 356,223 364,221 427,208 498,204 560,203", lp="447,232"];
+}

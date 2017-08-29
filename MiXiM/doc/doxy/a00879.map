@@ -1,0 +1,13 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,283,124"];
+	Node1 [label=MobilityBase, height="0.22", width="1.03", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="118,16", rects="81,8,156,24"];
+	Node2 [label=BasicModule, height="0.22", width="1.00", color=red, fillcolor=white, style=filled, URL="$a00031.html", tooltip="Base class for all simple modules of a host that want to have access to the NotificationBoard module...", pos="36,108", rects="0,100,73,116"];
+	Node3 [label=IMobility, height="0.22", width="0.78", color=black, fillcolor=white, style=filled, URL="$a00101.html", tooltip="Abstract base class defining the public interface that must be provided by all mobility modules...", pos="118,108", rects="90,100,146,116"];
+	Node4 [label=Coord, height="0.22", width="0.56", color=black, fillcolor=white, style=filled, URL="$a00065.html", tooltip="Class for storing 3D coordinates.", pos="184,108", rects="164,100,204,116"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,43,100 48,94 65,74 97,40 111,24"];
+	Node3 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,118,100 118,92 118,72 118,40 118,24"];
+	Node4 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" constraintAreaMax\nconstraintAreaMin\nlastPosition", pos="s,178,100 174,94 160,74 136,40 124,24", lp="220,62"];
+	Node4 -> Node4 [dir=back, color=darkorchid3, style=dashed, label=" ZERO", pos="s,204,102 214,102 219,103 222,105 222,108 222,113 214,115 204,114", lp="245,108"];
+}

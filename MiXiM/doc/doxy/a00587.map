@@ -1,0 +1,21 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,402,186"];
+	Node1 [label=BaseLayer, height="0.22", width="0.86", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="189,93", rects="158,85,220,101"];
+	Node2 [label=MiximBatteryAccess, height="0.22", width="1.56", color=red, fillcolor=white, style=filled, URL="$a00140.html", tooltip="Extends BaseModule by several methods which provide access to the battery module.", pos="65,93", rects="9,85,122,101"];
+	Node3 [label=Aggregation, height="0.22", width="0.97", color=black, fillcolor=white, style=filled, URL="$a00005.html", tooltip="this class aggregates the packets received from the application layer and separates packet emissions ...", pos="325,178", rects="290,170,361,186"];
+	Node4 [label=BaseApplLayer, height="0.22", width="1.19", color=red, fillcolor=white, style=filled, URL="$a00016.html", tooltip="Base class for the application layer.", pos="325,144", rects="282,136,369,152"];
+	Node5 [label=BaseMacLayer, height="0.22", width="1.17", color=red, fillcolor=white, style=filled, URL="$a00026.html", tooltip="A very simple MAC module template which provides de- and encapsulation of messages using the standard...", pos="325,110", rects="283,102,367,118"];
+	Node6 [label=BaseNetwLayer, height="0.22", width="1.22", color=red, fillcolor=white, style=filled, URL="$a00028.html", tooltip="Base class for the network layer.", pos="325,76", rects="281,68,370,84"];
+	Node7 [label=NetworkStackTrafficGen, height="0.22", width="1.92", color=black, fillcolor=white, style=filled, URL="$a00156.html", tooltip="A module to generate traffic for the NIC, used for testing purposes.", pos="325,42", rects="256,34,394,50"];
+	Node8 [label=SensorApplLayer, height="0.22", width="1.33", color=black, fillcolor=white, style=filled, URL="$a00191.html", tooltip="Test class for the application layer.", pos="325,8", rects="277,0,373,16"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,122,93 131,93 140,93 150,93 158,93"];
+	Node1 -> Node3 [dir=back, color=midnightblue, style=solid, pos="s,220,101 227,107 244,128 231,152 256,170 266,176 278,179 289,180"];
+	Node1 -> Node4 [dir=back, color=midnightblue, style=solid, pos="s,220,101 228,106 239,115 239,127 256,136 264,140 273,142 281,143"];
+	Node1 -> Node5 [dir=back, color=midnightblue, style=solid, pos="s,220,97 228,98 237,100 247,100 256,102 265,103 274,104 283,105"];
+	Node1 -> Node6 [dir=back, color=midnightblue, style=solid, pos="s,220,89 228,88 237,86 247,86 256,84 264,83 272,82 280,81"];
+	Node1 -> Node7 [dir=back, color=midnightblue, style=solid, pos="s,220,85 228,80 239,71 239,59 256,50"];
+	Node1 -> Node8 [dir=back, color=midnightblue, style=solid, pos="s,220,85 227,79 244,58 231,34 256,16 262,12 269,9 277,8"];
+}

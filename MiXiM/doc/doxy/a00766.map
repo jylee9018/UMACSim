@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,74,84"];
+	Node1 [label=IMobility, height="0.22", width="0.78", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="37,68", rects="9,60,65,76"];
+	Node2 [label=MobilityBase, height="0.22", width="1.03", color=red, fillcolor=white, style=filled, URL="$a00145.html", tooltip="Abstract base class for mobility modules.", pos="37,16", rects="0,8,75,24"];
+	Node1 -> Node2 [dir=back, color=midnightblue, style=solid, pos="s,37,60 37,51 37,42 37,31 37,24"];
+}

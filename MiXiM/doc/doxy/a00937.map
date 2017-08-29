@@ -1,0 +1,10 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,214,100"];
+	Node1 [label=PhyLayerUWBIR, height="0.22", width="1.39", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="101,16", rects="51,8,152,24"];
+	Node2 [label=PhyLayerBattery, height="0.22", width="1.33", color=red, fillcolor=white, style=filled, URL="$a00174.html", tooltip="Extends PhyLayer by adding power consumption for tx, rx and idle.", pos="48,84", rects="0,76,96,92"];
+	Node3 [label=RadioUWBIR, height="0.22", width="1.11", color=red, fillcolor=white, style=filled, URL="$a00183.html", tooltip="This class extends the basic radio model.", pos="154,84", rects="114,76,195,92"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,54,76 59,69 70,55 86,35 95,24"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" uwbradio", pos="s,148,76 143,69 132,55 116,35 107,24", lp="164,50"];
+}

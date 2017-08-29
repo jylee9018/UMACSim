@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,122,100"];
+	Node1 [label=MacToPhyControlInfo, height="0.22", width="1.69", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="61,16", rects="0,8,123,24"];
+	Node2 [label=Signal, height="0.22", width="0.56", color=red, fillcolor=white, style=filled, URL="$a00192.html", tooltip="The signal class stores the physical representation of the signal of an AirFrame.", pos="61,84", rects="41,76,81,92"];
+	Node2 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" signal", pos="s,61,76 61,67 61,53 61,35 61,24", lp="82,50"];
+}

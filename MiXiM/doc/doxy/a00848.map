@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,166,84"];
+	Node1 [label=MacToUWBIRPhyControlInfo, height="0.22", width="2.31", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="83,16", rects="0,8,166,24"];
+	Node2 [label=MacToPhyControlInfo, height="0.22", width="1.69", color=black, fillcolor=white, style=filled, URL="$a00133.html", tooltip="Stores information which is needed by the physical layer when sending a MacPkt.", pos="83,68", rects="22,60,145,76"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,83,60 83,51 83,42 83,31 83,24"];
+}

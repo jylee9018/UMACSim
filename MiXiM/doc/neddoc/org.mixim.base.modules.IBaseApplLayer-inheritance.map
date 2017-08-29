@@ -1,0 +1,5 @@
+<area shape="rect" href="org.mixim.base.modules.IBaseApplLayer.html" title="Module Interface IBaseApplLayer" alt="IBaseApplLayer" coords="200,16,301,40">
+<area shape="rect" href="org.mixim.modules.application.BurstApplLayer.html" title="Simple Module BurstApplLayer" alt="BurstApplLayer" coords="7,88,108,112">
+<area shape="rect" href="org.mixim.modules.application.SensorApplLayer.html" title="Simple Module SensorApplLayer" alt="SensorApplLayer" coords="132,88,241,112">
+<area shape="rect" href="org.mixim.modules.application.TestApplication.html" title="Simple Module TestApplication" alt="TestApplication" coords="265,88,364,112">
+<area shape="rect" href="org.mixim.modules.application.TrafficGen.html" title="Simple Module TrafficGen" alt="TrafficGen" coords="388,88,460,112">

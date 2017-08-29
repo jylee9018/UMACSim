@@ -1,0 +1,7 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,188,44"];
+	Node1 [label=DimensionSet, height="0.22", width="1.06", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="38,22", rects="0,14,77,30"];
+	Node1 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" timeDomain\ntimeFreqDomain", pos="s,77,16 86,17 91,18 94,20 94,22 94,26 86,28 77,28", lp="141,22"];
+}

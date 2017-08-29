@@ -1,0 +1,17 @@
+digraph structs {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,750,238"];
+	Node1 [label="base - base MiXiM modules", height="0.22", width="2.06", color=black, fillcolor=white, style=filled, URL="$a00515.html", pos="82,102", rects="8,94,156,110"];
+	Node3 [label="macLayer - MAC layer modules", height="0.22", width="2.36", color=black, fillcolor=white, style=filled, URL="$a00509.html", pos="644,210", rects="559,202,730,218"];
+	Node4 [label="netwLayer - network layer modules", height="0.22", width="2.61", color=black, fillcolor=white, style=filled, URL="$a00507.html", pos="644,134", rects="550,126,738,142"];
+	Node0 [label="baseUtils - utilities for base MiXiM", height="0.22", width="2.53", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="286,102", rects="195,94,378,110"];
+	Node2 [label="utils  -  utility classes", height="0.22", width="1.44", color=black, fillcolor=white, style=filled, URL="$a00514.html", pos="644,70", rects="592,62,696,78"];
+	Node5 [label="applLayer - application layer modules", height="0.22", width="2.72", color=black, fillcolor=white, style=filled, URL="$a00506.html", pos="644,18", rects="546,10,742,26"];
+	Node1 -> Node0 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,156,102 166,102 175,102 184,102 194,102"];
+	Node0 -> Node2 [shape=plaintext, color=orange, dir=none, style=dashed, label="FindModule\nNetwControlInfo", pos="378,94 387,91 388,86 396,84 462,65 541,64 592,66", lp="462,98"];
+	Node0 -> Node3 [shape=plaintext, color=orange, dir=none, style=dashed, label="MacToNetwControlInfo\nNetwToMacControlInfo", pos="359,110 368,112 374,115 378,118 398,135 377,156 396,174 447,218 479,193 546,202 550,202 554,203 558,203", lp="462,214"];
+	Node0 -> Node4 [shape=plaintext, color=orange, dir=none, style=dashed, label="MacToNetwControlInfo\nNetwControlInfo\nNetwToMacControlInfo", pos="378,110 387,111 388,114 396,116 446,126 503,130 550,132", lp="462,150"];
+	Node0 -> Node5 [shape=plaintext, color=orange, dir=none, style=dashed, label=NetwControlInfo, pos="351,94 363,92 373,89 378,85 394,72 381,55 396,44 450,4 480,32 546,26", lp="462,52"];
+}

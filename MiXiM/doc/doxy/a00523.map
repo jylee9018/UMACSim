@@ -1,0 +1,17 @@
+digraph structs {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,1374,188"];
+	Node0 [label="IEEE 802.15.4 - Classes for the IEEE 802.15.4 implementation of MiXiM", height="0.22", width="4.97", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="580,85", rects="401,77,760,93"];
+	Node5 [label="decider - decider modules", height="0.22", width="1.86", color=black, fillcolor=white, style=filled, URL="$a00512.html", pos="1156,160", rects="1089,152,1223,168"];
+	Node3 [label="macLayer - MAC layer modules", height="0.22", width="2.36", color=black, fillcolor=white, style=filled, URL="$a00509.html", pos="1156,108", rects="1071,100,1242,116"];
+	Node1 [label="protocols - Classes for the different protocols implemented in MiXiM", height="0.22", width="4.89", color=black, fillcolor=white, style=filled, URL="$a00521.html", pos="185,85", rects="9,77,362,93"];
+	Node2 [label="IEEE 802.15.4 Narrow band example - Classes from the ieee802154Narrow example", height="0.22", width="5.81", color=black, fillcolor=white, style=filled, URL="$a00529.html", pos="1156,62", rects="947,54,1366,70"];
+	Node4 [label="CSMA - Classes for the CSMA implementation of MiXiM", height="0.22", width="4.17", color=black, fillcolor=white, style=filled, URL="$a00525.html", pos="1156,18", rects="1006,10,1306,26"];
+	Node1 -> Node0 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,362,85 371,85 381,85 391,85 400,85"];
+	Node0 -> Node2 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,760,78 769,78 826,75 889,73 946,70"];
+	Node0 -> Node3 [shape=plaintext, color=orange, dir=none, style=dashed, label=CSMA802154, pos="760,92 819,95 886,97 946,100 987,101 1032,103 1070,104", lp="853,105"];
+	Node0 -> Node4 [shape=plaintext, color=orange, dir=none, style=dashed, label=CSMA802154, pos="749,77 755,76 759,76 760,75 772,70 768,60 778,53 844,16 871,34 946,26 965,24 986,23 1006,22", lp="853,64"];
+	Node0 -> Node5 [shape=plaintext, color=orange, dir=none, style=dashed, label="Decider802154Narrow\nDeciderResult802154Narrow", pos="749,93 755,94 759,94 760,95 772,100 768,110 778,117 844,156 871,142 946,152 994,158 1047,160 1089,160", lp="853,163"];
+}

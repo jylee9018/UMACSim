@@ -1,0 +1,10 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,200,100"];
+	Node1 [label=TrafficGen, height="0.22", width="0.92", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="97,16", rects="64,8,130,24"];
+	Node2 [label=BaseApplLayer, height="0.22", width="1.19", color=red, fillcolor=white, style=filled, URL="$a00016.html", tooltip="Base class for the application layer.", pos="43,84", rects="0,76,87,92"];
+	Node3 [label=BaseWorldUtility, height="0.22", width="1.33", color=red, fillcolor=white, style=filled, URL="$a00030.html", tooltip="Provides information and utility methods for the whole simulation.", pos="152,84", rects="104,76,200,92"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,49,76 54,69 66,56 82,35 91,24"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" world", pos="s,145,76 140,69 129,55 112,35 104,24", lp="151,50"];
+}

@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,184,84"];
+	Node1 [label=DelayedMapping, height="0.22", width="1.31", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="92,16", rects="45,8,140,24"];
+	Node2 [label="BaseDelayedMapping\< Mapping \>", height="0.22", width="2.56", color=red, fillcolor=white, style=filled, URL="$a00022.html", pos="92,68", rects="0,60,184,76"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,92,60 92,51 92,42 92,31 92,24"];
+}

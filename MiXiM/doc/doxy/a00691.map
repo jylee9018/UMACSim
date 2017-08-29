@@ -1,0 +1,10 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,184,84"];
+	Node1 [label=Decider, height="0.22", width="0.64", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="85,68", rects="62,60,109,76"];
+	Node2 [label=BaseDecider, height="0.22", width="0.97", color=red, fillcolor=white, style=filled, URL="$a00020.html", tooltip="Provides some base functionality for most common deciders.", pos="35,16", rects="0,8,70,24"];
+	Node3 [label=ThresholdDecider, height="0.22", width="1.33", color=black, fillcolor=white, style=filled, URL="$a00209.html", tooltip="A simple Decider implementation which only checks for a received signal if the receiving power is abo...", pos="136,16", rects="88,8,185,24"];
+	Node1 -> Node2 [dir=back, color=midnightblue, style=solid, pos="s,77,60 71,53 62,44 50,32 43,24"];
+	Node1 -> Node3 [dir=back, color=midnightblue, style=solid, pos="s,93,60 99,53 108,44 120,32 128,24"];
+}

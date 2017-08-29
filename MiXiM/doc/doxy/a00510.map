@@ -1,0 +1,25 @@
+digraph structs {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,932,454"];
+	Node4 [label="connectionManager - channel and connection related classes", height="0.22", width="4.22", color=black, fillcolor=white, style=filled, URL="$a00517.html", pos="741,438", rects="589,430,894,446"];
+	Node8 [label="Power consumption - Classes using/defining power consumption", height="0.22", width="4.58", color=black, fillcolor=white, style=filled, URL="$a00530.html", pos="741,374", rects="576,366,906,382"];
+	Node0 [label="phyLayer - physical layer modules", height="0.22", width="2.50", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="265,250", rects="175,242,356,258"];
+	Node2 [label="analogueModels - AnalogueModel implementations", height="0.22", width="3.67", color=black, fillcolor=white, style=filled, URL="$a00511.html", pos="741,328", rects="609,320,874,336"];
+	Node3 [label="decider - decider modules", height="0.22", width="1.86", color=black, fillcolor=white, style=filled, URL="$a00512.html", pos="741,290", rects="674,282,808,298"];
+	Node6 [label="macLayer - MAC layer modules", height="0.22", width="2.36", color=black, fillcolor=white, style=filled, URL="$a00509.html", pos="741,210", rects="656,202,827,218"];
+	Node7 [label="IEEE 802.15.4A - Classes that implement the IEEE 802.15.4A UWB PHY.", height="0.22", width="5.06", color=black, fillcolor=white, style=filled, URL="$a00524.html", pos="741,134", rects="559,126,924,142"];
+	Node1 [label="nic - network interfaces", height="0.22", width="1.75", color=black, fillcolor=white, style=filled, URL="$a00508.html", pos="72,250", rects="9,242,136,258"];
+	Node9 [label="AnalogueModels example - Classes from the AnalogueModels example", height="0.22", width="5.03", color=black, fillcolor=white, style=filled, URL="$a00527.html", pos="741,82", rects="560,74,923,90"];
+	Node5 [label="baseModules - base module classes of MiXiM", height="0.22", width="3.25", color=black, fillcolor=white, style=filled, URL="$a00516.html", pos="741,18", rects="624,10,859,26"];
+	Node1 -> Node0 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,136,250 146,250 155,250 164,250 174,250"];
+	Node0 -> Node2 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,324,258 332,260 342,262 351,265 356,267 367,272 364,279 374,285 448,323 476,310 558,320 574,322 591,323 608,324"];
+	Node0 -> Node3 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,356,258 364,261 367,263 369,264 374,266 454,286 477,276 558,282 597,284 639,286 674,288"];
+	Node0 -> Node4 [shape=plaintext, color=orange, dir=none, style=dashed, label=ConnectionManagerAccess, pos="324,258 339,261 351,265 356,271 394,311 336,354 374,394 404,425 501,435 588,438", lp="457,442"];
+	Node0 -> Node5 [shape=plaintext, color=orange, dir=none, style=dashed, label="ConnectionManagerAccess\nBasePhyLayer", pos="336,242 346,239 354,235 356,230 374,193 345,74 374,44 392,27 523,21 623,19", lp="457,63"];
+	Node0 -> Node6 [shape=plaintext, color=orange, dir=none, style=dashed, label="MacToPhyControlInfo\nMacToPhyInterface\nPhyToMacControlInfo\nMacToUWBIRPhyControlInfo", pos="356,242 371,233 360,217 374,207 386,200 551,204 655,207", lp="457,236"];
+	Node0 -> Node7 [shape=plaintext, color=orange, dir=none, style=dashed, label="MacToUWBIRPhyControlInfo\nPhyLayerUWBIR\nRadioUWBIR", pos="339,242 347,240 353,237 356,234 381,211 349,183 374,160 402,136 481,128 558,127", lp="457,183"];
+	Node0 -> Node8 [shape=plaintext, color=orange, dir=none, style=dashed, label="PhyLayerBattery\nPhyLayerUWBIR", pos="323,258 338,261 351,265 356,270 372,283 359,299 374,313 438,369 475,352 558,366 564,367 570,368 576,369", lp="457,376"];
+	Node0 -> Node9 [shape=plaintext, color=orange, dir=none, style=dashed, label=SamplePhyLayer, pos="338,242 347,239 354,236 356,231 381,183 335,147 374,109 402,83 481,76 559,75", lp="457,120"];
+}

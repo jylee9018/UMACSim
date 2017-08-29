@@ -1,0 +1,17 @@
+digraph G {
+	graph [compound=true];
+	node [label="\N", fontsize=10, fontname=Helvetica];
+	edge [labelfontsize=10, labelfontname=Helvetica];
+	graph [bb="0,0,98,84"];
+	subgraph clusterdir_a8e215bf854b9c7e8f39782c0cbe2e3a {
+		graph [bgcolor="#ddddee"];
+		graph [pencolor=black];
+		graph [label=examples];
+		graph [fontname=Helvetica];
+		graph [fontsize=10];
+		graph [URL="dir_a8e215bf854b9c7e8f39782c0cbe2e3a.html"];
+		graph [lp="49,68"];
+		graph [bb="8,8,90,76"];
+		dir_3d6ed159e5768439e443c67f4f7e3d3a [label=CSMAMac, shape=box, style=filled, fillcolor="#eeeeff", pencolor=black, URL="dir_3d6ed159e5768439e443c67f4f7e3d3a.html", pos="49,34", width="0.92", height="0.50"];
+	}
+}

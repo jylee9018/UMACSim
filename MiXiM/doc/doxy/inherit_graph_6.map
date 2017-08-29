@@ -1,0 +1,7 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,206,16"];
+	Node1 [label="BaseConnectionManager::GridCoord", height="0.22", width="2.61", color=black, fillcolor=white, style=filled, URL="$a00097.html", tooltip="Represents a position inside a grid.", pos="103,8", rects="9,0,198,16"];
+}

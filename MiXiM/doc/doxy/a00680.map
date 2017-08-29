@@ -1,0 +1,7 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,104,32"];
+	Node1 [label=Coord, height="0.22", width="0.56", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="20,16", rects="0,8,40,24"];
+	Node1 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" ZERO", pos="s,40,10 50,10 55,11 58,13 58,16 58,21 50,23 40,22", lp="81,16"];
+}

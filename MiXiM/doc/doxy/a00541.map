@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,70,84"];
+	Node1 [label=Aggregation, height="0.22", width="0.97", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="35,16", rects="0,8,71,24"];
+	Node2 [label=BaseLayer, height="0.22", width="0.86", color=red, fillcolor=white, style=filled, URL="$a00025.html", tooltip="A very simple layer template.", pos="35,68", rects="4,60,66,76"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,35,60 35,51 35,42 35,31 35,24"];
+}

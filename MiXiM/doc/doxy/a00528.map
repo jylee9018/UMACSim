@@ -1,0 +1,11 @@
+digraph structs {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,660,50"];
+	Node0 [label="CSMAMac example - Classes from the CSMAMac example", height="0.22", width="4.25", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="498,25", rects="345,17,652,33"];
+	Node2 [label="CSMA - Classes for the CSMA implementation of MiXiM", height="0.22", width="4.17", color=black, fillcolor=white, style=filled, URL="$a00525.html", pos="158,42", rects="8,34,308,50"];
+	Node1 [label="examples - Classes for the examples of MiXiM", height="0.22", width="3.36", color=black, fillcolor=white, style=filled, URL="$a00526.html", pos="158,8", rects="37,0,279,16"];
+	Node1 -> Node0 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,279,14 289,14 307,15 325,16 344,17"];
+	Node2 -> Node0 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,308,34 317,33 326,33 335,33 344,32"];
+}

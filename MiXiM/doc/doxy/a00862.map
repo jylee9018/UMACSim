@@ -1,0 +1,11 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,135,154"];
+	Node1 [label=MiximBatteryAccess, height="0.22", width="1.56", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="56,16", rects="0,8,113,24"];
+	Node2 [label=BaseModule, height="0.22", width="0.97", color=red, fillcolor=white, style=filled, URL="$a00027.html", tooltip="Base class for all simple modules of a host.", pos="58,138", rects="23,130,94,146"];
+	Node3 [label=BaseBattery, height="0.22", width="0.94", color=black, fillcolor=white, style=filled, URL="$a00018.html", tooltip="Base class for any power source.", pos="95,84", rects="61,76,130,92"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,57,130 55,121 54,112 53,102 52,92 51,67 53,38 55,24"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" battery", pos="s,90,76 86,68 78,55 67,35 61,24", lp="103,50"];
+	Node2 -> Node3 [dir=back, color=midnightblue, style=solid, pos="s,64,130 69,122 76,112 84,100 89,92"];
+}

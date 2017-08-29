@@ -1,0 +1,22 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,820,210"];
+	Node1 [label=MappingIterator, height="0.22", width="1.25", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="212,105", rects="167,97,258,113"];
+	Node2 [label=ConstMappingIterator, height="0.22", width="1.64", color=black, fillcolor=white, style=filled, URL="$a00059.html", tooltip="Defines an const iterator for a ConstMapping which is able to iterate over the Mapping.", pos="68,105", rects="9,97,128,113"];
+	Node3 [label="BaseFilteredIterator\< MappingIterator \>", height="0.22", width="2.89", color=red, fillcolor=white, style=filled, URL="$a00023.html", pos="406,200", rects="302,192,510,208"];
+	Node4 [label=ConstMappingIteratorWrapper, height="0.22", width="2.28", color=black, fillcolor=white, style=filled, URL="$a00060.html", tooltip="Wraps an ConstMappingIterator into a MappingIterator interface.", pos="406,162", rects="324,154,488,170"];
+	Node5 [label=LinearIntplMappingIterator, height="0.22", width="2.03", color=black, fillcolor=white, style=filled, URL="$a00121.html", tooltip="Helper-class for the MultiDimMapping which provides an Iterator which linear interpolates between two...", pos="406,124", rects="333,116,480,132"];
+	Node6 [label="MultiDimMappingIterator\< Interpolator \>", height="0.22", width="3.06", color=black, fillcolor=white, style=filled, URL="$a00149.html", tooltip="Implementation of the MappingIterator-interface which is able to iterate over every value in a MultiD...", pos="406,88", rects="296,80,516,96"];
+	Node7 [label="MultiDimMappingIterator\< Linear \>", height="0.22", width="2.69", color=red, fillcolor=white, style=filled, URL="$a00149.html", pos="715,71", rects="618,63,812,79"];
+	Node8 [label="TimeMappingIterator\< Interpolator \>", height="0.22", width="2.72", color=black, fillcolor=white, style=filled, URL="$a00213.html", tooltip="Provides an implementation of the MappingIterator- Interface which is able to iterate over TimeMappin...", pos="406,10", rects="308,2,504,18"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,128,105 137,105 147,105 157,105 166,105"];
+	Node1 -> Node3 [dir=back, color=midnightblue, style=solid, pos="s,238,113 246,117 250,119 254,122 258,125 284,147 268,173 296,192 298,193 300,194 302,195"];
+	Node1 -> Node4 [dir=back, color=midnightblue, style=solid, pos="s,240,113 249,116 252,118 255,119 258,121 278,132 276,145 296,154 305,157 314,160 324,162"];
+	Node1 -> Node5 [dir=back, color=midnightblue, style=solid, pos="s,258,112 267,113 276,114 287,115 296,116 308,117 320,118 332,119"];
+	Node1 -> Node6 [dir=back, color=midnightblue, style=solid, pos="s,258,100 268,99 277,98 287,97 296,96"];
+	Node6 -> Node7 [dir=back, color=orange, style=dashed, label=" \< Linear \>", pos="s,516,82 525,81 556,80 589,78 618,76", lp="567,90"];
+	Node1 -> Node7 [dir=back, color=midnightblue, style=solid, pos="s,240,97 249,94 253,93 258,91 262,89 278,83 280,76 296,71 355,57 514,61 618,66"];
+	Node1 -> Node8 [dir=back, color=midnightblue, style=solid, pos="s,256,97 263,90 276,73 262,56 276,34 283,25 286,23 296,18 300,17 304,15 308,14"];
+}

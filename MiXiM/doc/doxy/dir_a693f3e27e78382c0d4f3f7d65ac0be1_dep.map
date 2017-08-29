@@ -1,0 +1,27 @@
+digraph G {
+	graph [compound=true];
+	node [label="\N", fontsize=10, fontname=Helvetica];
+	edge [labelfontsize=10, labelfontname=Helvetica];
+	graph [bb="0,0,320,100"];
+	subgraph clusterdir_5b98468eb5a3695f9b6d6d18452c8ea1 {
+		graph [bgcolor="#ddddee"];
+		graph [pencolor=black];
+		graph [label=mixim];
+		graph [fontname=Helvetica];
+		graph [fontsize=10];
+		graph [URL="dir_5b98468eb5a3695f9b6d6d18452c8ea1.html"];
+		graph [lp="160,84"];
+		graph [bb="8,8,312,92"];
+		subgraph clusterdir_a693f3e27e78382c0d4f3f7d65ac0be1 {
+			graph [bgcolor="#eeeeff"];
+			graph [label=""];
+			graph [URL="dir_a693f3e27e78382c0d4f3f7d65ac0be1.html"];
+			graph [lp=""];
+			graph [bb="16,16,304,68"];
+			dir_a693f3e27e78382c0d4f3f7d65ac0be1 [label=src, shape=plaintext, pos="269,42", width="0.75", height="0.50"];
+			dir_480ff70c9e275e7d188cc28bdbcc43a9 [label=base, shape=box, color=red, fillcolor=white, style=filled, URL="dir_480ff70c9e275e7d188cc28bdbcc43a9.html", pos="197,42", width="0.75", height="0.50"];
+			dir_2a70cffa5c504087d78c61b179738498 [label=inet_stub, shape=box, color=red, fillcolor=white, style=filled, URL="dir_2a70cffa5c504087d78c61b179738498.html", pos="124,42", width="0.78", height="0.50"];
+			dir_75bd850ab6558d0a87dc9d97ebaafd4c [label=modules, shape=box, color=red, fillcolor=white, style=filled, URL="dir_75bd850ab6558d0a87dc9d97ebaafd4c.html", pos="51,42", width="0.75", height="0.50"];
+		}
+	}
+}

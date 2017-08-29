@@ -1,0 +1,10 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,90,136"];
+	Node1 [label=UWBIRMac, height="0.22", width="1.03", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="45,68", rects="8,60,82,76"];
+	Node2 [label=BaseMacLayer, height="0.22", width="1.17", color=red, fillcolor=white, style=filled, URL="$a00026.html", tooltip="A very simple MAC module template which provides de- and encapsulation of messages using the standard...", pos="45,120", rects="3,112,87,128"];
+	Node3 [label=AlohaMacLayer, height="0.22", width="1.25", color=black, fillcolor=white, style=filled, URL="$a00008.html", tooltip="this class implements a basic Aloha MAC protocol for an UWB-IR IEEE 802.15.4A transceiver to allow te...", pos="45,16", rects="0,8,91,24"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,45,112 45,103 45,94 45,83 45,76"];
+	Node1 -> Node3 [dir=back, color=midnightblue, style=solid, pos="s,45,60 45,51 45,42 45,31 45,24"];
+}

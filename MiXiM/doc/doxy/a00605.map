@@ -1,0 +1,10 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,74,136"];
+	Node1 [label=BasicModule, height="0.22", width="1.00", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="37,68", rects="1,60,74,76"];
+	Node2 [label=INotifiable, height="0.22", width="0.89", color=black, fillcolor=white, style=filled, URL="$a00102.html", pos="37,120", rects="5,112,69,128"];
+	Node3 [label=MobilityBase, height="0.22", width="1.03", color=red, fillcolor=white, style=filled, URL="$a00145.html", tooltip="Abstract base class for mobility modules.", pos="37,16", rects="0,8,75,24"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,37,112 37,103 37,94 37,83 37,76"];
+	Node1 -> Node3 [dir=back, color=midnightblue, style=solid, pos="s,37,60 37,51 37,42 37,31 37,24"];
+}

@@ -1,0 +1,15 @@
+!SESSION 2017-08-29 05:00:18.273 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.omnetpp.main 1 0 2017-08-29 05:00:32.147
+!MESSAGE OMNeT++ IDE 4.6.0.141202-f785492 started.
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-08-29 05:02:00.155
+!MESSAGE Indexed 'MiXiM' (155 sources, 559 headers) in 27.6 sec: 62,438 declarations; 157,228 references; 0 unresolved inclusions; 0 syntax errors; 8 unresolved names (0.0036%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-08-29 05:02:00.159
+!MESSAGE Indexed 'MiXiM_UWAN' (0 sources, 0 headers) in 0.001 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)

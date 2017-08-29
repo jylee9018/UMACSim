@@ -1,0 +1,9 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,344,16"];
+	Node1 [label="ModuleAccess\< IInterfaceTable \>", height="0.22", width="2.44", color=black, fillcolor=white, style=filled, URL="$a00146.html", pos="97,8", rects="9,0,186,16"];
+	Node2 [label=InterfaceTableAccess, height="0.22", width="1.58", color=black, fillcolor=white, style=filled, URL="$a00107.html", pos="279,8", rects="222,0,336,16"];
+	Node1 -> Node2 [dir=back, color=midnightblue, style=solid, pos="s,186,8 195,8 204,8 214,8 222,8"];
+}

@@ -1,0 +1,10 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,294,100"];
+	Node1 [label=ConcatConstMappingIterator, height="0.22", width="2.14", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="146,16", rects="69,8,223,24"];
+	Node2 [label=FilteredConstMappingIterator, height="0.22", width="2.17", color=red, fillcolor=white, style=filled, URL="$a00023.html", tooltip="This iterator takes another ConstMappingIterator and does just pipe every method to the passed ConstM...", pos="78,84", rects="0,76,156,92"];
+	Node3 [label=ConstMapping, height="0.22", width="1.14", color=red, fillcolor=white, style=filled, URL="$a00058.html", tooltip="Represents a not changeable mapping (mathematical function) from domain with at least the time to a A...", pos="215,84", rects="174,76,257,92"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,86,76 92,70 106,56 127,35 138,24"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" baseMapping", pos="s,207,76 201,70 187,56 166,35 154,24", lp="228,50"];
+}

@@ -1,0 +1,13 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,238,168"];
+	Node1 [label=UWBIRMac, height="0.22", width="1.03", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="112,16", rects="75,8,149,24"];
+	Node2 [label=BaseMacLayer, height="0.22", width="1.17", color=red, fillcolor=white, style=filled, URL="$a00026.html", tooltip="A very simple MAC module template which provides de- and encapsulation of messages using the standard...", pos="112,84", rects="70,76,154,92"];
+	Node3 [label=MacToPhyInterface, height="0.22", width="1.50", color=black, fillcolor=white, style=filled, URL="$a00134.html", tooltip="Defines the methods provided by the phy to the mac layer.", pos="54,152", rects="0,144,109,160"];
+	Node4 [label=Packet, height="0.22", width="0.58", color=black, fillcolor=white, style=filled, URL="$a00168.html", tooltip="Class that keeps track of the number of packets sent.", pos="193,84", rects="172,76,214,92"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,112,76 112,67 112,53 112,35 112,24"];
+	Node3 -> Node2 [dir=back, color=darkorchid3, style=dashed, label=" phy", pos="s,61,144 66,138 78,124 96,103 105,92", lp="106,118"];
+	Node4 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" packet", pos="s,183,76 177,71 161,57 135,35 122,24", lp="185,50"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" phy", pos="s,47,144 43,138 32,122 18,96 29,76 42,50 72,33 92,24", lp="45,84"];
+}

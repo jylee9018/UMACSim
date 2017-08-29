@@ -1,0 +1,10 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,170,84"];
+	Node1 [label=INotifiable, height="0.22", width="0.89", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="83,68", rects="51,60,115,76"];
+	Node2 [label=BasicModule, height="0.22", width="1.00", color=red, fillcolor=white, style=filled, URL="$a00031.html", tooltip="Base class for all simple modules of a host that want to have access to the NotificationBoard module...", pos="36,16", rects="0,8,73,24"];
+	Node3 [label=InterfaceTable, height="0.22", width="1.11", color=black, fillcolor=white, style=filled, URL="$a00106.html", pos="130,16", rects="90,8,171,24"];
+	Node1 -> Node2 [dir=back, color=midnightblue, style=solid, pos="s,76,60 70,53 61,44 50,32 43,24"];
+	Node1 -> Node3 [dir=back, color=darkgreen, style=solid, pos="s,90,60 96,53 105,44 116,32 123,24"];
+}

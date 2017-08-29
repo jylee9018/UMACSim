@@ -1,0 +1,12 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,208,136"];
+	Node1 [label=PhyLayer, height="0.22", width="0.81", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="104,68", rects="75,60,134,76"];
+	Node2 [label=BasePhyLayer, height="0.22", width="1.14", color=red, fillcolor=white, style=filled, URL="$a00029.html", tooltip="The BasePhyLayer represents the physical layer of a nic.", pos="104,120", rects="63,112,145,128"];
+	Node3 [label=PhyLayerBattery, height="0.22", width="1.33", color=red, fillcolor=white, style=filled, URL="$a00174.html", tooltip="Extends PhyLayer by adding power consumption for tx, rx and idle.", pos="48,16", rects="0,8,96,24"];
+	Node4 [label=SamplePhyLayer, height="0.22", width="1.31", color=black, fillcolor=white, style=filled, URL="$a00190.html", tooltip="Simple PhyLayer sub class which is just responsible for creating and initialising its own AnalogueMod...", pos="161,16", rects="114,8,209,24"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,104,112 104,103 104,94 104,83 104,76"];
+	Node1 -> Node3 [dir=back, color=midnightblue, style=solid, pos="s,95,60 88,54 78,44 65,32 57,24"];
+	Node1 -> Node4 [dir=back, color=midnightblue, style=solid, pos="s,113,60 120,54 130,44 143,32 152,24"];
+}

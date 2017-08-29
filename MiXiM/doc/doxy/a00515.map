@@ -1,0 +1,13 @@
+digraph structs {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,506,84"];
+	Node2 [label="connectionManager - channel and connection related classes", height="0.22", width="4.22", color=black, fillcolor=white, style=filled, URL="$a00517.html", pos="345,76", rects="193,68,498,84"];
+	Node0 [label="base - base MiXiM modules", height="0.22", width="2.06", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="82,42", rects="8,34,156,50"];
+	Node3 [label="baseUtils - utilities for base MiXiM", height="0.22", width="2.53", color=black, fillcolor=white, style=filled, URL="$a00518.html", pos="345,42", rects="254,34,437,50"];
+	Node1 [label="baseModules - base module classes of MiXiM", height="0.22", width="3.25", color=black, fillcolor=white, style=filled, URL="$a00516.html", pos="345,8", rects="228,0,463,16"];
+	Node0 -> Node1 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,156,34 164,31 175,25 178,19 192,16 203,13 215,11 227,9"];
+	Node0 -> Node2 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,156,50 164,53 175,58 178,64 192,68"];
+	Node0 -> Node3 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,156,42 165,42 193,42 225,42 253,42"];
+}

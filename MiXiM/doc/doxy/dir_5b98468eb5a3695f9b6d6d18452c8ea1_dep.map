@@ -1,0 +1,26 @@
+digraph G {
+	graph [compound=true];
+	node [label="\N", fontsize=10, fontname=Helvetica];
+	edge [labelfontsize=10, labelfontname=Helvetica];
+	graph [bb="0,0,246,100"];
+	subgraph clusterdir_f0d742422d117846120341974051282f {
+		graph [bgcolor="#ddddee"];
+		graph [pencolor=black];
+		graph [label=extsrc];
+		graph [fontname=Helvetica];
+		graph [fontsize=10];
+		graph [URL="dir_f0d742422d117846120341974051282f.html"];
+		graph [lp="123,84"];
+		graph [bb="8,8,238,92"];
+		subgraph clusterdir_5b98468eb5a3695f9b6d6d18452c8ea1 {
+			graph [bgcolor="#eeeeff"];
+			graph [label=""];
+			graph [URL="dir_5b98468eb5a3695f9b6d6d18452c8ea1.html"];
+			graph [lp=""];
+			graph [bb="16,16,230,68"];
+			dir_5b98468eb5a3695f9b6d6d18452c8ea1 [label=mixim, shape=plaintext, pos="195,42", width="0.75", height="0.50"];
+			dir_a8e215bf854b9c7e8f39782c0cbe2e3a [label=examples, shape=box, color=red, fillcolor=white, style=filled, URL="dir_a8e215bf854b9c7e8f39782c0cbe2e3a.html", pos="123,42", width="0.75", height="0.50"];
+			dir_a693f3e27e78382c0d4f3f7d65ac0be1 [label=src, shape=box, color=red, fillcolor=white, style=filled, URL="dir_a693f3e27e78382c0d4f3f7d65ac0be1.html", pos="51,42", width="0.75", height="0.50"];
+		}
+	}
+}

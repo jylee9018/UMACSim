@@ -1,0 +1,9 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,187,100"];
+	Node1 [label="ConcatConstMapping\< Operator \>", height="0.22", width="2.53", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="91,16", rects="0,8,182,24"];
+	Node2 [label=ConstMapping, height="0.22", width="1.14", color=red, fillcolor=white, style=filled, URL="$a00058.html", tooltip="Represents a not changeable mapping (mathematical function) from domain with at least the time to a A...", pos="91,84", rects="50,76,133,92"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,91,76 91,67 91,53 91,35 91,24"];
+	Node2 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" refMapping", pos="s,93,76 94,67 95,64 95,61 96,58 96,50 96,49 96,42 95,36 94,29 93,24", lp="133,50"];
+}

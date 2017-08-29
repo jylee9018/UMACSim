@@ -1,0 +1,9 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,356,16"];
+	Node1 [label="BaseFilteredIterator\< Base \>", height="0.22", width="2.06", color=black, fillcolor=white, style=filled, URL="$a00023.html", tooltip="This iterator takes another ConstMappingIterator and does just pipe every method to the passed ConstM...", pos="83,8", rects="9,0,158,16"];
+	Node2 [label=ConcatConstMappingIterator, height="0.22", width="2.14", color=black, fillcolor=white, style=filled, URL="$a00050.html", tooltip="Deletes its ConstMapping when this iterator is deleted.", pos="271,8", rects="194,0,348,16"];
+	Node1 -> Node2 [dir=back, color=midnightblue, style=solid, pos="s,158,8 168,8 177,8 185,8 194,8"];
+}

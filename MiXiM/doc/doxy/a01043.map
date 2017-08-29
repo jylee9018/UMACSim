@@ -1,0 +1,11 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,672,72"];
+	Node1 [label="TimeMapping\< Interpolator \>", height="0.22", width="2.19", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="584,40", rects="505,32,664,48"];
+	Node2 [label=Mapping, height="0.22", width="0.75", color=red, fillcolor=white, style=filled, URL="$a00136.html", tooltip="Represents a changeable mapping (mathematical function) from at least time to Argument::mapped_type.", pos="215,62", rects="188,54,243,70"];
+	Node3 [label="InterpolateableMap\< Interpolator\< std::map\< simtime_t, argument_value_t \> \> \>", height="0.22", width="5.72", color=red, fillcolor=white, style=filled, URL="$a00110.html", pos="215,18", rects="9,10,422,26"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,243,61 251,61 293,60 362,57 422,54 449,52 478,50 504,47"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" entries", pos="s,422,23 432,24 450,25 468,26 486,28 495,28 496,29 504,31 507,31 510,32 513,32", lp="463,36"];
+}

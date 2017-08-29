@@ -1,0 +1,12 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,286,100"];
+	Node1 [label=phyPER, height="0.22", width="0.72", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="130,16", rects="104,8,156,24"];
+	Node2 [label=BaseModule, height="0.22", width="0.97", color=red, fillcolor=white, style=filled, URL="$a00027.html", tooltip="Base class for all simple modules of a host.", pos="35,84", rects="0,76,71,92"];
+	Node3 [label=UWBIRPacket, height="0.22", width="1.17", color=black, fillcolor=white, style=filled, URL="$a00225.html", tooltip="Class that keeps track of the number of packets sent.", pos="130,84", rects="88,76,173,92"];
+	Node4 [label=Packet, height="0.22", width="0.58", color=black, fillcolor=white, style=filled, URL="$a00168.html", tooltip="Class that keeps track of the number of packets sent.", pos="241,84", rects="220,76,262,92"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,46,76 53,71 72,57 102,36 119,24"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" uwbirpacket", pos="s,130,76 130,67 130,53 130,35 130,24", lp="167,50"];
+	Node4 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" packet", pos="s,237,76 233,69 227,60 219,49 209,42 207,40 178,31 156,24", lp="249,50"];
+}

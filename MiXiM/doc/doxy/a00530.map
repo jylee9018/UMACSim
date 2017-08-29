@@ -1,0 +1,17 @@
+digraph structs {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,862,278"];
+	Node0 [label="Power consumption - Classes using/defining power consumption", height="0.22", width="4.58", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="173,146", rects="8,138,338,154"];
+	Node4 [label="phyLayer - physical layer modules", height="0.22", width="2.50", color=black, fillcolor=white, style=filled, URL="$a00510.html", pos="671,250", rects="581,242,762,258"];
+	Node2 [label="decider - decider modules", height="0.22", width="1.86", color=black, fillcolor=white, style=filled, URL="$a00512.html", pos="671,198", rects="604,190,738,206"];
+	Node5 [label="IEEE 802.15.4A - Classes that implement the IEEE 802.15.4A UWB PHY.", height="0.22", width="5.06", color=black, fillcolor=white, style=filled, URL="$a00524.html", pos="671,146", rects="489,138,854,154"];
+	Node3 [label="IEEE 802.11 - Classes for the IEEE 802.11 implementation of MiXiM", height="0.22", width="4.72", color=black, fillcolor=white, style=filled, URL="$a00522.html", pos="671,94", rects="501,86,842,102"];
+	Node1 [label="baseModules - base module classes of MiXiM", height="0.22", width="3.25", color=black, fillcolor=white, style=filled, URL="$a00516.html", pos="671,18", rects="554,10,789,26"];
+	Node0 -> Node1 [shape=plaintext, label="DrawAmount\nBaseBattery\nMiximBatteryAccess", color=orange, dir=none, style=dashed, pos="296,138 318,136 334,133 338,129 363,107 333,80 356,58 399,16 429,34 488,26 509,23 531,21 553,20", lp="413,78"];
+	Node0 -> Node2 [shape=plaintext, label=Decider80211Battery, color=orange, dir=none, style=dashed, pos="334,154 336,154 337,155 338,155 347,157 348,162 356,166 412,187 429,183 488,190 526,194 569,196 604,197", lp="413,195"];
+	Node0 -> Node3 [shape=plaintext, label=Decider80211Battery, color=orange, dir=none, style=dashed, pos="329,138 333,137 336,137 338,136 347,133 348,129 356,126 413,105 429,108 488,102 492,101 496,101 500,101", lp="413,134"];
+	Node0 -> Node4 [shape=plaintext, label="PhyLayerBattery\nPhyLayerUWBIR", color=orange, dir=none, style=dashed, pos="303,154 321,156 334,159 338,162 356,174 340,192 356,207 402,247 429,232 488,242 518,246 551,249 580,250", lp="413,252"];
+	Node0 -> Node5 [shape=plaintext, label=PhyLayerUWBIR, color=orange, dir=none, style=dashed, pos="338,146 386,146 439,146 488,146", lp="413,154"];
+}

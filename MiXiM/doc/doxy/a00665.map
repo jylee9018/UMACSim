@@ -1,0 +1,9 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,191,112"];
+	Node1 [label=ConstMapping, height="0.22", width="1.14", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="41,16", rects="0,8,83,24"];
+	Node2 [label=DimensionSet, height="0.22", width="1.06", color=black, fillcolor=white, style=filled, URL="$a00086.html", tooltip="Represents a set of dimensions which is used to define over which dimensions a mapping is defined (th...", pos="41,90", rects="3,82,80,98"];
+	Node2 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" dimensions", pos="s,41,82 41,73 41,58 41,36 41,24", lp="75,50"];
+	Node2 -> Node2 [dir=back, color=darkorchid3, style=dashed, label=" timeDomain\ntimeFreqDomain", pos="s,80,84 89,85 94,86 97,88 97,90 97,94 89,96 80,96", lp="144,90"];
+}

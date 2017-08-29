@@ -1,0 +1,7 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,192,16"];
+	Node1 [label="ChannelInfo::airframe_filter_fctr", height="0.22", width="2.44", color=black, fillcolor=white, style=filled, URL="$a00007.html", tooltip="Functor which can be used as to filter for specific air frames.", pos="96,8", rects="8,0,184,16"];
+}

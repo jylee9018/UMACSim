@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,116,84"];
+	Node1 [label=JakesFadingMapping, height="0.22", width="1.58", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="58,16", rects="1,8,116,24"];
+	Node2 [label=SimpleConstMapping, height="0.22", width="1.61", color=red, fillcolor=white, style=filled, URL="$a00194.html", tooltip="Abstract subclass of ConstMapping which can be used as base for any ConstMapping implementation with ...", pos="58,68", rects="0,60,116,76"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,58,60 58,51 58,42 58,31 58,24"];
+}

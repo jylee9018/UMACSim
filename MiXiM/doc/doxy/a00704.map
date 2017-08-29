@@ -1,0 +1,10 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,175,100"];
+	Node1 [label=Decider802154Narrow, height="0.22", width="1.64", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="70,16", rects="11,8,129,24"];
+	Node2 [label=BaseDecider, height="0.22", width="0.97", color=red, fillcolor=white, style=filled, URL="$a00020.html", tooltip="Provides some base functionality for most common deciders.", pos="35,84", rects="0,76,70,92"];
+	Node3 [label=string, height="0.22", width="0.50", color=grey75, fillcolor=white, style=filled, pos="106,84", rects="88,76,125,92"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,39,76 43,68 50,55 60,35 66,24"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" modulation", pos="s,102,76 98,68 90,55 80,35 74,24", lp="127,50"];
+}

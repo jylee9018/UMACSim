@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,332,112"];
+	Node1 [label=ChannelInfo, height="0.22", width="1.00", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="166,16", rects="130,8,203,24"];
+	Node2 [label="ChannelInfo::BaseIntersectionIterator\< C, ItMatrix, ItSubMatrix \>", height="0.22", width="4.61", color=black, fillcolor=white, style=filled, URL="$a00024.html", tooltip="Iterator for every intersection of a specific interval in a AirFrameMatrix.", pos="166,96", rects="0,88,333,104"];
+	Node2 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" cConstItEnd\ncItEnd", pos="s,166,88 166,79 166,62 166,38 166,24", lp="203,56"];
+}

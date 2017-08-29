@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,310,84"];
+	Node1 [label="D:/Projects/MiXiM/extsrc/mixim/src/base/utils/winsupport.h", height="0.22", width="4.25", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="155,68", rects="2,60,309,76"];
+	Node2 [label="D:/Projects/MiXiM/extsrc/mixim/src/base/utils/winsupport.cc", height="0.22", width="4.31", color=black, fillcolor=white, style=filled, URL="$a00317.html", tooltip="Support for Win32 architectures.", pos="155,16", rects="0,8,311,24"];
+	Node1 -> Node2 [dir=back, color=midnightblue, style=solid, pos="s,155,60 155,51 155,42 155,31 155,24"];
+}

@@ -1,0 +1,10 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,250,100"];
+	Node1 [label=Ns2MotionMobility, height="0.22", width="1.50", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="137,16", rects="83,8,191,24"];
+	Node2 [label=LineSegmentsMobilityBase, height="0.22", width="2.00", color=red, fillcolor=white, style=filled, URL="$a00124.html", tooltip="Base class for mobility models where movement consists of a sequence of linear movements of constant ...", pos="72,84", rects="0,76,144,92"];
+	Node3 [label=Ns2MotionFile, height="0.22", width="1.14", color=black, fillcolor=white, style=filled, URL="$a00166.html", pos="203,84", rects="162,76,245,92"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,80,76 86,70 99,56 119,35 129,24"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" ns2File", pos="s,195,76 189,70 176,56 156,35 145,24", lp="202,50"];
+}

@@ -1,0 +1,13 @@
+digraph structs {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,448,150"];
+	Node2 [label="netwLayer - network layer modules", height="0.22", width="2.61", color=black, fillcolor=white, style=filled, URL="$a00507.html", pos="342,134", rects="248,126,436,142"];
+	Node1 [label="baseUtils - utilities for base MiXiM", height="0.22", width="2.53", color=black, fillcolor=white, style=filled, URL="$a00518.html", pos="342,70", rects="251,62,434,78"];
+	Node0 [label="utils  -  utility classes", height="0.22", width="1.44", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="60,70", rects="8,62,112,78"];
+	Node3 [label="applLayer - application layer modules", height="0.22", width="2.72", color=black, fillcolor=white, style=filled, URL="$a00506.html", pos="342,18", rects="244,10,440,26"];
+	Node0 -> Node1 [shape=plaintext, label="FindModule\nNetwControlInfo", color=orange, dir=none, style=dashed, pos="112,70 151,70 205,70 250,70", lp="178,84"];
+	Node0 -> Node2 [shape=plaintext, label=NetwControlInfo, color=orange, dir=none, style=dashed, pos="111,78 111,78 112,79 112,79 124,85 119,95 130,102 174,129 193,118 244,126 245,126 247,126 248,127", lp="178,130"];
+	Node0 -> Node3 [shape=plaintext, label=NetwControlInfo, color=orange, dir=none, style=dashed, pos="106,62 108,61 110,61 112,60 121,56 122,53 130,50 179,31 193,33 244,26", lp="178,58"];
+}

@@ -1,0 +1,9 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,244,16"];
+	Node1 [label=BaseWorldUtility, height="0.22", width="1.33", color=black, fillcolor=white, style=filled, URL="$a00030.html", tooltip="Provides information and utility methods for the whole simulation.", pos="56,8", rects="8,0,104,16"];
+	Node2 [label=WorldUtilityStats, height="0.22", width="1.33", color=black, fillcolor=white, style=filled, URL="$a00228.html", tooltip="Collects global statistics (like channel usage).", pos="188,8", rects="140,0,236,16"];
+	Node1 -> Node2 [dir=back, color=midnightblue, style=solid, pos="s,104,8 114,8 123,8 131,8 140,8"];
+}

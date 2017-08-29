@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,96,84"];
+	Node1 [label=ThresholdDecider, height="0.22", width="1.33", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="48,16", rects="0,8,97,24"];
+	Node2 [label=Decider, height="0.22", width="0.64", color=red, fillcolor=white, style=filled, URL="$a00070.html", tooltip="The basic Decider class.", pos="48,68", rects="25,60,72,76"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,48,60 48,51 48,42 48,31 48,24"];
+}

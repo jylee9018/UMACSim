@@ -1,0 +1,24 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,568,356"];
+	Node1 [label=BasePhyLayer, height="0.22", width="1.14", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="519,196", rects="478,188,560,204"];
+	Node2 [label=ConnectionManagerAccess, height="0.22", width="1.97", color=red, fillcolor=white, style=filled, URL="$a00053.html", tooltip="Basic class for all physical layers, please don&#39;t touch!!", pos="282,346", rects="211,338,354,354"];
+	Node3 [label=DeciderToPhyInterface, height="0.22", width="1.72", color=black, fillcolor=white, style=filled, URL="$a00079.html", tooltip="This class is the interface for a Decider to the BasePhyLayer.", pos="71,286", rects="9,278,134,294"];
+	Node4 [label=MacToPhyInterface, height="0.22", width="1.50", color=black, fillcolor=white, style=filled, URL="$a00134.html", tooltip="Defines the methods provided by the phy to the mac layer.", pos="282,218", rects="228,210,337,226"];
+	Node5 [label=BaseWorldUtility, height="0.22", width="1.33", color=red, fillcolor=white, style=filled, URL="$a00030.html", tooltip="Provides information and utility methods for the whole simulation.", pos="282,174", rects="234,166,330,182"];
+	Node6 [label=ConstantSimpleConstMapping, height="0.22", width="2.22", color=red, fillcolor=white, style=filled, URL="$a00055.html", tooltip="Represents a constant mathematical mapping (f(x) = c)", pos="282,122", rects="202,114,362,130"];
+	Node7 [label=ChannelInfo, height="0.22", width="1.00", color=red, fillcolor=white, style=filled, URL="$a00043.html", tooltip="This class is used by the BasePhyLayer to keep track of the AirFrames on the channel.", pos="282,70", rects="246,62,319,78"];
+	Node8 [label=Decider, height="0.22", width="0.64", color=black, fillcolor=white, style=filled, URL="$a00070.html", tooltip="The basic Decider class.", pos="282,264", rects="259,256,306,272"];
+	Node9 [label=MiximRadio, height="0.22", width="1.00", color=red, fillcolor=white, style=filled, URL="$a00141.html", tooltip="The class that represents the Radio as a state machine.", pos="282,18", rects="246,10,319,26"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,354,345 363,345 403,342 446,336 460,322 495,287 448,251 478,213 481,209 485,206 489,204"];
+	Node3 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,134,294 143,295 148,296 151,296 152,296 290,304 346,345 460,270 484,254 473,237 491,216 495,211 500,207 505,204"];
+	Node4 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,337,213 346,212 388,208 442,203 478,200"];
+	Node5 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" world", pos="s,330,172 338,172 373,172 420,174 460,181 469,182 470,184 478,187 479,187 481,188 482,188", lp="420,189"];
+	Node6 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" thermalNoise", pos="s,362,123 371,124 402,129 435,137 460,154 472,162 468,171 478,179 483,183 488,186 494,188", lp="420,162"];
+	Node7 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" channelInfo", pos="s,319,67 328,67 368,66 427,72 460,107 472,119 468,164 478,176 482,181 488,185 495,188", lp="420,115"];
+	Node8 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" decider", pos="s,306,263 315,262 330,261 347,259 362,256 408,245 419,238 460,218 469,213 470,210 478,207 480,206 483,205 485,204", lp="420,258"];
+	Node3 -> Node8 [dir=back, color=darkorchid3, style=dashed, label=" phy", pos="s,134,279 142,278 162,276 183,274 202,272 221,270 243,268 258,266", lp="168,284"];
+	Node9 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" radio", pos="s,319,13 328,12 369,10 428,15 460,51 463,54 476,173 478,175 482,181 488,185 495,188", lp="420,59"];
+}

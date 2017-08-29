@@ -1,0 +1,10 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,230,100"];
+	Node1 [label=BMacLayer, height="0.22", width="0.94", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="93,16", rects="59,8,128,24"];
+	Node2 [label=BaseMacLayer, height="0.22", width="1.17", color=red, fillcolor=white, style=filled, URL="$a00026.html", tooltip="A very simple MAC module template which provides de- and encapsulation of messages using the standard...", pos="42,84", rects="0,76,84,92"];
+	Node3 [label=DroppedPacket, height="0.22", width="1.17", color=black, fillcolor=white, style=filled, URL="$a00088.html", tooltip="May be published by MAC lyer to indicate why a packet was dropped.", pos="144,84", rects="102,76,187,92"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,48,76 53,69 64,55 79,35 87,24"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" droppedPacket", pos="s,138,76 133,69 122,55 107,35 99,24", lp="167,50"];
+}

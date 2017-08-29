@@ -1,0 +1,7 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,112,16"];
+	Node1 [label=PostureTransition, height="0.22", width="1.33", color=black, fillcolor=white, style=filled, URL="$a00179.html", tooltip="Class to provide spatial and temporal correlation in the posture selection process of the MoBAN mobil...", pos="56,8", rects="8,0,104,16"];
+}

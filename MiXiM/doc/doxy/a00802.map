@@ -1,0 +1,13 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,410,112"];
+	Node1 [label=JakesFadingMapping, height="0.22", width="1.58", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="169,16", rects="112,8,227,24"];
+	Node2 [label=SimpleConstMapping, height="0.22", width="1.61", color=red, fillcolor=white, style=filled, URL="$a00194.html", tooltip="Abstract subclass of ConstMapping which can be used as base for any ConstMapping implementation with ...", pos="58,90", rects="0,82,116,98"];
+	Node3 [label=JakesFading, height="0.22", width="0.97", color=red, fillcolor=white, style=filled, URL="$a00114.html", tooltip="Implements Rayleigh fading after Jakes&#39; model.", pos="169,90", rects="134,82,204,98"];
+	Node4 [label=DimensionSet, height="0.22", width="1.06", color=black, fillcolor=white, style=filled, URL="$a00086.html", tooltip="Represents a set of dimensions which is used to define over which dimensions a mapping is defined (th...", pos="260,90", rects="222,82,299,98"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,70,82 77,77 101,62 138,37 157,24"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" model", pos="s,169,82 169,73 169,58 169,36 169,24", lp="191,50"];
+	Node4 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" dimensions", pos="s,254,82 249,76 241,66 228,52 216,42 207,35 196,29 187,24", lp="267,50"];
+	Node4 -> Node4 [dir=back, color=darkorchid3, style=dashed, label=" timeDomain\ntimeFreqDomain", pos="s,299,84 308,85 313,86 316,88 316,90 316,94 308,96 299,96", lp="363,90"];
+}

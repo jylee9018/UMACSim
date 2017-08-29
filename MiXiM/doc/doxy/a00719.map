@@ -1,0 +1,12 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,334,136"];
+	Node1 [label=DeciderUWBIRED, height="0.22", width="1.47", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="153,68", rects="100,60,206,76"];
+	Node2 [label=BaseDecider, height="0.22", width="0.97", color=red, fillcolor=white, style=filled, URL="$a00020.html", tooltip="Provides some base functionality for most common deciders.", pos="153,120", rects="118,112,188,128"];
+	Node3 [label=DeciderUWBIREDSync, height="0.22", width="1.81", color=black, fillcolor=white, style=filled, URL="$a00081.html", tooltip="this Decider models a non-coherent energy-detection receiver that synchronizes on the first sync prea...", pos="65,16", rects="0,8,130,24"];
+	Node4 [label=DeciderUWBIREDSyncOnAddress, height="0.22", width="2.58", color=black, fillcolor=white, style=filled, URL="$a00082.html", tooltip="this Decider models a non-coherent energy-detection receiver", pos="241,16", rects="148,8,334,24"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,153,112 153,103 153,94 153,83 153,76"];
+	Node1 -> Node3 [dir=back, color=midnightblue, style=solid, pos="s,139,60 131,55 115,46 93,33 79,24"];
+	Node1 -> Node4 [dir=back, color=midnightblue, style=solid, pos="s,167,60 175,55 191,46 213,33 227,24"];
+}

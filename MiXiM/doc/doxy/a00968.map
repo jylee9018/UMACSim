@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,80,84"];
+	Node1 [label=RadioUWBIR, height="0.22", width="1.11", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="40,16", rects="0,8,81,24"];
+	Node2 [label=MiximRadio, height="0.22", width="1.00", color=black, fillcolor=white, style=filled, URL="$a00141.html", tooltip="The class that represents the Radio as a state machine.", pos="40,68", rects="4,60,77,76"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,40,60 40,51 40,42 40,31 40,24"];
+}

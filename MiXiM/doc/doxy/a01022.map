@@ -1,0 +1,10 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,180,100"];
+	Node1 [label=SimTracer, height="0.22", width="0.83", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="91,16", rects="61,8,121,24"];
+	Node2 [label=BaseWorldUtility, height="0.22", width="1.33", color=red, fillcolor=white, style=filled, URL="$a00030.html", tooltip="Provides information and utility methods for the whole simulation.", pos="48,84", rects="0,76,96,92"];
+	Node3 [label=Packet, height="0.22", width="0.58", color=black, fillcolor=white, style=filled, URL="$a00168.html", tooltip="Class that keeps track of the number of packets sent.", pos="135,84", rects="114,76,156,92"];
+	Node2 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" world", pos="s,52,76 56,68 60,60 65,50 71,42 75,36 80,29 84,24", lp="92,50"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" packet", pos="s,133,76 130,68 127,59 122,49 117,42 112,35 106,29 101,24", lp="148,50"];
+}

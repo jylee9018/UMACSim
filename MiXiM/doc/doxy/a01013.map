@@ -1,0 +1,10 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,248,100"];
+	Node1 [label=SimplePathlossConstMapping, height="0.22", width="2.17", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="124,16", rects="46,8,202,24"];
+	Node2 [label=SimpleConstMapping, height="0.22", width="1.61", color=red, fillcolor=white, style=filled, URL="$a00194.html", tooltip="Abstract subclass of ConstMapping which can be used as base for any ConstMapping implementation with ...", pos="58,84", rects="0,76,116,92"];
+	Node3 [label=SimplePathlossModel, height="0.22", width="1.58", color=red, fillcolor=white, style=filled, URL="$a00199.html", tooltip="Basic implementation of a SimplePathlossModel that uses SimplePathlossConstMapping (that is subclasse...", pos="191,84", rects="134,76,248,92"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,66,76 72,70 85,56 105,35 116,24"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" model", pos="s,183,76 177,70 163,56 143,35 132,24", lp="187,50"];
+}

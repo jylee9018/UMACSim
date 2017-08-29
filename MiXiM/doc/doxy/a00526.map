@@ -1,0 +1,13 @@
+digraph structs {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,714,84"];
+	Node2 [label="CSMAMac example - Classes from the CSMAMac example", height="0.22", width="4.25", color=black, fillcolor=white, style=filled, URL="$a00528.html", pos="496,76", rects="343,68,650,84"];
+	Node1 [label="AnalogueModels example - Classes from the AnalogueModels example", height="0.22", width="5.03", color=black, fillcolor=white, style=filled, URL="$a00527.html", pos="496,42", rects="315,34,678,50"];
+	Node3 [label="IEEE 802.15.4 Narrow band example - Classes from the ieee802154Narrow example", height="0.22", width="5.81", color=black, fillcolor=white, style=filled, URL="$a00529.html", pos="496,8", rects="287,0,706,16"];
+	Node0 [label="examples - Classes for the examples of MiXiM", height="0.22", width="3.36", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="129,42", rects="8,34,250,50"];
+	Node0 -> Node1 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,250,42 260,42 278,42 296,42 314,42"];
+	Node0 -> Node2 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,250,50 259,53 269,57 272,64 286,68 304,73 323,76 342,78"];
+	Node0 -> Node3 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,250,34 259,31 269,26 272,19 286,16"];
+}

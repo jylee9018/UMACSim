@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,194,112"];
+	Node1 [label="BaseDelayedIterator\< Base, Iterator \>", height="0.22", width="2.69", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="97,16", rects="0,8,194,24"];
+	Node2 [label=Argument, height="0.22", width="0.86", color=black, fillcolor=white, style=filled, URL="$a00013.html", tooltip="Defines an argument for a mapping.", pos="97,96", rects="66,88,128,104"];
+	Node2 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" position\nnextPosition", pos="s,97,88 97,79 97,62 97,38 97,24", lp="132,56"];
+}

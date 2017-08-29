@@ -1,0 +1,10 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,188,100"];
+	Node1 [label=BaseMacLayer, height="0.22", width="1.17", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="82,16", rects="40,8,124,24"];
+	Node2 [label=BaseLayer, height="0.22", width="0.86", color=red, fillcolor=white, style=filled, URL="$a00025.html", tooltip="A very simple layer template.", pos="31,84", rects="0,76,62,92"];
+	Node3 [label=MacToPhyInterface, height="0.22", width="1.50", color=black, fillcolor=white, style=filled, URL="$a00134.html", tooltip="Defines the methods provided by the phy to the mac layer.", pos="134,84", rects="80,76,189,92"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,37,76 42,69 53,55 68,35 76,24"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" phy", pos="s,128,76 123,69 112,55 96,35 88,24", lp="130,50"];
+}

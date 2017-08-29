@@ -1,0 +1,8 @@
+<area shape="rect" href="org.mixim.modules.node.WirelessNode.html" title="Compound Module WirelessNode" alt="WirelessNode" coords="271,88,364,112">
+<area shape="rect" href="org.mixim.base.modules.IBaseArp.html" title="Module Interface IBaseArp" alt="IBaseArp" coords="7,160,79,184">
+<area shape="rect" href="org.mixim.base.modules.IBaseNetwLayer.html" title="Module Interface IBaseNetwLayer" alt="IBaseNetwLayer" coords="103,160,207,184">
+<area shape="rect" href="inet.mobility.IMobility.html" title="Module Interface IMobility" alt="IMobility" coords="231,160,303,184">
+<area shape="rect" href="ned.IdealChannel.html" title="Channel IdealChannel" alt="IdealChannel" coords="327,160,412,184">
+<area shape="rect" href="org.mixim.modules.nic.IWirelessNicUpperCtrl.html" title="Module Interface IWirelessNicUpperCtrl" alt="IWirelessNicUpperCtrl" coords="436,160,572,184">
+<area shape="rect" href="org.mixim.base.modules.IBaseApplLayer.html" title="Module Interface IBaseApplLayer" alt="IBaseApplLayer" coords="596,160,697,184">
+<area shape="rect" href="org.mixim.examples.baseNetwork.TestBaseNetwork.html" title="Network TestBaseNetwork" alt="TestBaseNetwork" coords="261,16,373,40">

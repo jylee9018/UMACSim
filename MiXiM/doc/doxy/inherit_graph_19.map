@@ -1,0 +1,7 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,206,16"];
+	Node1 [label="ChannelInfo::c_min_start_time_fctr", height="0.22", width="2.64", color=black, fillcolor=white, style=filled, URL="$a00042.html", pos="103,8", rects="8,0,198,16"];
+}

@@ -1,0 +1,12 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,457,100"];
+	Node1 [label=BaseDecider, height="0.22", width="0.97", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="143,16", rects="108,8,178,24"];
+	Node2 [label=Decider, height="0.22", width="0.64", color=red, fillcolor=white, style=filled, URL="$a00070.html", tooltip="The basic Decider class.", pos="23,84", rects="0,76,47,92"];
+	Node3 [label="BaseDecider::tProcessingSignal", height="0.22", width="2.19", color=black, fillcolor=white, style=filled, URL="$a00215.html", tooltip="Pair of a AirFrame and the state it is in.", pos="143,84", rects="64,76,222,92"];
+	Node4 [label="BaseDecider::tCSRInfo", height="0.22", width="1.67", color=black, fillcolor=white, style=filled, URL="$a00206.html", tooltip="Data about an currently ongoing ChannelSenseRequest.", pos="300,84", rects="240,76,361,92"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,37,76 45,72 69,58 108,36 129,24"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" currentSignal", pos="s,143,76 143,67 143,53 143,35 143,24", lp="182,50"];
+	Node4 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" currentChannelSenseRequest", pos="s,287,76 280,72 266,63 245,51 226,42 209,35 190,29 175,24", lp="337,50"];
+}

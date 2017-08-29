@@ -1,0 +1,12 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,236,154"];
+	Node1 [label=LineSegmentsMobilityBase, height="0.22", width="2.00", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="72,16", rects="0,8,144,24"];
+	Node2 [label=MovingMobilityBase, height="0.22", width="1.58", color=red, fillcolor=white, style=filled, URL="$a00147.html", tooltip="Base class for moving mobility modules. Periodically emits a signal with the current mobility state...", pos="179,70", rects="122,62,236,78"];
+	Node3 [label=Coord, height="0.22", width="0.56", color=black, fillcolor=white, style=filled, URL="$a00065.html", tooltip="Class for storing 3D coordinates.", pos="74,138", rects="54,130,94,146"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,163,62 155,58 135,48 106,33 88,24"];
+	Node3 -> Node2 [dir=back, color=darkorchid3, style=dashed, label=" lastSpeed", pos="s,86,130 93,126 114,112 148,90 167,78", lp="164,104"];
+	Node3 -> Node3 [dir=back, color=darkorchid3, style=dashed, label=" ZERO", pos="s,94,132 104,132 109,133 112,135 112,138 112,143 104,145 94,144", lp="135,138"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" targetPosition", pos="s,66,130 61,124 51,112 38,95 33,78 27,56 47,35 61,24", lp="73,70"];
+}

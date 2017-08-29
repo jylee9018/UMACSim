@@ -1,0 +1,7 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,196,16"];
+	Node1 [label="mixim::math::mW2dBm\< T, true \>", height="0.22", width="2.50", color=black, fillcolor=white, style=filled, URL="$a00152.html", pos="98,8", rects="8,0,188,16"];
+}

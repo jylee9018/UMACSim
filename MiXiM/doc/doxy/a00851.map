@@ -1,0 +1,25 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,676,262"];
+	Node1 [label=Mapping, height="0.22", width="0.75", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="158,138", rects="131,130,186,146"];
+	Node2 [label=ConstMapping, height="0.22", width="1.14", color=black, fillcolor=white, style=filled, URL="$a00058.html", tooltip="Represents a not changeable mapping (mathematical function) from domain with at least the time to a A...", pos="50,138", rects="9,130,92,146"];
+	Node3 [label="BaseDelayedMapping\< Mapping \>", height="0.22", width="2.56", color=red, fillcolor=white, style=filled, URL="$a00022.html", pos="316,252", rects="224,244,408,260"];
+	Node4 [label=ConstMappingWrapper, height="0.22", width="1.75", color=black, fillcolor=white, style=filled, URL="$a00061.html", tooltip="Wraps an ConstMapping into a Mapping interface.", pos="316,214", rects="253,206,380,222"];
+	Node5 [label=LinearIntplMapping, height="0.22", width="1.53", color=black, fillcolor=white, style=filled, URL="$a00120.html", tooltip="Helper class which represents a linear interpolation between two other mappings.", pos="316,176", rects="261,168,371,184"];
+	Node6 [label="MultiDimMapping\< Interpolator \>", height="0.22", width="2.53", color=black, fillcolor=white, style=filled, URL="$a00148.html", tooltip="Implementation of the Mapping-interface which is able to represent arbitrary dimensional instances of...", pos="316,140", rects="225,132,408,148"];
+	Node7 [label="MultiDimMapping\< Linear \>", height="0.22", width="2.17", color=red, fillcolor=white, style=filled, URL="$a00148.html", pos="589,123", rects="511,115,668,131"];
+	Node8 [label="TimeMapping\< Interpolator \>", height="0.22", width="2.19", color=black, fillcolor=white, style=filled, URL="$a00212.html", tooltip="Implements the Mapping-interface with an InterpolateableMap from simtime_t to double between which va...", pos="316,57", rects="237,49,396,65"];
+	Node9 [label="TimeMapping\< Linear \>", height="0.22", width="1.83", color=black, fillcolor=white, style=filled, URL="$a00212.html", pos="589,33", rects="523,25,656,41"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,92,138 101,138 111,138 122,138 130,138"];
+	Node1 -> Node3 [dir=back, color=midnightblue, style=solid, pos="s,173,146 180,152 182,154 184,156 186,158 213,190 191,219 224,244"];
+	Node1 -> Node4 [dir=back, color=midnightblue, style=solid, pos="s,174,146 182,152 183,153 185,155 186,156 207,174 200,192 224,206 233,211 242,213 252,215"];
+	Node1 -> Node5 [dir=back, color=midnightblue, style=solid, pos="s,184,146 193,150 205,156 209,163 224,168 236,171 248,173 261,174"];
+	Node1 -> Node6 [dir=back, color=midnightblue, style=solid, pos="s,186,138 195,138 204,138 214,138 224,139"];
+	Node6 -> Node7 [dir=back, color=orange, style=dashed, label=" \< Linear \>", pos="s,408,134 417,133 448,132 481,130 510,128", lp="459,142"];
+	Node1 -> Node7 [dir=back, color=midnightblue, style=solid, pos="s,186,131 195,129 204,127 215,125 224,123 323,112 436,114 510,118"];
+	Node1 -> Node8 [dir=back, color=midnightblue, style=solid, pos="s,185,130 192,123 200,111 195,101 204,86 212,76 213,71 224,65 228,63 232,62 236,60"];
+	Node8 -> Node9 [dir=back, color=orange, style=dashed, label=" \< Linear \>", pos="s,396,50 406,49 407,49 407,49 408,49 446,46 488,42 522,39", lp="459,57"];
+	Node1 -> Node9 [dir=back, color=midnightblue, style=solid, pos="s,172,130 180,125 183,123 185,121 186,119 212,90 192,62 224,40 272,10 431,18 522,26"];
+}

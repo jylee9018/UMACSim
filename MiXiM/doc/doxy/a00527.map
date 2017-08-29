@@ -1,0 +1,13 @@
+digraph structs {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,1124,98"];
+	Node3 [label="phyLayer - physical layer modules", height="0.22", width="2.50", color=black, fillcolor=white, style=filled, URL="$a00510.html", pos="983,82", rects="893,74,1074,90"];
+	Node2 [label="analogueModels - AnalogueModel implementations", height="0.22", width="3.67", color=black, fillcolor=white, style=filled, URL="$a00511.html", pos="983,18", rects="851,10,1116,26"];
+	Node0 [label="AnalogueModels example - Classes from the AnalogueModels example", height="0.22", width="5.03", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="470,50", rects="289,42,652,58"];
+	Node1 [label="examples - Classes for the examples of MiXiM", height="0.22", width="3.36", color=black, fillcolor=white, style=filled, URL="$a00526.html", pos="129,50", rects="8,42,250,58"];
+	Node1 -> Node0 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,250,50 259,50 269,50 278,50 288,50"];
+	Node0 -> Node2 [shape=plaintext, color=orange, dir=none, style=dashed, label="RandomFreqTimeModel\nRandomFrequencyOnlyModel", pos="652,42 661,40 662,35 670,32 728,16 794,11 850,11", lp="751,49"];
+	Node0 -> Node3 [shape=plaintext, color=orange, dir=none, style=dashed, label=SamplePhyLayer, pos="652,58 661,59 662,62 670,64 744,78 829,82 892,83", lp="751,88"];
+}

@@ -1,0 +1,13 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,478,138"];
+	Node1 [label="ModuleAccess\< T \>", height="0.22", width="1.50", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="63,70", rects="9,62,118,78"];
+	Node2 [label="ModuleAccess\< NotificationBoard \>", height="0.22", width="2.64", color=red, fillcolor=white, style=filled, URL="$a00146.html", pos="374,122", rects="279,114,470,130"];
+	Node3 [label="ModuleAccess\< IInterfaceTable \>", height="0.22", width="2.44", color=red, fillcolor=white, style=filled, URL="$a00146.html", pos="374,70", rects="286,62,463,78"];
+	Node4 [label="ModuleAccess\< IMobility \>", height="0.22", width="2.06", color=red, fillcolor=white, style=filled, URL="$a00146.html", pos="374,18", rects="300,10,448,26"];
+	Node1 -> Node2 [dir=back, color=orange, style=dashed, label=" \< NotificationBoard \>", pos="s,116,78 125,82 128,85 131,87 136,90 196,112 215,106 278,114", lp="198,119"];
+	Node1 -> Node3 [dir=back, color=orange, style=dashed, label=" \< IInterfaceTable \>", pos="s,118,70 127,70 173,70 235,70 285,70", lp="198,78"];
+	Node1 -> Node4 [dir=back, color=orange, style=dashed, label=" \< IMobility \>", pos="s,112,62 121,59 127,55 129,53 136,50 189,32 252,24 300,20", lp="198,58"];
+}

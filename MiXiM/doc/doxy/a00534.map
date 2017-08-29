@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,228,84"];
+	Node1 [label="AccessModuleWrap\< T \>", height="0.22", width="1.89", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="114,68", rects="46,60,183,76"];
+	Node2 [label="ConnectionManagerAccess\< BaseMobility \>", height="0.22", width="3.17", color=red, fillcolor=white, style=filled, URL="$a00053.html", tooltip="Basic class for all physical layers, please don&#39;t touch!!", pos="114,16", rects="0,8,229,24"];
+	Node1 -> Node2 [dir=back, color=darkgreen, style=solid, pos="s,114,60 114,51 114,42 114,31 114,24"];
+}

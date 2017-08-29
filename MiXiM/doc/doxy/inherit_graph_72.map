@@ -1,0 +1,11 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,198,50"];
+	Node1 [label=NicEntry, height="0.22", width="0.78", color=black, fillcolor=white, style=filled, URL="$a00159.html", tooltip="NicEntry is used by ConnectionManager to store the necessary information for each nic...", pos="36,25", rects="8,17,64,33"];
+	Node2 [label=NicEntryDebug, height="0.22", width="1.22", color=black, fillcolor=white, style=filled, URL="$a00161.html", tooltip="NicEntry is used by ConnectionManager to store the necessary information for each nic...", pos="145,42", rects="101,34,190,50"];
+	Node3 [label=NicEntryDirect, height="0.22", width="1.19", color=black, fillcolor=white, style=filled, URL="$a00162.html", tooltip="NicEntry is used by ConnectionManager to store the necessary information for each nic...", pos="145,8", rects="102,0,188,16"];
+	Node1 -> Node2 [dir=back, color=midnightblue, style=solid, pos="s,64,29 72,30 81,32 91,33 100,35"];
+	Node1 -> Node3 [dir=back, color=midnightblue, style=solid, pos="s,64,21 72,20 81,18 92,17 102,15"];
+}

@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,181,100"];
+	Node1 [label="Interpolated\< V \>", height="0.22", width="1.36", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="79,84", rects="30,76,129,92"];
+	Node2 [label="Interpolated\< mapped_type \>", height="0.22", width="2.19", color=black, fillcolor=white, style=filled, URL="$a00111.html", pos="79,16", rects="0,8,158,24"];
+	Node1 -> Node2 [dir=back, color=orange, style=dashed, label=" \< mapped_type \>", pos="s,79,76 79,67 79,53 79,35 79,24", lp="130,50"];
+}

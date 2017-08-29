@@ -1,0 +1,14 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,368,100"];
+	Node1 [label=SimpleBattery, height="0.22", width="1.11", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="174,16", rects="134,8,214,24"];
+	Node2 [label=BaseBattery, height="0.22", width="0.94", color=red, fillcolor=white, style=filled, URL="$a00018.html", tooltip="Base class for any power source.", pos="34,84", rects="0,76,69,92"];
+	Node3 [label=BatteryState, height="0.22", width="0.97", color=black, fillcolor=white, style=filled, URL="$a00032.html", tooltip="residual capacity of battery", pos="121,84", rects="86,76,156,92"];
+	Node4 [label=HostState, height="0.22", width="0.78", color=black, fillcolor=white, style=filled, URL="$a00098.html", tooltip="HostState is published by the battery to announce host failure.", pos="228,84", rects="200,76,256,92"];
+	Node5 [label=DeviceEntry, height="0.22", width="1.00", color=black, fillcolor=white, style=filled, URL="$a00084.html", tooltip="per-device/per-account record of battery consumption, is passed to BatteryStats on finish()...", pos="320,84", rects="284,76,356,92"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,48,76 55,72 79,59 118,38 153,24"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" batteryState", pos="s,122,76 124,67 126,59 129,49 135,42 140,34 149,28 156,24", lp="171,50"];
+	Node4 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" hostState", pos="s,226,76 223,67 220,59 216,49 210,42 204,35 196,29 189,24", lp="246,50"];
+	Node5 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" devices", pos="s,314,76 309,70 301,60 290,49 278,42 272,39 238,30 210,24", lp="322,50"];
+}

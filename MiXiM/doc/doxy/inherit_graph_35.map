@@ -1,0 +1,7 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,102,16"];
+	Node1 [label=DroppedPacket, height="0.22", width="1.17", color=black, fillcolor=white, style=filled, URL="$a00088.html", tooltip="May be published by MAC lyer to indicate why a packet was dropped.", pos="51,8", rects="9,0,94,16"];
+}

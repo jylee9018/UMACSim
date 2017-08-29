@@ -1,0 +1,11 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,310,112"];
+	Node1 [label=BaseConnectionManager, height="0.22", width="1.83", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="153,16", rects="87,8,220,24"];
+	Node2 [label=Coord, height="0.22", width="0.56", color=black, fillcolor=white, style=filled, URL="$a00065.html", tooltip="Class for storing 3D coordinates.", pos="20,96", rects="0,88,40,104"];
+	Node3 [label="BaseConnectionManager::GridCoord", height="0.22", width="2.61", color=black, fillcolor=white, style=filled, URL="$a00097.html", tooltip="Represents a position inside a grid.", pos="216,96", rects="122,88,311,104"];
+	Node2 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" playgroundSize\nfindDistance", pos="s,27,88 32,83 44,70 63,53 82,42 94,34 109,28 122,24", lp="126,56"];
+	Node2 -> Node2 [dir=back, color=darkorchid3, style=dashed, label=" ZERO", pos="s,40,90 49,90 55,91 58,93 58,96 58,101 50,103 40,102", lp="81,96"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" gridDim", pos="s,209,88 204,81 191,64 171,38 160,24", lp="222,56"];
+}

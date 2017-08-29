@@ -1,0 +1,11 @@
+digraph structs {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,362,50"];
+	Node2 [label="phyLayer - physical layer modules", height="0.22", width="2.50", color=black, fillcolor=white, style=filled, URL="$a00510.html", pos="263,42", rects="173,34,354,50"];
+	Node1 [label="macLayer - MAC layer modules", height="0.22", width="2.36", color=black, fillcolor=white, style=filled, URL="$a00509.html", pos="263,8", rects="178,0,349,16"];
+	Node0 [label="nic - network interfaces", height="0.22", width="1.75", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="72,25", rects="9,17,136,33"];
+	Node0 -> Node1 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,136,19 145,18 154,18 163,17 172,16 174,16 176,16 177,15"];
+	Node0 -> Node2 [shape=plaintext, color=midnightblue, dir=back, style=solid, pos="s,136,31 146,32 155,33 163,33 172,34"];
+}

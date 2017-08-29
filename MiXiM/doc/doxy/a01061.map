@@ -1,0 +1,19 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,566,292"];
+	Node1 [label=UWBIRIEEE802154APathlossModel, height="0.22", width="2.64", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="463,160", rects="368,152,558,168"];
+	Node2 [label=AnalogueModel, height="0.22", width="1.22", color=black, fillcolor=white, style=filled, URL="$a00009.html", tooltip="Interface for the analogue models of the physical layer.", pos="130,282", rects="86,274,175,290"];
+	Node3 [label=ConstMapping, height="0.22", width="1.14", color=red, fillcolor=white, style=filled, URL="$a00058.html", tooltip="Represents a not changeable mapping (mathematical function) from domain with at least the time to a A...", pos="130,238", rects="89,230,172,246"];
+	Node4 [label="TimeMapping\< Linear \>", height="0.22", width="1.83", color=red, fillcolor=white, style=filled, URL="$a00212.html", pos="130,186", rects="64,178,197,194"];
+	Node5 [label=MappingIterator, height="0.22", width="1.25", color=red, fillcolor=white, style=filled, URL="$a00137.html", tooltip="Defines an iterator for a Mapping which is able to iterate over the Mapping.", pos="130,134", rects="85,126,176,142"];
+	Node6 [label=Argument, height="0.22", width="0.86", color=black, fillcolor=white, style=filled, URL="$a00013.html", tooltip="Defines an argument for a mapping.", pos="130,82", rects="99,74,161,90"];
+	Node7 [label="UWBIRIEEE802154APathlossModel::CMconfig", height="0.22", width="3.39", color=black, fillcolor=white, style=filled, URL="$a00047.html", pos="130,18", rects="8,10,252,26"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,175,281 183,281 205,280 230,278 252,274 297,266 319,277 350,245 372,223 347,200 368,180 373,175 386,171 400,168"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" txPower", pos="s,172,238 181,238 203,236 229,234 252,230 298,220 312,220 350,195 360,188 358,181 368,176 373,173 383,170 395,168", lp="310,233"];
+	Node4 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" newTxPower", pos="s,197,182 206,181 221,180 237,179 252,178 304,174 317,172 368,168", lp="310,183"];
+	Node5 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" pulsesIter", pos="s,176,135 185,135 229,136 294,140 350,148 359,149 360,150 368,152", lp="310,156"];
+	Node6 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" arg", pos="s,161,82 170,82 194,82 225,85 252,90 297,97 313,93 350,119 361,126 357,136 368,143 374,147 386,150 399,152", lp="310,127"];
+	Node7 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" CMconfigs\ncfg", pos="s,252,26 261,27 300,33 322,26 350,58 363,71 355,126 368,140 373,145 386,149 400,152", lp="310,72"];
+}

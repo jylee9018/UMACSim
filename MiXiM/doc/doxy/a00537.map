@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,162,84"];
+	Node1 [label=AdaptiveProbabilisticBroadcast, height="0.22", width="2.25", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="81,16", rects="0,8,163,24"];
+	Node2 [label=ProbabilisticBroadcast, height="0.22", width="1.64", color=red, fillcolor=white, style=filled, URL="$a00180.html", tooltip="This class offers a data dissemination service using probabilistic broadcast. Each packet which arriv...", pos="81,68", rects="22,60,140,76"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,81,60 81,51 81,42 81,31 81,24"];
+}

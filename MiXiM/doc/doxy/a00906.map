@@ -1,0 +1,11 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,264,100"];
+	Node1 [label=NicEntry, height="0.22", width="0.78", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="149,16", rects="121,8,177,24"];
+	Node2 [label=Coord, height="0.22", width="0.56", color=black, fillcolor=white, style=filled, URL="$a00065.html", tooltip="Class for storing 3D coordinates.", pos="20,84", rects="0,76,40,92"];
+	Node3 [label=ConnectionManagerAccess, height="0.22", width="1.97", color=red, fillcolor=white, style=filled, URL="$a00053.html", tooltip="Basic class for all physical layers, please don&#39;t touch!!", pos="193,84", rects="122,76,265,92"];
+	Node2 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" pos", pos="s,35,76 42,72 69,58 111,36 134,24", lp="113,50"];
+	Node2 -> Node2 [dir=back, color=darkorchid3, style=dashed, label=" ZERO", pos="s,40,78 49,78 55,79 58,81 58,84 58,89 50,91 40,90", lp="81,84"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" chAccess", pos="s,188,76 183,69 174,55 162,35 154,24", lp="204,50"];
+}

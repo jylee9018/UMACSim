@@ -1,0 +1,16 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,490,204"];
+	Node1 [label=InterfaceEntry, height="0.22", width="1.14", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="344,96", rects="303,88,386,104"];
+	Node2 [label=MACAddress, height="0.22", width="1.08", color=black, fillcolor=white, style=filled, URL="$a00130.html", pos="39,176", rects="0,168,78,184"];
+	Node3 [label=IInterfaceTable, height="0.22", width="1.17", color=black, fillcolor=white, style=filled, URL="$a00100.html", pos="344,176", rects="302,168,387,184"];
+	Node4 [label=InterfaceProtocolData, height="0.22", width="1.64", color=black, fillcolor=white, style=filled, URL="$a00105.html", pos="344,16", rects="285,8,403,24"];
+	Node5 [label=InterfaceToken, height="0.22", width="1.19", color=black, fillcolor=white, style=filled, URL="$a00108.html", pos="447,176", rects="404,168,490,184"];
+	Node2 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" macAddr", pos="s,52,168 60,164 66,161 72,158 78,156 100,148 237,118 305,104", lp="244,130"];
+	Node2 -> Node2 [dir=back, color=darkorchid3, style=dashed, label=" UNSPECIFIED_ADDRESS\nBROADCAST_ADDRESS\nMULTICAST_PAUSE_ADDRESS", pos="s,78,170 88,171 93,172 96,173 96,176 96,180 88,182 78,182", lp="190,176"];
+	Node3 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" ownerp", pos="s,344,168 344,159 344,142 344,118 344,104", lp="369,130"];
+	Node4 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" protocol3data\nprotocol4data", pos="s,349,24 353,33 355,36 356,39 356,42 358,54 358,57 356,70 354,76 351,83 349,88", lp="396,56"];
+	Node1 -> Node4 [dir=back, color=darkorchid3, style=dashed, label=" ownerp", pos="s,319,88 311,84 306,80 301,75 298,70 291,59 291,52 298,42 302,34 310,28 318,24", lp="323,56"];
+	Node5 -> Node1 [dir=back, color=darkorchid3, style=dashed, label=" token", pos="s,441,168 437,162 428,150 413,133 399,122 389,114 377,108 367,104", lp="437,130"];
+}

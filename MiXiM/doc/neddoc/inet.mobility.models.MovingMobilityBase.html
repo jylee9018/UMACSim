@@ -1,0 +1,398 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Simple Module <i>MovingMobilityBase</i></h2>
+<b>Package:</b> inet.mobility.models<br/><b>File: <a href="src-inet_stub-mobility-models-MovingMobilityBase.ned.html">src/inet_stub/mobility/models/MovingMobilityBase.ned</a></b><br/><p><a href="../doxy/a00145.html" target="mainframe"><b>C++ definition</b></a></p>
+
+<p>Abstract base module for mobility models.</p>
+<p><b>Author:</b> Andras Varga</p>
+<img src="inet.mobility.models.MovingMobilityBase-type.png" ismap="yes" usemap="#type-diagram"/><map name="type-diagram">
+<area shape="rect" href="inet.mobility.models.MovingMobilityBase.html" title="MovingMobilityBase" alt="MovingMobilityBase" coords="0,30,155,70">
+</map>
+<h3 class="subtitle">Usage diagram:</h3>
+<p>The following diagram shows usage relationships between types.
+Unresolved types are missing from the diagram. Click <a href="full-ned-usage-diagram.html">here</a> to see the full picture.</p>
+<img src="inet.mobility.models.MovingMobilityBase-usage.png" ismap="yes" usemap="#usage-diagram"/><map name="usage-diagram"><area shape="rect" href="inet.mobility.models.MovingMobilityBase.html" title="Simple Module MovingMobilityBase" alt="MovingMobilityBase" coords="7,16,132,40">
+</map>
+<h3 class="subtitle">Inheritance diagram:</h3>
+<p>The following diagram shows inheritance relationships for this type.
+Unresolved types are missing from the diagram. Click <a href="full-ned-inheritance-diagram.html">here</a> to see the full picture.</p>
+<img src="inet.mobility.models.MovingMobilityBase-inheritance.png" ismap="yes" usemap="#inheritance-diagram"/><map name="inheritance-diagram"><area shape="rect" href="inet.mobility.models.MovingMobilityBase.html" title="Simple Module MovingMobilityBase" alt="MovingMobilityBase" coords="913,88,1039,112">
+<area shape="rect" href="inet.mobility.models.ANSimMobility.html" title="Simple Module ANSimMobility" alt="ANSimMobility" coords="7,160,105,184">
+<area shape="rect" href="inet.mobility.models.BonnMotionMobility.html" title="Simple Module BonnMotionMobility" alt="BonnMotionMobility" coords="129,160,255,184">
+<area shape="rect" href="inet.mobility.models.ChiangMobility.html" title="Simple Module ChiangMobility" alt="ChiangMobility" coords="279,160,375,184">
+<area shape="rect" href="inet.mobility.models.CircleMobility.html" title="Simple Module CircleMobility" alt="CircleMobility" coords="399,160,487,184">
+<area shape="rect" href="inet.mobility.models.ConstSpeedMobility.html" title="Simple Module ConstSpeedMobility" alt="ConstSpeedMobility" coords="511,160,636,184">
+<area shape="rect" href="inet.mobility.models.GaussMarkovMobility.html" title="Simple Module GaussMarkovMobility" alt="GaussMarkovMobility" coords="660,160,793,184">
+<area shape="rect" href="inet.mobility.models.LinearMobility.html" title="Simple Module LinearMobility" alt="LinearMobility" coords="817,160,908,184">
+<area shape="rect" href="inet.mobility.models.MassMobility.html" title="Simple Module MassMobility" alt="MassMobility" coords="932,160,1020,184">
+<area shape="rect" href="inet.mobility.models.MoBANCoordinator.html" title="Simple Module MoBANCoordinator" alt="MoBANCoordinator" coords="1044,160,1167,184">
+<area shape="rect" href="inet.mobility.models.MoBANLocal.html" title="Simple Module MoBANLocal" alt="MoBANLocal" coords="1191,160,1276,184">
+<area shape="rect" href="inet.mobility.models.Ns2MotionMobility.html" title="Simple Module Ns2MotionMobility" alt="Ns2MotionMobility" coords="1300,160,1417,184">
+<area shape="rect" href="inet.mobility.models.RandomWPMobility.html" title="Simple Module RandomWPMobility" alt="RandomWPMobility" coords="1441,160,1567,184">
+<area shape="rect" href="inet.mobility.models.RectangleMobility.html" title="Simple Module RectangleMobility" alt="RectangleMobility" coords="1591,160,1703,184">
+<area shape="rect" href="inet.mobility.models.TractorMobility.html" title="Simple Module TractorMobility" alt="TractorMobility" coords="1727,160,1823,184">
+<area shape="rect" href="inet.mobility.models.TurtleMobility.html" title="Simple Module TurtleMobility" alt="TurtleMobility" coords="1847,160,1935,184">
+<area shape="rect" href="inet.mobility.models.MobilityBase.html" title="Simple Module MobilityBase" alt="MobilityBase" coords="933,16,1019,40">
+</map>
+<h3 class="subtitle">Extends:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="inet.mobility.models.MobilityBase.html">MobilityBase</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>Abstract base module for mobility models.</p>
+
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Known subclasses:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="inet.mobility.models.ANSimMobility.html">ANSimMobility</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>Uses the &lt;position_change&gt; elements of the ANSim tool's
+trace file.</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="inet.mobility.models.BonnMotionMobility.html">BonnMotionMobility</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>Uses the native file format of BonnMotion (http://www.cs.uni-bonn.de/IV/BonnMotion/).</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="inet.mobility.models.ChiangMobility.html">ChiangMobility</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>Uses a probabilistic transition matrix to change the state of motion.
+In this model, the state of the mobile node in each direction (x and y) can be:</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="inet.mobility.models.CircleMobility.html">CircleMobility</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>Moves the node around a circle.</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="inet.mobility.models.ConstSpeedMobility.html">ConstSpeedMobility</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>Controls all movement related things of a host</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="inet.mobility.models.GaussMarkovMobility.html">GaussMarkovMobility</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>Uses a Gauss-Markov model to control the randomness in the movement.
+Totally random walk (Brownian motion) is obtained by setting alpha=0,
+while alpha=1 results a linear motion.</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="inet.mobility.models.LinearMobility.html">LinearMobility</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>This is a linear mobility model with speed, angle and acceleration parameters.
+Angle only changes when the mobile node hits a wall: then it reflects
+off the wall at the same angle.</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="inet.mobility.models.MassMobility.html">MassMobility</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>This is a random mobility model for a mobile host with a mass. It is the
+one used in "Optimized Smooth Handoffs in Mobile IP" by Perkins &amp;Wang.</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="inet.mobility.models.MoBANCoordinator.html">MoBANCoordinator</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>This is the coordinator module of the MoBAN mobility model. It should be instantiated in the top level simulation network in MiXiM, once per WBAN.
+The coordinator module is the main module that provides the group mobility and correlation between nodes in a WBAN.
+In the initialization phase, it reads three user defined input files which are the postures specification file, a configuration file which includes all
+required parameter for specific distributions, and the previously logged mobility pattern, if it is requested to use a logged pattern.
+Note that all WBAN instances may use the same input files if they are exactly in the same situation.</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="inet.mobility.models.MoBANLocal.html">MoBANLocal</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>This is the local mobility module of MoBAN. It should be instantiated in each node that belongs to a WBAN. The NED parameter "coordinatorIndex"
+determine to which WBAN (<a href="inet.mobility.models.MoBANCoordinator.html">MoBANCoordinator</a>) it belongs.
+The current implementation uses the Random Walk Mobility Model (RWMM) for individual (local) movement with a sphere around the node, with given speed
+and sphere radius of the current posture. The reference point of the node it the current posture, the sphere radius, and the speed is given by the
+corresponding coordinator. RWMM determines the location of node at ant time relative to the given reference point.</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="inet.mobility.models.Ns2MotionMobility.html">Ns2MotionMobility</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>TODO: why does this comment refer to BonnMotion instead of NS2?</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="inet.mobility.models.RandomWPMobility.html">RandomWPMobility</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>Random Waypoint mobility model.</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="inet.mobility.models.RectangleMobility.html">RectangleMobility</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>Moves the node around a rectangle.</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="inet.mobility.models.TractorMobility.html">TractorMobility</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>Moves a tractor through a field with a certain amount of rows.
+Since the tractor also moves around the field, the tractor travels
+the number of rows PLUS one rows. Consider the following piece of
+ascii-art for rows=2.</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="inet.mobility.models.TurtleMobility.html">TurtleMobility</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>A LOGO-style movement model, with the script coming from XML. It can be
+useful for describing random as well as deterministic scenarios.</p>
+
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Parameters:</h3>
+<table class="paramstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="inherited">
+   <td>debug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr class="inherited">
+   <td>constraintAreaMinX</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>-1m/0</td>
+   <td>
+<p>min x position of the constraint area, unconstrained by default (negative infinity)</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>constraintAreaMinY</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>-1m/0</td>
+   <td>
+<p>min y position of the constraint area, unconstrained by default (negative infinity)</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>constraintAreaMinZ</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>-1m/0</td>
+   <td>
+<p>min z position of the constraint area, unconstrained by default (negative infinity)</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>constraintAreaMaxX</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>1m/0</td>
+   <td>
+<p>max x position of the constraint area, unconstrained by default (positive infinity)</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>constraintAreaMaxY</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>1m/0</td>
+   <td>
+<p>max y position of the constraint area, unconstrained by default (positive infinity)</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>constraintAreaMaxZ</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>1m/0</td>
+   <td>
+<p>max z position of the constraint area, unconstrained by default (positive infinity)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>updateInterval</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.1s</td>
+   <td>
+<p>the simulation time interval used to regularly signal mobility state changes and update the display</p>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Properties:</h3>
+<table class="propertiestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>display</td>
+   <td><i>i=block/cogwheel</i></td>
+   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #808080; font-style: italic; ">//
+// Abstract base module for mobility models.
+//
+// </span><span style="color: #000080; ">@author</span><span style="color: #808080; font-style: italic; "> Andras Varga
+//
+</span><span style="color: #800000; font-weight: bold; ">simple</span><span style="color: #000000; "> </span><span style="color: #000000; ">MovingMobilityBase</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">extends</span><span style="color: #000000; "> </span><span style="color: #000000; ">MobilityBase</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">updateInterval</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">s</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">.</span><span style="color: #008000; ">1</span><span style="color: #000000; ">s</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">// the simulation time interval used to regularly signal mobility state changes and update the display
+</span><span style="color: #000000; ">}
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

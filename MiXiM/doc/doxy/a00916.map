@@ -1,0 +1,8 @@
+digraph G {
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,190,84"];
+	Node1 [label=NotificationBoardAccess, height="0.22", width="1.83", color=black, fillcolor=grey75, style=filled, fontcolor=black, pos="95,16", rects="29,8,161,24"];
+	Node2 [label="ModuleAccess\< NotificationBoard \>", height="0.22", width="2.64", color=red, fillcolor=white, style=filled, URL="$a00146.html", pos="95,68", rects="0,60,191,76"];
+	Node2 -> Node1 [dir=back, color=midnightblue, style=solid, pos="s,95,60 95,51 95,42 95,31 95,24"];
+}

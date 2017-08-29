@@ -1,0 +1,7 @@
+digraph G {
+	graph [rankdir=LR];
+	node [label="\N", fontname=Helvetica, fontsize=10, shape=record];
+	edge [fontname=Helvetica, fontsize=10, labelfontname=Helvetica, labelfontsize=10];
+	graph [bb="0,0,224,16"];
+	Node1 [label="Argument::key_iterator\< IteratorType \>", height="0.22", width="2.89", color=black, fillcolor=white, style=filled, URL="$a00116.html", pos="112,8", rects="8,0,216,16"];
+}
