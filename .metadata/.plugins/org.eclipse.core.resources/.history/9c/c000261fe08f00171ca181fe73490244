@@ -1,0 +1,470 @@
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program.  If not, see http://www.gnu.org/licenses/.
+// 
+
+#include "UWANMacLayer.h"
+
+#include "PhyToMacControlInfo.h"
+#include "NetwToMacControlInfo.h"
+#include "MacToPhyInterface.h"
+//#include "FWMath.h"
+//#include "BaseConnectionManager.h"
+//#include "PhyUtils.h"
+
+Define_Module(UWANMacLayer);
+
+void UWANMacLayer::initialize(int stage)
+{
+    BaseMacLayer::initialize(stage);
+
+    if(stage == 0) {
+        bitrate = hasPar("bitrate")         ? par("bitrate").doubleValue()          : 10000;
+        txPower = hasPar("txPower")         ? par("txPower").doubleValue()          : 50;
+
+        queueLength   = hasPar("queueLength")   ? par("queueLength").longValue()    : 10;
+        maxTxAttempts = hasPar("maxTxAttempts") ? par("maxTxAttempts").longValue()  : 3;
+
+        timeout = new cMessage("TIMEOUT", TIMEOUT);
+
+        macState = IDLE;
+
+        delta = 1E-9;
+
+        // Counts the total number of frames
+        nbTxRtsFrames = 0;
+        nbTxCtsFrames = 0;
+        nbTxFrames    = 0;
+        nbRxRtsFrames = 0;
+        nbRxCtsFrames = 0;
+        nbRxFrames    = 0;
+
+    }
+    else if(stage == 1) {
+
+    }
+}
+
+UWANMacLayer::~UWANMacLayer()
+{
+    cancelAndDelete(timeout);
+
+    for(MacPktList::iterator it = fromUpperPkt.begin();
+        it != fromUpperPkt.end(); ++it)
+    {
+        delete (*it);
+    }
+    fromUpperPkt.clear();
+}
+
+void UWANMacLayer::finish()
+{
+    recordScalar("nbTxRtsFrames", nbTxRtsFrames);
+    recordScalar("nbTxCtsFrames", nbTxCtsFrames);
+    recordScalar("nbTxFrames", nbTxFrames);
+    recordScalar("nbRxRtsFrames", nbRxRtsFrames);
+    recordScalar("nbRxCtsFrames", nbRxCtsFrames);
+    recordScalar("nbRxFrames", nbRxFrames);
+
+    BaseMacLayer::finish();
+}
+
+void UWANMacLayer::handleSelfMsg(cMessage *msg)
+{
+    debugEV << "UWANMacLayer::handleSelfMsg()..., Msg: " << msg->getName() << endl;
+
+    switch(msg->getKind()) {
+    // The MAC is waiting for CTS, DATA packet, but the timer has expired.
+    case TIMEOUT:
+        handleTimeoutTimer();
+        break;
+    }
+}
+
+void UWANMacLayer::handleUpperMsg(cMessage *msg)
+{
+    debugEV << "UWANMacLayer::handleUpperMsg()..., Msg: " << msg->getName() << endl;
+
+    cPacket* pkt = static_cast<cPacket*>(msg);
+
+    if(fromUpperPkt.size() == queueLength) {
+        msg->setName("MAC-ERROR");
+        msg->setKind(PACKET_DROPPED);
+        sendControlUp(msg);
+        debugEV << " - Pkt is dropped. (MAC Queue is Full.) \n";
+        return;
+    }
+
+    UWANMacPkt *macPkt = static_cast<UWANMacPkt*>(encapsMsg(pkt));
+    fromUpperPkt.push_back(macPkt);
+    debugEV << " - Pkt is put in Queue: Queue Size [" << fromUpperPkt.size()
+            << "/" << queueLength << "]\n";
+
+    if(macState == IDLE) {
+        beginNewCycle();
+    }
+}
+
+UWANMacLayer::macpkt_ptr_t UWANMacLayer::encapsMsg(cPacket *netwPkt)
+{
+    debugEV << "UWANMacLayer::encapsMsg()..." << endl;
+
+    macpkt_ptr_t pkt = new MacPkt(netwPkt->getName(), netwPkt->getKind());
+
+    pkt->setKind(DATA);
+//    pkt->setBitLength(headerLength);
+    pkt->setBitLength(pkt->getBitLength() + MAC_HEADER_LENGTH);
+    pkt->setSrcAddr(myMacAddr);
+
+    // Set Destination Address...
+    cObject* cInfo = netwPkt->removeControlInfo();
+    pkt->setDestAddr(getUpperDestinationFromControlInfo(cInfo));
+    delete cInfo;
+
+    pkt->encapsulate(netwPkt);
+    debugEV <<" - Pkt is encapsulated.\n";
+
+    return pkt;
+}
+
+void UWANMacLayer::beginNewCycle()
+{
+    debugEV << "UWANMacLayer::beginNewCycle()..." << endl;
+
+    switch(macState) {
+    case IDLE:
+    case CONTEND:
+        checkMaxTxAttempts();
+        if(!fromUpperPkt.empty()) {
+            sendRTSframe();
+        }
+        break;
+
+    default:
+        macState = IDLE;
+        break;
+    }
+}
+
+void UWANMacLayer::checkMaxTxAttempts()
+{
+    debugEV << "UWANMacLayer::checkMaxTxAttempts()..." << endl;
+    debugEV << " - Retry sending RTS [" << txAttempts
+            << "/" << maxTxAttempts << "]\n";
+
+    if(txAttempts >= maxTxAttempts) {
+        UWANMacPkt *temp = fromUpperPkt.front();
+        fromUpperPkt.pop_front();
+        temp->setName("MAC-ERROR");
+        temp->setKind(PACKET_DROPPED);
+        sendControlUp(temp);
+        debugEV << " - Pkt is dropped. (Retry limit is reached.)\n";
+
+        txAttempts = 0;
+        macState = IDLE;
+    }
+}
+
+//void UWANMacLayer::scheduleBackoff()
+//{
+//    debugEV << "UWANMacLayer::scheduleBackoff()..." << endl;
+//}
+
+void UWANMacLayer::sendRTSframe()
+{
+    debugEV << "UWANMacLayer::sendRTSframe()..." << endl;
+
+    UWANMacPkt *frameRTS = new UWANMacPkt("UWAN-RTS");
+
+    UWANMacPkt *frameToSend = fromUpperPkt.front()->dup();
+
+    frameRTS->setKind(RTS);
+    frameRTS->setBitLength(LENGTH_RTS);
+    frameRTS->setSrcAddr(myMacAddr);
+    frameRTS->setDestAddr(frameToSend->getDestAddr());
+
+    // Create Signal
+    setDownControlInfo(frameRTS, createSignal(simTime(), packetDuration(LENGTH_RTS, bitrate), txPower, bitrate));
+
+    // Send RTS frame
+    phy->setRadioState(MiximRadio::TX);
+    sendDown(frameRTS);
+    nbTxRtsFrames++;
+    debugEV << " **Send RTS (Src: " << frameRTS->getSrcAddr() << " -> Dst: " << frameRTS->getDestAddr() << ")\n";
+
+    // Schedule time-out, Waiting for CTS
+    scheduleAt(simTime() + timeOut(RTS, bitrate), timeout);
+
+//    macState = WFCTS;
+    macState = TX_RTS;
+    debugEV << " - Set MacState: " << macState << endl;
+}
+
+void UWANMacLayer::sendCTSframe(UWANMacPkt *pkt)
+{
+    debugEV << "UWANMacLayer::sendCTSFrame()..." << endl;
+
+    UWANMacPkt *frameCTS = new UWANMacPkt("UWAN-CTS");
+
+    frameCTS->setKind(CTS);
+    frameCTS->setBitLength(LENGTH_CTS);
+    frameCTS->setSrcAddr(myMacAddr);
+    frameCTS->setDestAddr(pkt->getSrcAddr());
+
+    // Create Signal
+    setDownControlInfo(frameCTS, createSignal(simTime(), packetDuration(LENGTH_CTS, bitrate), txPower, bitrate));
+
+    phy->setRadioState(MiximRadio::TX);
+    sendDown(frameCTS);
+    nbTxCtsFrames++;
+    debugEV << " **Send CTS (Src: " << frameCTS->getSrcAddr() << " -> Dst: " << frameCTS->getDestAddr() << ")\n";
+
+    // Schedule time-out, Waiting for DATA
+    scheduleAt(simTime() + timeOut(CTS, bitrate), timeout);
+
+//    macState = WFDATA;
+    macState = TX_CTS;
+    debugEV << " - Set MacState: " << macState << endl;
+}
+
+void UWANMacLayer::sendDATAframe()
+{
+    debugEV << "UWANMacLayer::sendDATAFrame()..." << endl;
+
+    UWANMacPkt *frameDATA = new UWANMacPkt("UWAN-DATA");
+    frameDATA = fromUpperPkt.front();
+    LENGTH_DATA = frameDATA->getBitLength();
+    debugEV << " - Length of DATA frames from Upper Layer: " << LENGTH_DATA << endl;
+
+    // Create Signal
+    setDownControlInfo(frameDATA
+                , createSignal(simTime()
+                    , packetDuration(frameDATA->getBitLength(), bitrate)
+                    , txPower
+                    , bitrate));
+
+    phy->setRadioState(MiximRadio::TX);
+    sendDown(frameDATA);
+    nbTxFrames++;
+    fromUpperPkt.pop_front();
+    debugEV << " **Send DATA (Src: " << frameDATA->getSrcAddr() << " -> Dst: " << frameDATA->getDestAddr() << ")\n";
+
+//    macState = BUSY;
+    macState = TX_DATA;
+    debugEV << " - Set MacState: " << macState << endl;
+}
+
+simtime_t UWANMacLayer::packetDuration(double bits, double br)
+{
+    return bits / br + PHY_HEADER_LENGTH / BITRATE_HEADER;
+}
+
+simtime_t UWANMacLayer::timeOut(UWANMacMessageKinds type, double br)
+{
+    debugEV << "UWANMacLayer::timeOut()..." << endl;
+
+    simtime_t time_out = 0;
+
+    switch(type) {
+    case RTS:
+        time_out = packetDuration(LENGTH_RTS, br) + packetDuration(LENGTH_CTS, br)
+                   + delta;
+        debugEV << " - Set timeout after sending RTS: " << time_out << endl;
+        break;
+
+    case CTS:
+        time_out = packetDuration(LENGTH_CTS, br) + packetDuration(LENGTH_DATA, br)
+                   + delta;
+        debugEV << " - Set timeout after sending CTS: " << time_out << endl;
+        break;
+
+    default:
+        debugEV << "[ERROR] Undefined Msg Kinds!" << endl;
+        break;
+    }
+
+    return time_out;
+}
+
+void UWANMacLayer::handleTimeoutTimer()
+{
+    debugEV << "UWANMacLayer::handleTimeoutTimer()..." << endl;
+
+    if(macState == WFCTS) {
+        rtsTransmissionFailed();
+    }
+    else if(macState == WFDATA) {
+        // Finally, DATA Communication is failed.
+        debugEV << "[ERROR] DATA Communication is failed!" << endl;
+    }
+
+    beginNewCycle();
+}
+
+void UWANMacLayer::rtsTransmissionFailed()
+{
+    debugEV << "UWANMacLayer::rtsTransmissionFailed()..." << endl;
+
+    txAttempts++;
+    macState = CONTEND;
+}
+
+void UWANMacLayer::handleLowerMsg(cMessage *msg)
+{
+    debugEV << "UWANMacLayer::handleLowerMsg()..., Msg: " << msg->getName() << endl;
+
+    UWANMacPkt* macPkt = static_cast<UWANMacPkt *>(msg);
+
+    int radioState = phy->getRadioState();
+    if(radioState == MiximRadio::RX) {
+        if(macPkt->getDestAddr() == myMacAddr) {
+            debugEV << " - Packet is for me." << endl;
+            handleMsgForMe(macPkt);
+        }
+        else {
+            debugEV << " - Packet is NOT for me." << endl;
+            handleMsgNotForMe(macPkt);
+        }
+    }
+}
+
+void UWANMacLayer::handleMsgForMe(UWANMacPkt *pkt)
+{
+    debugEV << "UWANMacLayer::handleMsgForMe()..., Msg: " << pkt->getName() << endl;
+
+    debugEV << " - macState: " << macState << endl;
+    switch(macState) {
+    case IDLE:
+    case CONTEND:
+        if(pkt->getKind() == RTS) {
+            handleRTSframe(pkt);
+        }
+        else {
+            debugEV << "[ERROR] Unexpected Msg! in IDLE/CONTEND" << endl;
+        }
+        break;
+
+    case WFCTS:
+        if(pkt->getKind() == CTS) {
+            handleCTSframe(pkt);
+        }
+        else {
+            debugEV << "[ERROR] Unexpected Msg! in WFCTS" << endl;
+        }
+        break;
+
+    case WFDATA:
+        if(pkt->getKind() == DATA) {
+            handleDATAframe(pkt);
+        }
+        else {
+            debugEV << "[ERROR] Unexpected Msg! in WFDATA" << endl;
+        }
+        break;
+
+    default:
+        debugEV << "Unhandled MAC State!" << endl;
+        break;
+    }
+}
+
+void UWANMacLayer::handleRTSframe(UWANMacPkt *pkt)
+{
+    debugEV << " **RTS received.\n";
+    nbRxRtsFrames++;
+    sendCTSframe(pkt);
+}
+
+void UWANMacLayer::handleCTSframe(UWANMacPkt *pkt)
+{
+    debugEV << " **CTS received.\n";
+    nbRxCtsFrames++;
+    cancelEvent(timeout);
+    txAttempts = 0;
+
+    sendDATAframe();
+}
+
+void UWANMacLayer::handleDATAframe(UWANMacPkt *pkt)
+{
+    debugEV << " **DATA received. Send up.\n";
+    nbRxFrames++;
+    cancelEvent(timeout);
+    sendUp(decapsMsg(pkt));
+
+    macState = IDLE;
+    beginNewCycle();
+}
+
+void UWANMacLayer::handleMsgNotForMe(UWANMacPkt *pkt)
+{
+    debugEV << "UWANMacLayer::handleMsgNotForMe()..., Msg: " << pkt->getName() << endl;
+    debugEV << " - Delete Pkt." << endl;
+    delete pkt;
+}
+
+void UWANMacLayer::handleLowerControl(cMessage *msg)
+{
+    debugEV << "UWANMacLayer::handleLowerControl()..., Msg: "
+            << msg->getName() << ", " << msg->getKind() << endl;
+
+    switch(msg->getKind()) {
+    case MacToPhyInterface::CHANNEL_SENSE_REQUEST:
+        break;
+
+    case MacToPhyInterface::RADIO_SWITCHING_OVER:
+        break;
+
+    case MacToPhyInterface::TX_OVER:
+        debugEV << "PHY indicated Transmission Over." << endl;
+        phy->setRadioState(MiximRadio::RX);
+        handleEndTransmission();
+        break;
+
+    default:
+        debugEV << "Unhandled Control Msg from PHY Layer: " << msg << endl;
+        break;
+    }
+
+    delete msg;
+}
+
+void UWANMacLayer::handleEndTransmission()
+{
+    debugEV << "UWANMacLayer::handleEndTransmission()..." << endl;
+
+//    if(macState == BUSY) {
+//        macState = IDLE;
+//        beginNewCycle();
+//    }
+
+    switch(macState) {
+    case TX_RTS:
+        macState = WFCTS;
+        break;
+
+    case TX_CTS:
+        macState = WFDATA;
+        break;
+
+    case TX_DATA:
+        macState = IDLE;
+        beginNewCycle();
+        break;
+
+    default:
+        debugEV << "Unhandled MAC State!" << endl;
+        break;
+    }
+    debugEV << " - Change MacState: " << macState << endl;
+}

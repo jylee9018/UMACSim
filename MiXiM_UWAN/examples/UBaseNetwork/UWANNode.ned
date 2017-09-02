@@ -20,13 +20,6 @@ import org.mixim.modules.node.WirelessNode;
 module UWANNode extends WirelessNode
 {
     parameters:
-//        applicationType = "BurstApplLayer";			// Basic		
-//        applicationType = "BurstApplLayerBettery";
-        applicationType = "SensorApplLayer";
-//        applicationType = "TestApplication";
-//        applicationType = "TrafficGen";
-
-		mobilityType = "StationaryMobility";
 		nicType = "UWANNic";
     
     connections allowunconnected:

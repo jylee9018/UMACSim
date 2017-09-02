@@ -1,0 +1,86 @@
+E # 0 t 0 m 1 ce -1 msg -1
+SB v 1030 rid General-0-20170902-16:27:22-4636 b 1000
+KF p -1 c "" s ""
+MC id 1 c cModule t org.mixim.examples.ieee802154a.ieee802154a n ieee802154a cm 1
+MS id 1 d bgb=$playgroundSizeX,$playgroundSizeY,white;bgp=0,0
+MC id 2 c ConnectionManager t org.mixim.base.connectionManager.ConnectionManager pid 1 n connectionManager
+MS id 2 d is=s;p=201,0;i=abstract/multicast
+MC id 3 c BaseWorldUtility t org.mixim.base.modules.BaseWorldUtility pid 1 n world
+MS id 3 d is=s;p=280,0;i=misc/globe
+MC id 4 c cModule t org.mixim.modules.node.Host802154A pid 1 n node[0] cm 1
+GC m 4 g 0 n radioIn o 0
+MS id 4 d is=vs;p=50,50;i2=status/battery;bgb=210,450,white;i=device/wifilaptop;b=40,40,rect
+MC id 5 c cModule t org.mixim.modules.node.Host802154A pid 1 n node[1] cm 1
+GC m 5 g 0 n radioIn o 0
+MS id 5 d is=vs;p=50,50;i2=status/battery;bgb=210,450,white;i=device/wifilaptop;b=40,40,rect
+MC id 6 c cModule t org.mixim.modules.node.Host802154A pid 1 n node[2] cm 1
+GC m 6 g 0 n radioIn o 0
+MS id 6 d is=vs;p=50,50;i2=status/battery;bgb=210,450,white;i=device/wifilaptop;b=40,40,rect
+MC id 7 c cModule t org.mixim.modules.node.Host802154A pid 1 n node[3] cm 1
+GC m 7 g 0 n radioIn o 0
+MS id 7 d is=vs;p=50,50;i2=status/battery;bgb=210,450,white;i=device/wifilaptop;b=40,40,rect
+MC id 8 c cModule t org.mixim.modules.node.Host802154A pid 1 n node[4] cm 1
+GC m 8 g 0 n radioIn o 0
+MS id 8 d is=vs;p=50,50;i2=status/battery;bgb=210,450,white;i=device/wifilaptop;b=40,40,rect
+MC id 9 c ArpHost t org.mixim.modules.netw.ArpHost pid 4 n arp
+MS id 9 d p=140,100;i=block/network2
+MC id 10 c ConstSpeedMobility t inet.mobility.models.ConstSpeedMobility pid 4 n mobility
+MS id 10 d p=140,30;i=block/cogwheel
+MC id 11 c cModule t org.mixim.modules.nic.Nic802154A pid 4 n nic cm 1
+GC m 11 g 0 n upperLayerIn o 0
+GC m 11 g 3 n upperLayerOut o 1
+GC m 11 g 5 n upperControlOut o 1
+GC m 11 g 6 n upperControlIn o 0
+GC m 11 g 8 n radioIn o 0
+MS id 11 d p=70,380;i=block/wrxtx,#008000
+MC id 12 c DummyRoute t org.mixim.modules.netw.DummyRoute pid 4 n netwl
+GC m 12 g 0 n upperLayerIn o 0
+GC m 12 g 3 n upperLayerOut o 1
+GC m 12 g 4 n upperControlIn o 0
+GC m 12 g 7 n upperControlOut o 1
+GC m 12 g 8 n lowerLayerIn o 0
+GC m 12 g 11 n lowerLayerOut o 1
+GC m 12 g 12 n lowerControlIn o 0
+GC m 12 g 15 n lowerControlOut o 1
+MS id 12 d p=70,310;i=block/layer
+MC id 13 c TestApplication t org.mixim.modules.application.TestApplication pid 4 n appl
+GC m 13 g 0 n lowerLayerIn o 0
+GC m 13 g 3 n lowerLayerOut o 1
+GC m 13 g 4 n lowerControlIn o 0
+GC m 13 g 7 n lowerControlOut o 1
+MS id 13 d p=70,30;i=app
+CC sm 11 sg 3 dm 12 dg 8
+CC sm 12 sg 11 dm 11 dg 0
+CC sm 11 sg 5 dm 12 dg 12
+CS sm 11 sg 5 d ls=red;m=m,70,0,70,0
+CC sm 12 sg 15 dm 11 dg 6
+CS sm 12 sg 15 d ls=red;m=m,70,0,70,0
+CC sm 12 sg 3 dm 13 dg 0
+CC sm 13 sg 3 dm 12 dg 0
+CC sm 12 sg 7 dm 13 dg 4
+CS sm 12 sg 7 d ls=red;m=m,70,0,70,0
+CC sm 13 sg 7 dm 12 dg 4
+CS sm 13 sg 7 d ls=red;m=m,70,0,70,0
+CC sm 4 sg 0 dm 11 dg 8
+MC id 14 c BatteryStats t org.mixim.modules.power.battery.BatteryStats pid 4 n batteryStats
+MS id 14 d p=140,240;i=block/table,#FF8040
+MC id 15 c SimpleBattery t org.mixim.modules.power.battery.SimpleBattery pid 4 n battery
+MS id 15 d p=140,170;i=block/plug,#FF8000
+MC id 16 c phyPER t org.mixim.modules.utility.phyPER pid 4 n stats
+MS id 16 d p=140,310
+MC id 17 c AlohaMacLayer t org.mixim.modules.mac.AlohaMacLayer pid 11 n mac
+GC m 17 g 0 n upperLayerIn o 0
+GC m 17 g 3 n upperLayerOut o 1
+GC m 17 g 4 n upperControlIn o 0
+GC m 17 g 7 n upperControlOut o 1
+GC m 17 g 8 n lowerLayerIn o 0
+GC m 17 g 11 n lowerLayerOut o 1
+GC m 17 g 12 n lowerControlIn o 0
+GC m 17 g 15 n lowerControlOut o 1
+MS id 17 d p=52,51;i=block/layer
+MC id 18 c PhyLayerUWBIR t org.mixim.modules.phy.PhyLayerUWBIR pid 11 n phy
+GC m 18 g 0 n upperLayerIn o 0
+GC m 18 g 3 n upperLayerOut o 1
+GC m 18 g 4 n upperControlIn o 0
+GC m 18 g 7 n upperControlOut o 1
+GC m 18 g 8 n radioIn o 0

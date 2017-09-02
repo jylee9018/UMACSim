@@ -1,0 +1,46 @@
+file 8820 1504365984                                            
+version 2
+run BERDistance-0-20170902-16:27:54-4636
+attr Channel ghassemzadeh-los
+attr Receiver 3dB
+attr configname BERDistance
+attr datetime 20170902-16:27:54
+attr distance 1
+attr experiment BERDistance
+attr inifile omnetpp.ini
+attr iterationvars "$distance=1, $nbPackets=250, $Channel=ghassemzadeh-los, $Receiver=3dB"
+attr iterationvars2 "$distance=1, $nbPackets=250, $Channel=ghassemzadeh-los, $Receiver=3dB, $repetition=0"
+attr measurement "$distance=1, $nbPackets=250, $Channel=ghassemzadeh-los, $Receiver=3dB"
+attr nbPackets 250
+attr network ieee802154a
+attr processid 4636
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 14  ieee802154a.node[0].nic.phy  distances  ETV
+vector 19  ieee802154a.node[0].nic.phy  pathloss  ETV
+vector 23  ieee802154a.node[0].stats  maiPER  ETV
+vector 24  ieee802154a.node[0].stats  maiPERnoRS  ETV
+vector 0  ieee802154a.node[0].nic.mac  packetsBER  ETV
+vector 1  ieee802154a.node[0].nic.mac  meanPacketBER  ETV
+vector 11  ieee802154a.node[0].nic.mac  successNoRS  ETV
+vector 10  ieee802154a.node[0].nic.mac  success  ETV
+vector 8  ieee802154a.node[0].nic.mac  ber  ETV
+vector 6  ieee802154a.node[0].nic.mac  packetSuccessRate  ETV
+vector 7  ieee802154a.node[0].nic.mac  packetSuccessRateNoRS  ETV
+vector 9  ieee802154a.node[0].nic.mac  ser  ETV
+0	1366 397 115 588 5.001080687102 17.463810771616 16 0 0.4125 0.4125 0.17015625
+1	1763 530 115 588 5.001080687102 17.463810771616 16 0.02578125 0.4125 1.394550709707 0.2695864648315
+6	2293 545 115 588 5.001080687102 17.463810771616 16 0 0.9375 12.619271006771 10.822888546987
+7	2838 545 115 588 5.001080687102 17.463810771616 16 0 0.9375 12.619271006771 10.822888546987
+8	3383 530 115 588 5.001080687102 17.463810771616 16 0.02578125 0.4125 1.394550709707 0.2695864648315
+9	3913 564 115 588 5.001080687102 17.463810771616 16 0.059375 0.95 3.2116925435675 1.4298727464341
+10	4477 408 115 588 5.001080687102 17.463810771616 16 0 1 15 15
+11	4885 408 115 588 5.001080687102 17.463810771616 16 0 1 15 15
+14	5293 632 107 580 5.000548813502 17.463278898016 16 11.635425283417 16.524669106021 226.49755855638 3246.1744692821
+19	5925 711 107 580 5.000548813502 17.463278898016 16 6.1386690570147e-008 8.6572259012462e-007 5.126960446825e-006 2.1703067707708e-012
+23	6636 1092 108 588 5.000620313502 17.463810771616 31 0 0.9375 22.857813020313 18.637358707851
+24	7728 1092 108 588 5.000620313502 17.463810771616 31 0 0.9375 22.857813020313 18.637358707851

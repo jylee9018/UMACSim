@@ -14,7 +14,6 @@
 // 
 
 package org.mixim.modules.mac;
-//package org.uwan.examples.UBaseNetwork;
 
 import org.mixim.base.modules.BaseMacLayer;
 
@@ -24,30 +23,13 @@ simple UWANMacLayer extends BaseMacLayer
         @class(UWANMacLayer);
         
         // enable debugging for this module
-        bool debug = default(true);
-        // length of the MAC queue
-        int queueLength;
+        bool debug = default(false);
         // bit rate [bps]
         double bitrate @unit(bps);
-        //tx power [mW]
-        double txPower @unit(mW);
-                
-//        // enable debugging for this module
-//        bool debug = default(true)
-//        // how long is a slot? [s]
-//        double slotDuration @unit(s);
-//        // maximum time between a packet and its ack [s]
-//        double difs @unit(s);
-//        // maximum number of transmission attempts
-//        int maxTxAttempts;
-//        // length of the MAC queue
-//        int queueLength;
-//        // default channel 
-//        double defaultChannel;
-//        // bit rate [bps]
-//        double bitrate @unit(bps);
-//        //tx power [mW]
-//        double txPower @unit(mW);
-//        // contention window
-//        int contentionWindow;
+        // tx power [mW]
+        double txPower @unit(mW);       
+        // length of the MAC queue
+        int queueLength;
+        // maximum number of transmission attempts
+        int maxTxAttempts;
 }

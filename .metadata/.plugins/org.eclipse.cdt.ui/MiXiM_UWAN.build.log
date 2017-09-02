@@ -1,0 +1,9 @@
+17:53:22 **** Build of configuration gcc-debug for project MiXiM_UWAN ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd examples && /usr/bin/make all
+make[1]: Entering directory '/c/Workspace/UMACSim/MiXiM_UWAN/examples'
+Creating executable: ../out/gcc-debug/examples/miximuwanexamples.exe
+make[1]: Leaving directory '/c/Workspace/UMACSim/MiXiM_UWAN/examples'
+
+17:53:24 Build Finished (took 1s.795ms)
+

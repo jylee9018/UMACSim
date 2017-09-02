@@ -22,10 +22,9 @@ module UWANNic extends WirelessNic
     parameters:
         phyType = "PhyLayer";
         macType = "UWANMacLayer";
-//		macType = "AlohaMacLayer";
         
-        phy.headerLength = 192bit;
-        mac.headerLength = 100bit;
+        phy.headerLength = 40bit;
+        mac.headerLength = 40bit;
         
         // UWANMac does not support switching times
         phy.timeRXToTX    = 0s;

@@ -1,0 +1,53 @@
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program.  If not, see http://www.gnu.org/licenses/.
+// 
+
+package org.mixim.modules.mac;
+
+import org.mixim.base.modules.BaseMacLayer;
+
+simple UWANMacLayer extends BaseMacLayer
+{
+    parameters:
+        @class(UWANMacLayer);
+        
+        // enable debugging for this module
+        bool debug = default(true);
+        // bit rate [bps]
+        double bitrate @unit(bps);
+        //tx power [mW]
+        double txPower @unit(mW);
+        // length of the MAC queue
+        int queueLength;
+        int maxTxAttempts;
+                
+//        // enable debugging for this module
+//        bool debug = default(true)
+//        // how long is a slot? [s]
+//        double slotDuration @unit(s);
+//        // maximum time between a packet and its ack [s]
+//        double difs @unit(s);
+//        // maximum number of transmission attempts
+//        int maxTxAttempts;
+//        // length of the MAC queue
+//        int queueLength;
+//        // default channel 
+//        double defaultChannel;
+//        // bit rate [bps]
+//        double bitrate @unit(bps);
+//        //tx power [mW]
+//        double txPower @unit(mW);
+//        // contention window
+//        int contentionWindow;
+}

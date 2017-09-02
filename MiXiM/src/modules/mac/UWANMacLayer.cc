@@ -29,15 +29,26 @@ void UWANMacLayer::initialize(int stage)
     BaseMacLayer::initialize(stage);
 
     if(stage == 0) {
-        queueLength = hasPar("queueLength") ? par("queueLength").longValue()    : 10;
-        bitrate = hasPar("bitrate")         ? par("bitrate").doubleValue()      : 10000;
-        txPower = hasPar("txPower")         ? par("txPower").doubleValue()      : 50;
+        bitrate = hasPar("bitrate")         ? par("bitrate").doubleValue()          : 10000;
+        txPower = hasPar("txPower")         ? par("txPower").doubleValue()          : 50;
+
+        queueLength   = hasPar("queueLength")   ? par("queueLength").longValue()    : 10;
+        maxTxAttempts = hasPar("maxTxAttempts") ? par("maxTxAttempts").longValue()  : 3;
 
         timeout = new cMessage("TIMEOUT", TIMEOUT);
 
         macState = IDLE;
 
         delta = 1E-9;
+
+        // Counts the total number of frames
+        nbTxRtsFrames = 0;
+        nbTxCtsFrames = 0;
+        nbTxFrames    = 0;
+        nbRxRtsFrames = 0;
+        nbRxCtsFrames = 0;
+        nbRxFrames    = 0;
+
     }
     else if(stage == 1) {
 
@@ -58,6 +69,13 @@ UWANMacLayer::~UWANMacLayer()
 
 void UWANMacLayer::finish()
 {
+    recordScalar("nbTxRtsFrames", nbTxRtsFrames);
+    recordScalar("nbTxCtsFrames", nbTxCtsFrames);
+    recordScalar("nbTxFrames", nbTxFrames);
+    recordScalar("nbRxRtsFrames", nbRxRtsFrames);
+    recordScalar("nbRxCtsFrames", nbRxCtsFrames);
+    recordScalar("nbRxFrames", nbRxFrames);
+
     BaseMacLayer::finish();
 }
 
@@ -104,7 +122,8 @@ UWANMacLayer::macpkt_ptr_t UWANMacLayer::encapsMsg(cPacket *netwPkt)
     macpkt_ptr_t pkt = new MacPkt(netwPkt->getName(), netwPkt->getKind());
 
     pkt->setKind(DATA);
-    pkt->setBitLength(headerLength);
+//    pkt->setBitLength(headerLength);
+    pkt->setBitLength(pkt->getBitLength() + headerLength);
     pkt->setSrcAddr(myMacAddr);
 
     // Set Destination Address...
@@ -114,6 +133,8 @@ UWANMacLayer::macpkt_ptr_t UWANMacLayer::encapsMsg(cPacket *netwPkt)
 
     pkt->encapsulate(netwPkt);
     debugEV <<" - Pkt is encapsulated.\n";
+
+    LENGTH_DATA = pkt->getBitLength();
 
     return pkt;
 }
@@ -125,7 +146,7 @@ void UWANMacLayer::beginNewCycle()
     switch(macState) {
     case IDLE:
     case CONTEND:
-        checkMaxAttempts();
+        checkMaxTxAttempts();
         if(!fromUpperPkt.empty()) {
             sendRTSframe();
         }
@@ -137,13 +158,13 @@ void UWANMacLayer::beginNewCycle()
     }
 }
 
-void UWANMacLayer::checkMaxAttempts()
+void UWANMacLayer::checkMaxTxAttempts()
 {
-    debugEV << "UWANMacLayer::checkMaxAttempts()..." << endl;
-    debugEV << " - Retry sending RTS [" << retryCounter
-            << "/" << RETRY_LIMIT << "]\n";
+    debugEV << "UWANMacLayer::checkMaxTxAttempts()..." << endl;
+    debugEV << " - Retry sending RTS [" << txAttempts
+            << "/" << maxTxAttempts << "]\n";
 
-    if(retryCounter >= RETRY_LIMIT) {
+    if(txAttempts >= maxTxAttempts) {
         UWANMacPkt *temp = fromUpperPkt.front();
         fromUpperPkt.pop_front();
         temp->setName("MAC-ERROR");
@@ -151,10 +172,15 @@ void UWANMacLayer::checkMaxAttempts()
         sendControlUp(temp);
         debugEV << " - Pkt is dropped. (Retry limit is reached.)\n";
 
-        retryCounter = 0;
+        txAttempts = 0;
         macState = IDLE;
     }
 }
+
+//void UWANMacLayer::scheduleBackoff()
+//{
+//    debugEV << "UWANMacLayer::scheduleBackoff()..." << endl;
+//}
 
 void UWANMacLayer::sendRTSframe()
 {
@@ -165,7 +191,7 @@ void UWANMacLayer::sendRTSframe()
     UWANMacPkt *frameToSend = fromUpperPkt.front()->dup();
 
     frameRTS->setKind(RTS);
-    frameRTS->setBitLength((int)LENGTH_RTS);
+    frameRTS->setBitLength(LENGTH_RTS);
     frameRTS->setSrcAddr(myMacAddr);
     frameRTS->setDestAddr(frameToSend->getDestAddr());
 
@@ -175,6 +201,7 @@ void UWANMacLayer::sendRTSframe()
     // Send RTS frame
     phy->setRadioState(MiximRadio::TX);
     sendDown(frameRTS);
+    nbTxRtsFrames++;
     debugEV << " **Send RTS (Src: " << frameRTS->getSrcAddr() << " -> Dst: " << frameRTS->getDestAddr() << ")\n";
 
     // Schedule time-out, Waiting for CTS
@@ -201,6 +228,7 @@ void UWANMacLayer::sendCTSframe(UWANMacPkt *pkt)
 
     phy->setRadioState(MiximRadio::TX);
     sendDown(frameCTS);
+    nbTxCtsFrames++;
     debugEV << " **Send CTS (Src: " << frameCTS->getSrcAddr() << " -> Dst: " << frameCTS->getDestAddr() << ")\n";
 
     // Schedule time-out, Waiting for DATA
@@ -217,12 +245,19 @@ void UWANMacLayer::sendDATAframe()
 
     UWANMacPkt *frameDATA = new UWANMacPkt("UWAN-DATA");
     frameDATA = fromUpperPkt.front();
+//    LENGTH_DATA = frameDATA->getBitLength();
+    debugEV << " - Length of DATA frames from Upper Layer: " << LENGTH_DATA << endl;
 
     // Create Signal
-    setDownControlInfo(frameDATA, createSignal(simTime(), packetDuration(LENGTH_DATA, bitrate), txPower, bitrate));
+    setDownControlInfo(frameDATA
+                , createSignal(simTime()
+                    , packetDuration(frameDATA->getBitLength(), bitrate)
+                    , txPower
+                    , bitrate));
 
     phy->setRadioState(MiximRadio::TX);
     sendDown(frameDATA);
+    nbTxFrames++;
     fromUpperPkt.pop_front();
     debugEV << " **Send DATA (Src: " << frameDATA->getSrcAddr() << " -> Dst: " << frameDATA->getDestAddr() << ")\n";
 
@@ -233,7 +268,7 @@ void UWANMacLayer::sendDATAframe()
 
 simtime_t UWANMacLayer::packetDuration(double bits, double br)
 {
-    return bits / br;
+    return bits / br + PHY_HEADER_LENGTH / BITRATE_HEADER;
 }
 
 simtime_t UWANMacLayer::timeOut(UWANMacMessageKinds type, double br)
@@ -282,7 +317,7 @@ void UWANMacLayer::rtsTransmissionFailed()
 {
     debugEV << "UWANMacLayer::rtsTransmissionFailed()..." << endl;
 
-    retryCounter++;
+    txAttempts++;
     macState = CONTEND;
 }
 
@@ -348,14 +383,16 @@ void UWANMacLayer::handleMsgForMe(UWANMacPkt *pkt)
 void UWANMacLayer::handleRTSframe(UWANMacPkt *pkt)
 {
     debugEV << " **RTS received.\n";
+    nbRxRtsFrames++;
     sendCTSframe(pkt);
 }
 
 void UWANMacLayer::handleCTSframe(UWANMacPkt *pkt)
 {
     debugEV << " **CTS received.\n";
+    nbRxCtsFrames++;
     cancelEvent(timeout);
-    retryCounter = 0;
+    txAttempts = 0;
 
     sendDATAframe();
 }
@@ -363,6 +400,7 @@ void UWANMacLayer::handleCTSframe(UWANMacPkt *pkt)
 void UWANMacLayer::handleDATAframe(UWANMacPkt *pkt)
 {
     debugEV << " **DATA received. Send up.\n";
+    nbRxFrames++;
     cancelEvent(timeout);
     sendUp(decapsMsg(pkt));
 

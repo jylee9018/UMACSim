@@ -1,0 +1,133 @@
+[General]
+cmdenv-config-name = perftest
+cmdenv-express-mode = true
+network = UBaseNetwork
+
+
+##############################################################
+#					Simulation parameters                    #
+##############################################################
+record-eventlog = false
+tkenv-default-config = 
+*.**.coreDebug = false
+*.playgroundSizeX = 1500m
+*.playgroundSizeY = 1500m
+*.playgroundSizeZ = 1500m
+*.numNodes = 5
+
+##############################################################
+#					WorldUtility parameters                  #
+##############################################################
+*.world.useTorus = false
+
+##############################################################
+#			   		Channel parameters                       #
+##############################################################
+*.connectionManager.sendDirect = false
+*.connectionManager.pMax = 100mW
+*.connectionManager.sat = -90dBm
+*.connectionManager.alpha = 3
+*.connectionManager.carrierFrequency = 2.412e+9Hz
+
+##############################################################
+#             		Host specific parameters                 #
+##############################################################
+*.node[*].nic.connectionManagerName = "connectionManager"
+
+
+#################### Phy Layer parameters ####################
+*.node[*].nic.phy.usePropagationDelay = false
+*.node[*].nic.phy.thermalNoise = -100dBm
+*.node[*].nic.phy.useThermalNoise = true
+        
+*.node[*].nic.phy.analogueModels = xmldoc("config.xml")
+*.node[*].nic.phy.decider = xmldoc("config.xml")
+
+*.node[*].nic.phy.sensitivity = -87dBm
+*.node[*].nic.phy.maxTXPower = 100.0mW
+
+#################### MAC layer parameters ####################
+*.node[*].nic.mac.debug = true
+
+*.node[*].nic.mac.bitrate = 15360bps
+*.node[*].nic.mac.txPower = 100mW
+
+*.node[*].nic.mac.queueLength = 5
+*.node[*].nic.mac.maxTxAttempts = 3
+
+#################### NETW layer parameters ###################
+*.node[*].netwl.headerLength = 100bit
+
+#################### APP layer parameters ####################
+*.node[*].appl.debug = true
+
+# Payload size
+*.node[*].appl.headerLength = 20byte
+
+# TestApplication
+*.node[0].appl.nodeAddr = 4
+*.node[1].appl.nodeAddr = 5
+*.node[2].appl.nodeAddr = 6
+*.node[3].appl.nodeAddr = 7
+*.node[4].appl.nodeAddr = 8
+
+*.node[0].appl.dstAddr = 5
+*.node[1].appl.dstAddr = 6
+*.node[2].appl.dstAddr = 7
+*.node[3].appl.dstAddr = 8
+*.node[4].appl.dstAddr = 4
+
+*.node[*].appl.trafficType = "uniform"
+*.node[*].appl.trafficParam = 0.3s
+*.node[*].appl.flood = true
+*.node[*].appl.payloadSize = 10byte
+*.node[*].appl.nbPackets = 50
+
+*.node[*].appl.destAddr = 5
+
+
+#SensorApplLayer
+
+
+#################### Mobility parameters ####################
+*.node[*].mobility.debug = false
+*.node[*].mobility.initFromDisplayString = false
+*.node[*].mobility.Type = "ConstSpeedMobility"
+*.node[*].mobility.speed = 2mps
+*.node[*].mobility.updateInterval = 0.1s
+
+*.node[0].mobility.initialX = 150m
+*.node[0].mobility.initialY = 200m
+*.node[0].mobility.initialZ = 100m
+
+*.node[1].mobility.initialX = 250m
+*.node[1].mobility.initialY = 100m
+*.node[1].mobility.initialZ = 100m
+
+*.node[2].mobility.initialX = 250m
+*.node[2].mobility.initialY = 200m
+*.node[2].mobility.initialZ = 100m
+
+*.node[3].mobility.initialX = 50m
+*.node[3].mobility.initialY = 100m
+*.node[3].mobility.initialZ = 100m
+
+*.node[4].mobility.initialX = 150m
+*.node[4].mobility.initialY = 380m
+*.node[4].mobility.initialZ = 100m
+
+*.node[5].mobility.initialX = 50m
+*.node[5].mobility.initialY = 400m
+*.node[5].mobility.initialZ = 100m
+
+*.node[*].mobility.initialX = 0m
+*.node[*].mobility.initialY = 0m
+*.node[*].mobility.initialZ = 0m
+
+#*.node[*].mobilityType = "ConstSpeedMobility"
+*.node[*].mobility.debug = false
+*.node[*].mobility.initFromDisplayString = false
+#*.node[*].mobility.speed = 1mps
+*.node[*].mobility.updateInterval = 0.1s
+
+

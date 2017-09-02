@@ -1,0 +1,157 @@
+version 2
+run General-0-20170902-15:13:26-6800
+attr configname General
+attr datetime 20170902-15:13:26
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network UBaseNetwork
+attr processid 6800
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+scalar UBaseNetwork.node[0].nic.mac 	nbTxRtsFrames 	77
+scalar UBaseNetwork.node[0].nic.mac 	nbTxCtsFrames 	0
+scalar UBaseNetwork.node[0].nic.mac 	nbTxFrames 	40
+scalar UBaseNetwork.node[0].nic.mac 	nbRxRtsFrames 	0
+scalar UBaseNetwork.node[0].nic.mac 	nbRxCtsFrames 	40
+scalar UBaseNetwork.node[0].nic.mac 	nbRxFrames 	0
+scalar UBaseNetwork.node[0].nic.phy 	nbFramesWithInterference 	0
+scalar UBaseNetwork.node[0].nic.phy 	nbFramesWithoutInterference 	359
+scalar UBaseNetwork.node[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar UBaseNetwork.node[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar UBaseNetwork.node[0].nic.phy 	nbFramesWithInterferenceDropped 	62
+scalar UBaseNetwork.node[0].nic.phy 	nbFramesWithoutInterferenceDropped 	24
+scalar UBaseNetwork.node[0].appl 	"activity duration" 	-1
+attr unit  s
+scalar UBaseNetwork.node[0].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar UBaseNetwork.node[0].appl 	lastPacketReception 	-2
+attr unit  s
+scalar UBaseNetwork.node[0].appl 	nbPacketsSent 	50
+scalar UBaseNetwork.node[0].appl 	nbPacketsReceived 	0
+statistic UBaseNetwork.node[0].appl 	latency
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar UBaseNetwork.node[1].nic.mac 	nbTxRtsFrames 	150
+scalar UBaseNetwork.node[1].nic.mac 	nbTxCtsFrames 	88
+scalar UBaseNetwork.node[1].nic.mac 	nbTxFrames 	0
+scalar UBaseNetwork.node[1].nic.mac 	nbRxRtsFrames 	88
+scalar UBaseNetwork.node[1].nic.mac 	nbRxCtsFrames 	0
+scalar UBaseNetwork.node[1].nic.mac 	nbRxFrames 	70
+scalar UBaseNetwork.node[1].nic.phy 	nbFramesWithInterference 	0
+scalar UBaseNetwork.node[1].nic.phy 	nbFramesWithoutInterference 	171
+scalar UBaseNetwork.node[1].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar UBaseNetwork.node[1].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar UBaseNetwork.node[1].nic.phy 	nbFramesWithInterferenceDropped 	23
+scalar UBaseNetwork.node[1].nic.phy 	nbFramesWithoutInterferenceDropped 	22
+scalar UBaseNetwork.node[1].appl 	"activity duration" 	8.104223620853
+attr unit  s
+scalar UBaseNetwork.node[1].appl 	firstPacketGeneration 	60.164644050691
+attr unit  s
+scalar UBaseNetwork.node[1].appl 	lastPacketReception 	68.268867671544
+attr unit  s
+scalar UBaseNetwork.node[1].appl 	nbPacketsSent 	50
+scalar UBaseNetwork.node[1].appl 	nbPacketsReceived 	70
+statistic UBaseNetwork.node[1].appl 	latency
+field count 70
+field mean 0.015227192147914
+field stddev 0.0027110613771771
+field sum 1.065903450354
+field sqrsum 0.016737856561232
+field min 0.014302499998
+field max 0.025039168662
+scalar UBaseNetwork.node[2].nic.mac 	nbTxRtsFrames 	83
+scalar UBaseNetwork.node[2].nic.mac 	nbTxCtsFrames 	0
+scalar UBaseNetwork.node[2].nic.mac 	nbTxFrames 	36
+scalar UBaseNetwork.node[2].nic.mac 	nbRxRtsFrames 	0
+scalar UBaseNetwork.node[2].nic.mac 	nbRxCtsFrames 	36
+scalar UBaseNetwork.node[2].nic.mac 	nbRxFrames 	0
+scalar UBaseNetwork.node[2].nic.phy 	nbFramesWithInterference 	0
+scalar UBaseNetwork.node[2].nic.phy 	nbFramesWithoutInterference 	279
+scalar UBaseNetwork.node[2].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar UBaseNetwork.node[2].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar UBaseNetwork.node[2].nic.phy 	nbFramesWithInterferenceDropped 	34
+scalar UBaseNetwork.node[2].nic.phy 	nbFramesWithoutInterferenceDropped 	25
+scalar UBaseNetwork.node[2].appl 	"activity duration" 	-1
+attr unit  s
+scalar UBaseNetwork.node[2].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar UBaseNetwork.node[2].appl 	lastPacketReception 	-2
+attr unit  s
+scalar UBaseNetwork.node[2].appl 	nbPacketsSent 	50
+scalar UBaseNetwork.node[2].appl 	nbPacketsReceived 	0
+statistic UBaseNetwork.node[2].appl 	latency
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar UBaseNetwork.node[3].nic.mac 	nbTxRtsFrames 	150
+scalar UBaseNetwork.node[3].nic.mac 	nbTxCtsFrames 	0
+scalar UBaseNetwork.node[3].nic.mac 	nbTxFrames 	0
+scalar UBaseNetwork.node[3].nic.mac 	nbRxRtsFrames 	0
+scalar UBaseNetwork.node[3].nic.mac 	nbRxCtsFrames 	0
+scalar UBaseNetwork.node[3].nic.mac 	nbRxFrames 	0
+scalar UBaseNetwork.node[3].nic.phy 	nbFramesWithInterference 	0
+scalar UBaseNetwork.node[3].nic.phy 	nbFramesWithoutInterference 	98
+scalar UBaseNetwork.node[3].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar UBaseNetwork.node[3].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar UBaseNetwork.node[3].nic.phy 	nbFramesWithInterferenceDropped 	7
+scalar UBaseNetwork.node[3].nic.phy 	nbFramesWithoutInterferenceDropped 	10
+scalar UBaseNetwork.node[3].appl 	"activity duration" 	-1
+attr unit  s
+scalar UBaseNetwork.node[3].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar UBaseNetwork.node[3].appl 	lastPacketReception 	-2
+attr unit  s
+scalar UBaseNetwork.node[3].appl 	nbPacketsSent 	50
+scalar UBaseNetwork.node[3].appl 	nbPacketsReceived 	0
+statistic UBaseNetwork.node[3].appl 	latency
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar UBaseNetwork.node[4].nic.mac 	nbTxRtsFrames 	150
+scalar UBaseNetwork.node[4].nic.mac 	nbTxCtsFrames 	0
+scalar UBaseNetwork.node[4].nic.mac 	nbTxFrames 	0
+scalar UBaseNetwork.node[4].nic.mac 	nbRxRtsFrames 	0
+scalar UBaseNetwork.node[4].nic.mac 	nbRxCtsFrames 	0
+scalar UBaseNetwork.node[4].nic.mac 	nbRxFrames 	0
+scalar UBaseNetwork.node[4].nic.phy 	nbFramesWithInterference 	0
+scalar UBaseNetwork.node[4].nic.phy 	nbFramesWithoutInterference 	0
+scalar UBaseNetwork.node[4].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar UBaseNetwork.node[4].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar UBaseNetwork.node[4].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar UBaseNetwork.node[4].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar UBaseNetwork.node[4].appl 	"activity duration" 	-1
+attr unit  s
+scalar UBaseNetwork.node[4].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar UBaseNetwork.node[4].appl 	lastPacketReception 	-2
+attr unit  s
+scalar UBaseNetwork.node[4].appl 	nbPacketsSent 	50
+scalar UBaseNetwork.node[4].appl 	nbPacketsReceived 	0
+statistic UBaseNetwork.node[4].appl 	latency
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan

@@ -67,7 +67,6 @@ class MIXIM_API UWANMacLayer : public BaseMacLayer
   public:
     UWANMacLayer()
         : BaseMacLayer()
-        , retryCounter(0)
     {}
     virtual ~UWANMacLayer();
     virtual void initialize(int);
@@ -91,7 +90,8 @@ class MIXIM_API UWANMacLayer : public BaseMacLayer
 
     /** @brief start a new contention period */
     void beginNewCycle();
-    void checkMaxAttempts();
+    void checkMaxTxAttempts();
+//    void scheduleBackoff();
 
     void sendRTSframe();
     void sendCTSframe(UWANMacPkt*);
@@ -119,21 +119,21 @@ class MIXIM_API UWANMacLayer : public BaseMacLayer
     packet is still waiting for transmission..*/
     MacPktList fromUpperPkt;
 
-    const int LENGTH_RTS  =  40; // 5 * 8 bit = 40 bit
-    const int LENGTH_CTS  =  40;
-    const int LENGTH_DATA = 200;
-    const int MAC_HEADER_LENGTH = 40;
-    const int PHY_HEADER_LENGTH = 80;
+    /** @brief PHY */
+    const double PHY_HEADER_LENGTH = 80;
+    const double BITRATE_HEADER = 1E+6;
 
-    const unsigned RETRY_LIMIT = 3;
+    /** @brief MAC */
+//    const double MAC_HEADER_LENGTH = headerLength;
+    const double LENGTH_RTS =  40; // 5 * 8 bit = 40 bit
+    const double LENGTH_CTS =  40;
+    double LENGTH_DATA;
+
 
     // TIMERS:
     cMessage* timeout;
 
     simtime_t delta;
-
-    /** @brief length of the queue*/
-    unsigned queueLength;
 
     /** @brief the bit rate at which we transmit */
     double bitrate;
@@ -141,7 +141,17 @@ class MIXIM_API UWANMacLayer : public BaseMacLayer
     /** @brief The power at which we transmit. */
     double txPower;
 
-    unsigned retryCounter;
+    /** @brief length of the queue*/
+    unsigned queueLength;
+    unsigned maxTxAttempts;
+    unsigned txAttempts;
+
+    unsigned long nbTxRtsFrames;
+    unsigned long nbTxCtsFrames;
+    unsigned long nbTxFrames;
+    unsigned long nbRxRtsFrames;
+    unsigned long nbRxCtsFrames;
+    unsigned long nbRxFrames;
 };
 
 #endif /* UWANMACLAYER_H_ */
